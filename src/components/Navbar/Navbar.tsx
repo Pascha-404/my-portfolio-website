@@ -14,9 +14,15 @@ function Navbar(): JSX.Element {
 					width={200}
 					height={37}
 					alt='Patrick Pavliuchik typed in code syntax'
+					priority
 				/>
 			</div>
-			<div><LanguageButton currentLanguage='eng'/></div>
+			<div className={styles.navbarLinks}>
+				<LanguageButton currentLanguage='eng' />
+				<a href=''>about</a>
+				<a href=''>projects</a>
+				<a href=''>contacts</a>
+			</div>
 		</nav>
 	);
 }
