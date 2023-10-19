@@ -1,6 +1,9 @@
-import styles from './Navbar.module.scss';
-import Logo from '../../../public/personal-logo.svg';
 import Image from 'next/image';
+import Logo from '../../../public/personal-logo.svg';
+
+import LanguageButton from '../LanguageButton';
+
+import styles from './Navbar.module.scss';
 
 function Navbar(): JSX.Element {
 	return (
@@ -13,7 +16,7 @@ function Navbar(): JSX.Element {
 					alt='Patrick Pavliuchik typed in code syntax'
 				/>
 			</div>
-			<div></div>
+			<div><LanguageButton currentLanguage='eng'/></div>
 		</nav>
 	);
 }
