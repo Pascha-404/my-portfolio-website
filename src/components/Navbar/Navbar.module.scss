@@ -1,8 +1,20 @@
 @use '../../sass/abstracts/' as *;
 
-.navbar{
-width: 100vw;
-@include flexbox();
-@include justify-content(space-around);
-@include align-items(center);
+.navbar {
+	width: 100vw;
+	@include flexbox();
+	@include justify-content(space-around);
+	@include align-items(center);
+
+    .navbarLinks{
+        width: 70%;
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items(center);
+
+        a{
+            text-transform: uppercase;
+            color: $txt-yellow;
+        }
+    }
 }
