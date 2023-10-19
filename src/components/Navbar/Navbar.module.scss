@@ -1,0 +1,8 @@
+@use '../../sass/abstracts/' as *;
+
+.navbar{
+width: 100vw;
+@include flexbox();
+@include justify-content(space-around);
+@include align-items(center);
+}
