@@ -1,0 +1,22 @@
+/* Colors */
+// Background Colors
+$bg-color-dark: linear-gradient(0deg, rgba(251, 215, 113, 0.08) 0%, rgba(36, 34, 34, 0.00) 100%), #242222;
+
+// Text Colors
+$txt-light-100: #FFF;
+$txt-light-50: rgba(239, 241, 243, 0.90);;
+$txt-highlight-100: #ce5625;
+$txt-highlight-50: rgba(206, 86, 37, 0.75);
+$txt-blue: #9abebe;
+$txt-yellow: #FBD771;
+
+/* Breakpoints */
+$breakpoints: (
+	'zero': 0px,
+	'xs': 400px,
+	's': 576px,
+	'm': 768px,
+	'l': 992px,
+	'xl': 1200px,
+	'xxl': 1400px,
+);

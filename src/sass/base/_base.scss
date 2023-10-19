@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html body {
+	position: relative;
+	color: $txt-light-50;
+	background: $bg-color-dark;
+	overflow-x: hidden;
+	min-height: 100vh;
+	min-width: 100vw;
+	padding-top: pxToRem(40.47px);
+	max-width: 2000px;
+	margin: 0 auto;
+}
+
+body section{
+    padding-left: pxToRem(144px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
