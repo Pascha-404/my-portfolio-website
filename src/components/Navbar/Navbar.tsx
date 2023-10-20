@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Logo from '../../../public/personal-logo.svg';
 
 import LanguageButton from '../LanguageButton';
+import ContactButton from '../ContactButton';
 
 import styles from './Navbar.module.scss';
 
@@ -22,6 +23,7 @@ function Navbar(): JSX.Element {
 				<a href=''>about</a>
 				<a href=''>projects</a>
 				<a href=''>contacts</a>
+				<ContactButton text="Let's talk?"/>
 			</div>
 		</nav>
 	);
