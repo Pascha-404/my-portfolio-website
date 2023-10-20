@@ -1,0 +1,65 @@
+@use '../../sass/abstracts/' as *;
+
+.heroSection {
+	width: 90vw;
+	height: 100vh;
+	max-height: 837px;
+	@include flexbox();
+	@include align-items(center);
+	@include justify-content(space-between);
+
+	.heroFirstHalf {
+		width: 60%;
+		max-width: 738px;
+		h1 {
+			margin-bottom: pxToRem(10px);
+		}
+
+		h2 {
+			margin-bottom: pxToRem(44px);
+		}
+
+		.colorHighlight {
+			color: $txt-highlight-100;
+		}
+		.sizeHighlight {
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+
+		p {
+			max-width: 620px;
+			margin-bottom: pxToRem(46px);
+		}
+
+		.links {
+			width: 100%;
+			margin-bottom: pxToRem(69px);
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(space-between);
+
+			a {
+				text-transform: uppercase;
+				color: $txt-yellow;
+				border-bottom: 1px solid $txt-yellow;
+				font-size: 20px;
+				font-weight: 700;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.heroSecondHalf {
+		position: relative;
+		width: 40%;
+		height: 100%;
+		padding-top: pxToRem(71px);
+
+		img {
+			width: 100%;
+			height: auto;
+			max-width: 446px;
+		}
+	}
+}
