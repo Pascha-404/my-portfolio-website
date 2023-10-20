@@ -5,7 +5,7 @@ interface ContactButtonProps {
 }
 
 function ContactButton({ text }: ContactButtonProps): JSX.Element {
-	return <button className={styles.contactButton}>text</button>;
+	return <button className={styles.contactButton}>{text}</button>;
 }
 
 export default ContactButton;
