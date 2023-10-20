@@ -7,7 +7,7 @@
 	@include align-items(center);
 
     .navbarLinks{
-        width: 70%;
+        width: 65%;
         @include flexbox();
         @include justify-content(space-around);
         @include align-items(center);
