@@ -1,4 +1,14 @@
 @use '../../sass/abstracts/' as *;
 
 .projectsSection {
+	width: 100%;
+	margin-top: pxToRem(70px);
+
+	h3 {
+		margin-bottom: pxToRem(30px);
+	}
+
+	.colorHighlight {
+		color: $txt-highlight-100;
+	}
 }
