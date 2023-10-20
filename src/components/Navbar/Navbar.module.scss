@@ -5,6 +5,7 @@
 	@include flexbox();
 	@include justify-content(space-around);
 	@include align-items(center);
+    padding-bottom: pxToRem(31px);
 
     .navbarLinks{
         width: 65%;
