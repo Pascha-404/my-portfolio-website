@@ -1,4 +1,8 @@
+import arrowIcon from '../../../public/icon-arrow.svg';
+
+import Image from 'next/image';
 import ProjectCard from '../ProjectCard';
+
 import styles from './ProjectsSection.module.scss';
 
 function ProjectsSection(): JSX.Element {
@@ -12,8 +16,8 @@ function ProjectsSection(): JSX.Element {
 				name='Test-Project'
 				role='Full-Stack Developer'
 				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
-                tasks={['Task', 'Task1', 'Task2']}
-                liveLink='/'
+				tasks={['Task', 'Task1', 'Task2']}
+				liveLink='/'
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
 				githubLink='https://github.com/Pascha-404/my-portfolio-website'
 			/>
@@ -22,8 +26,8 @@ function ProjectsSection(): JSX.Element {
 				name='Test-Project'
 				role='Full-Stack Developer'
 				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
-                tasks={['Task', 'Task1', 'Task2']}
-                liveLink='/'
+				tasks={['Task', 'Task1', 'Task2']}
+				liveLink='/'
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
 				githubLink='https://github.com/Pascha-404/my-portfolio-website'
 			/>
@@ -32,13 +36,19 @@ function ProjectsSection(): JSX.Element {
 				name='Test-Project'
 				role='Full-Stack Developer'
 				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
-                tasks={['Task', 'Task1', 'Task2']}
-                liveLink='/'
+				tasks={['Task', 'Task1', 'Task2']}
+				liveLink='/'
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
 				githubLink='https://github.com/Pascha-404/my-portfolio-website'
-            />
-            
-            <a href="/">more about me and my experience</a>
+			/>
+
+			<a className={styles.aboutLink} href='/'>
+				more about me and my experience
+			</a>
+
+			<div className={styles.imgWrapper}>
+				<Image src={arrowIcon} alt='Yellow arrow pointing downwards' />
+			</div>
 		</section>
 	);
 }
