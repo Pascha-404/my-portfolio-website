@@ -6,9 +6,20 @@
 
 	h3 {
 		margin-bottom: pxToRem(30px);
+
+		.colorHighlight {
+			color: $txt-highlight-100;
+		}
 	}
 
-	.colorHighlight {
-		color: $txt-highlight-100;
+	.aboutLink {
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: 700;
+		color: $txt-yellow;
+		border-bottom: 1px solid $txt-yellow;
+	}
+	.imgWrapper {
+		margin-top: pxToRem(69px);
 	}
 }
