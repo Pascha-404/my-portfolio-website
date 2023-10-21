@@ -2,22 +2,50 @@
 
 .projectCard {
 	width: 100%;
+	max-width: 100%;
+	padding-right: 100px;
 
 	.cardFirstHalf {
 		width: 100%;
+		margin-bottom: pxToRem(30px);
+
+		@include flexbox();
+		@include justify-content(space-between);
 
 		.imgWrapper {
-            position: relative;
-            width: 100%;
+			position: relative;
+			width: 100%;
 			max-width: 455px;
-            max-height: 172px;
+			max-height: 172px;
+
 			img {
-                width: 100%;
-                height: 100%;
+				width: 100%;
+				height: 100%;
 				object-fit: cover;
 			}
 		}
 
-		@include flexbox();
+		.cardDetails {
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+
+			.weightHighlight {
+				font-weight: 700;
+			}
+		}
+
+		.cardLive {
+			.techLogos {
+				margin-bottom: pxToRem(28px);
+				img {
+					margin-right: pxToRem(18px);
+				}
+			}
+			a {
+				color: $txt-blue;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+		}
 	}
 }
