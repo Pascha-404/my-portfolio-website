@@ -1,8 +1,9 @@
 import styles from './ProjectCard.module.scss';
+import defaultImg from '../../../public/projectCard-default-img.png'
 
 interface ProjectCardProps {
-	id: string;
-	imgSrc: string;
+	readonly id: string;
+	imgSrc?: string;
 	name: string;
 	role: string;
 	stack: string[];
@@ -13,6 +14,7 @@ interface ProjectCardProps {
 }
 
 function ProjectCard(props: ProjectCardProps): JSX.Element {
+	const img = props.imgSrc || defaultImg
 	return <div className={styles.projectCard}></div>;
 }
 
