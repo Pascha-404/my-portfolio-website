@@ -1,0 +1,6 @@
+@use '../sass/abstracts/' as *;
+
+.main{
+    padding-left: pxToRem(144px);
+    max-width: 100vw;
+}
