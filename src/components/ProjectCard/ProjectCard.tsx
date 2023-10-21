@@ -1,5 +1,6 @@
+"use client"
 import styles from './ProjectCard.module.scss';
-import defaultImg from '../../../public/projectCard-default-img.png';
+import defaultImg from '../../../public/projectCard-default-img.jpeg';
 import iconReact from '../../../public/icon-react.svg';
 import Image from 'next/image';
 
@@ -33,8 +34,8 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 				</div>
 				<div className={styles.cardLive}>
 					<div className={styles.techLogos}>
-						{props.stack.map(tech => (
-							<Image src={iconReact} alt='tech icon' />
+						{props.stack.map((tech, idx) => (
+							<Image key={idx} src={iconReact} alt='tech icon' />
 						))}
 					</div>
 				</div>
