@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import styles from './ProjectCard.module.scss';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
 import iconReact from '../../../public/icon-react.svg';
@@ -24,22 +24,27 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 				<div className={styles.imgWrapper}>
 					<Image src={img} alt='Project Preview' />
 				</div>
+
 				<div className={styles.cardDetails}>
-					<p>Role:</p>
+					<p className={styles.weightHighlight}>Role:</p>
 					<p>{props.role}</p>
-					<p>Tasks:</p>
+					<p className={styles.weightHighlight}>Tasks:</p>
 					<p>{props.tasks.join(', ')}</p>
-					<p>Stack:</p>
+					<p className={styles.weightHighlight}>Stack:</p>
 					<p>{props.stack.join(', ')}</p>
 				</div>
+
 				<div className={styles.cardLive}>
 					<div className={styles.techLogos}>
 						{props.stack.map((tech, idx) => (
 							<Image key={idx} src={iconReact} alt='tech icon' />
 						))}
 					</div>
+
+					{props.liveLink && <a href={props.liveLink}>visit live product</a>}
 				</div>
 			</div>
+
 			<div className={styles.cardSecondHalf}>
 				<h4>project: {props.name}</h4>
 				<p>{props.description}</p>
