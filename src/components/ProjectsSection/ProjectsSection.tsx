@@ -17,6 +17,28 @@ function ProjectsSection(): JSX.Element {
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
 				githubLink='https://github.com/Pascha-404/my-portfolio-website'
 			/>
+			<ProjectCard
+				id='2'
+				name='Test-Project'
+				role='Full-Stack Developer'
+				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
+                tasks={['Task', 'Task1', 'Task2']}
+                liveLink='/'
+				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
+				githubLink='https://github.com/Pascha-404/my-portfolio-website'
+			/>
+			<ProjectCard
+				id='3'
+				name='Test-Project'
+				role='Full-Stack Developer'
+				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
+                tasks={['Task', 'Task1', 'Task2']}
+                liveLink='/'
+				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
+				githubLink='https://github.com/Pascha-404/my-portfolio-website'
+            />
+            
+            <a href="/">more about me and my experience</a>
 		</section>
 	);
 }
