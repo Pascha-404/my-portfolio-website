@@ -12,7 +12,8 @@ function ProjectsSection(): JSX.Element {
 				name='Test-Project'
 				role='Full-Stack Developer'
 				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
-				tasks={['Task', 'Task1', 'Task2']}
+                tasks={['Task', 'Task1', 'Task2']}
+                liveLink='/'
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
 				githubLink='https://github.com/Pascha-404/my-portfolio-website'
 			/>
