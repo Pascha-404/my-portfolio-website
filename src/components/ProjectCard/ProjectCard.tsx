@@ -1,7 +1,7 @@
 'use client';
 import styles from './ProjectCard.module.scss';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
-import iconReact from '../../../public/icon-react.svg';
+import { iconReact } from '../../../public/icons';
 import Image from 'next/image';
 
 interface ProjectCardProps {

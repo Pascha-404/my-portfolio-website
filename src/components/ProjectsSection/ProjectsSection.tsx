@@ -1,4 +1,4 @@
-import arrowIcon from '../../../public/icon-arrow.svg';
+import { iconArrow } from '../../../public/icons';
 
 import Image from 'next/image';
 import ProjectCard from '../ProjectCard';
@@ -47,7 +47,7 @@ function ProjectsSection(): JSX.Element {
 			</a>
 
 			<div className={styles.imgWrapper}>
-				<Image src={arrowIcon} alt='Yellow arrow pointing downwards' />
+				<Image src={iconArrow} alt='Yellow arrow pointing downwards' />
 			</div>
 		</section>
 	);
