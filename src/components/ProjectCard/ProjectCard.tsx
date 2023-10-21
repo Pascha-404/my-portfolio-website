@@ -48,7 +48,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 			<div className={styles.cardSecondHalf}>
 				<h4>project: {props.name}</h4>
 				<p>{props.description}</p>
-				<a href={props.githubLink}>github link</a>
+				<a href={props.githubLink}>[github link]</a>
 			</div>
 		</article>
 	);
