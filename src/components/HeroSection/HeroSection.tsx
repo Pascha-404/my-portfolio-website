@@ -36,7 +36,7 @@ function HeroSection(): JSX.Element {
 				<Image src={ArrowIcon} alt='Long arrow icon pointing downwards' />
 			</div>
 			<div className={styles.heroSecondHalf}>
-				<Image src={HeroImg} alt='Front photo of Patrick Pavliuchik' />
+				<Image src={HeroImg} alt='Front photo of Patrick Pavliuchik' priority />
 			</div>
 		</section>
 	);
