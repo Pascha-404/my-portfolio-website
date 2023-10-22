@@ -1,15 +1,19 @@
 'use client';
-import styles from './ProjectCard.module.scss';
+import { v4 as uuid } from 'uuid';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
-import { iconReact } from '../../../public/icons';
+import { TechType } from '@/ts/types';
+
 import Image from 'next/image';
+import TechIcon from '../TechIcon';
+
+import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
 	readonly id: string;
 	imgSrc?: string;
 	name: string;
 	role: string;
-	stack: string[];
+	stack: TechType[];
 	tasks: string[];
 	description: string;
 	githubLink: string;
@@ -36,8 +40,8 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 
 				<div className={styles.cardLive}>
 					<div className={styles.techLogos}>
-						{props.stack.map((tech, idx) => (
-							<Image key={idx} src={iconReact} alt='tech icon' />
+						{props.stack.map(tech => (
+							<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
 						))}
 					</div>
 
