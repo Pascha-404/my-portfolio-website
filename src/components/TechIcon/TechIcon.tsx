@@ -12,22 +12,14 @@ import {
 	iconNode,
 	iconSass,
 } from '../../../public/icons';
+import { TechType } from '@/ts/types';
 
-type TechIconProp =
-	| 'React'
-	| 'Next.js'
-	| 'Express.js'
-	| 'Node.js'
-	| 'JavaScript'
-	| 'SASS'
-	| 'HTML'
-	| 'CSS'
-	| 'AWS'
-	| 'MongoDB'
-	| 'Cloudinary';
+type TechIconProp = {
+	technology: TechType;
+};
 
-function TechIcon(prop: TechIconProp): JSX.Element {
-	switch (prop) {
+function TechIcon({ technology }: TechIconProp): JSX.Element {
+	switch (technology) {
 		case 'React':
 			return <Image src={iconReact} alt='React icon' />;
 		case 'Next.js':
@@ -52,7 +44,7 @@ function TechIcon(prop: TechIconProp): JSX.Element {
 			return <Image src={iconCloudinary} alt='Cloudinary icon' />;
 
 		default:
-			throw new Error(`No Case found for provided property: ${prop}`);
+			throw new Error(`No Case found for provided property: ${technology}`);
 	}
 }
 
