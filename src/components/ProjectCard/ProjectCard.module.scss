@@ -4,7 +4,7 @@
 	width: 100%;
 	max-width: 100%;
 	padding-right: 100px;
-    margin-bottom: pxToRem(100px);
+	margin-bottom: pxToRem(100px);
 
 	.cardFirstHalf {
 		width: 100%;
@@ -50,23 +50,23 @@
 		}
 	}
 
-    .cardSecondHalf{
-        width: 100%;
+	.cardSecondHalf {
+		width: 100%;
 
-        h4{
-            display: inline-block;
-            text-transform: uppercase;
-            border-bottom: 1px solid $txt-light-100;
-            margin-bottom: pxToRem(20px);
-        }
-        p{
-            max-width: 1000px;
-            margin-bottom: 20px;
-        }
-        a{
-            color: $txt-blue;
-            text-transform: uppercase;
-            font-size: 20px;
-        }
-    }
+		h4 {
+			display: inline-block;
+			text-transform: uppercase;
+			border-bottom: 1px solid $txt-light-100;
+			margin-bottom: pxToRem(20px);
+		}
+		p {
+			max-width: 1000px;
+			margin-bottom: 20px;
+		}
+		a {
+			color: $txt-blue;
+			text-transform: uppercase;
+			font-size: 20px;
+		}
+	}
 }
