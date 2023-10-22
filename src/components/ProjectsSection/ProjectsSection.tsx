@@ -15,7 +15,7 @@ function ProjectsSection(): JSX.Element {
 				id='1'
 				name='Test-Project'
 				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
+				stack={['React', 'Next.js', 'AWS', 'Node.js']}
 				tasks={['Task', 'Task1', 'Task2']}
 				liveLink='/'
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
@@ -25,7 +25,7 @@ function ProjectsSection(): JSX.Element {
 				id='2'
 				name='Test-Project'
 				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
+				stack={['React', 'Next.js', 'AWS', 'Node.js']}
 				tasks={['Task', 'Task1', 'Task2']}
 				liveLink='/'
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
@@ -35,7 +35,7 @@ function ProjectsSection(): JSX.Element {
 				id='3'
 				name='Test-Project'
 				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'Firebase', 'Node.js']}
+				stack={['React', 'Next.js', 'AWS', 'Node.js']}
 				tasks={['Task', 'Task1', 'Task2']}
 				liveLink='/'
 				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
