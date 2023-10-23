@@ -1,5 +1,5 @@
 import HeroImg from '../../../public/patrick-hero-img.png';
-import ArrowIcon from '../../../public/icon-arrow.svg';
+import {iconArrow} from '../../../public/icons';
 
 import Image from 'next/image';
 import ContactButton from '../ContactButton';
@@ -33,10 +33,10 @@ function HeroSection(): JSX.Element {
 					<ContactButton text='book a call' />
 				</div>
 
-				<Image src={ArrowIcon} alt='Long arrow icon pointing downwards' />
+				<Image src={iconArrow} alt='Long arrow icon pointing downwards' />
 			</div>
 			<div className={styles.heroSecondHalf}>
-				<Image src={HeroImg} alt='Front photo of Patrick Pavliuchik' />
+				<Image src={HeroImg} alt='Front photo of Patrick Pavliuchik' priority />
 			</div>
 		</section>
 	);

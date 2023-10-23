@@ -1,0 +1,72 @@
+@use '../../sass/abstracts/' as *;
+
+.projectCard {
+	width: 100%;
+	max-width: 100%;
+	padding-right: 100px;
+	margin-bottom: pxToRem(100px);
+
+	.cardFirstHalf {
+		width: 100%;
+		margin-bottom: pxToRem(30px);
+
+		@include flexbox();
+		@include justify-content(space-between);
+
+		.imgWrapper {
+			position: relative;
+			width: 100%;
+			max-width: 455px;
+			max-height: 172px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.cardDetails {
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+
+			.weightHighlight {
+				font-weight: 700;
+			}
+		}
+
+		.cardLive {
+			.techLogos {
+				margin-bottom: pxToRem(28px);
+				img {
+					margin-right: pxToRem(18px);
+				}
+			}
+			a {
+				color: $txt-blue;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.cardSecondHalf {
+		width: 100%;
+
+		h4 {
+			display: inline-block;
+			text-transform: uppercase;
+			border-bottom: 1px solid $txt-light-100;
+			margin-bottom: pxToRem(20px);
+		}
+		p {
+			max-width: 1000px;
+			margin-bottom: 20px;
+		}
+		a {
+			color: $txt-blue;
+			text-transform: uppercase;
+			font-size: 20px;
+		}
+	}
+}
