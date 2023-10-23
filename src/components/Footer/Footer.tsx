@@ -13,24 +13,32 @@ function Footer(): JSX.Element {
 			</a>
 			<div className={styles.middleContent}>
 				<Image src={iconArrowUp} alt='Yellow arrow pointing upwards' />
+
 				<div className={styles.contactWrapper}>
 					<h6>contacts</h6>
-					<p>Patrick Pavliuchik,</p>
-					<a href='tel:04917782934'>+49 17782934</a>
-					<a href='mailto:patrick@pavliuchik.com'>patrick@pavliuchik.com</a>
+					<div>
+						<p>Patrick Pavliuchik,</p>
+						<a href='tel:04917782934'>+49 17782934</a>
+						<a href='mailto:patrick@pavliuchik.com'>patrick@pavliuchik.com</a>
+					</div>
 				</div>
+
 				<div className={styles.sitemap}>
 					<h6>sitemap</h6>
-					<a href='/'>Projects</a>
-					<a href='/'>About me</a>
-					<a href='/'>Resume</a>
+					<div>
+						<a href='/'>Projects</a>
+						<a href='/'>About me</a>
+						<a href='/'>Resume</a>
+					</div>
 				</div>
 			</div>
+
 			<div className={styles.bottomContent}>
 				<div className={styles.logoWrapper}>
 					<Image src={personalLogo} alt='Patrick Pavliuchik typed in code syntax' />
 					<p>&copy;</p>
 				</div>
+
 				<div className={styles.legal}>
 					<a href='/'>Impressum</a>
 					<a href='/'>Privacy Policy</a>
