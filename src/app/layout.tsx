@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 import '../sass/main.scss';
 
@@ -16,6 +17,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
 			<body>
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
