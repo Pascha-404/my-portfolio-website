@@ -10,6 +10,7 @@ import iconMongodb from './icon-mongodb.svg';
 import iconNextjs from './icon-nextjs.svg';
 import iconNode from './icon-node.svg';
 import iconSass from './icon-sass.svg';
+import iconArrowUp from './icon-arrow-up.svg';
 
 export {
 	iconReact,
@@ -24,4 +25,5 @@ export {
 	iconNextjs,
 	iconNode,
 	iconSass,
+	iconArrowUp
 };
