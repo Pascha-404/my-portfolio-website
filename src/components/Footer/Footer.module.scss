@@ -1,4 +1,48 @@
 @use '../../sass/abstracts/' as *;
+@use '../../sass/base/fonts/' as *;
 
 .footer {
+	width: 100%;
+	margin-top: pxToRem(77px);
+
+	.upLink,
+	h6 {
+		text-transform: uppercase;
+	}
+
+	.upLink {
+		font-size: 20px;
+		font-weight: 700;
+		display: inline-block;
+		margin-left: pxToRem(144px);
+		margin-bottom: pxToRem(28px);
+		color: $txt-yellow;
+		border-bottom: 1px solid $txt-yellow;
+	}
+
+	.middleContent {
+		padding-left: pxToRem(144px);
+		@include flexbox();
+
+		img {
+			margin-right: pxToRem(372px);
+		}
+
+		.contactWrapper,
+		.sitemap {
+			@include flexbox(column);
+			@include justify-content(space-around);
+			margin-right: pxToRem(94px);
+
+			h6 {
+				font-size: 20px;
+				font-weight: 700;
+			}
+			div {
+				@include flexbox(column);
+				line-height: 28px;
+				font-family: $font-header;
+			}
+		}
+	}
 }
