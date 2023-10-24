@@ -43,12 +43,12 @@ function AboutSection(): JSX.Element {
 				</div>
 			</div>
 
-			<div className={styles.dataWrapper}>
+			<div className={styles.myExperience}>
 				<h5>
 					My <span className={styles.colorHighlight}>experience</span>
 				</h5>
 
-				<div className={styles.experienceContainer}>
+				<div className={styles.dataWrapper}>
 					<a href='/'>download my cv in pdf</a>
 
 					<div className={styles.dataCardWrapper}>
