@@ -1,3 +1,4 @@
+import DataListCard from '../DataListCard';
 import styles from './AboutSection.module.scss';
 
 function AboutSection(): JSX.Element {
@@ -19,25 +20,24 @@ function AboutSection(): JSX.Element {
 				<div className={styles.skills}>
 					<p>my skills:</p>
 
-					<div className={styles.skillsContainer}>
-						<h6>frontend</h6>
-
-						<ul className={styles.skillsList}>
-							<li>Proficient in HTML, CSS, and JavaScript.</li>
-							<li>Experience with modern frontend frameworks like React and Vue.js.</li>
-							<li>Responsive design and mobile-first development.</li>
-						</ul>
-					</div>
-
-					<div className={styles.skillsContainer}>
-						<h6>backend</h6>
-
-						<ul className={styles.skillsList}>
-							<li>Proficient in HTML, CSS, and JavaScript.</li>
-							<li>Experience with modern frontend frameworks like React and Vue.js.</li>
-							<li>Responsive design and mobile-first development.</li>
-						</ul>
-					</div>
+					<DataListCard
+						type='skill'
+						header='fontend'
+						data={[
+							'Proficient in HTML, CSS, and JavaScript.',
+							'Experience with modern frontend frameworks like React and Vue.js.',
+							'Responsive design and mobile-first development.',
+						]}
+					/>
+					<DataListCard
+						type='skill'
+						header='backend'
+						data={[
+							'Proficient in HTML, CSS, and JavaScript.',
+							'Experience with modern frontend frameworks like React and Vue.js.',
+							'Responsive design and mobile-first development.',
+						]}
+					/>
 				</div>
 			</div>
 
@@ -49,21 +49,28 @@ function AboutSection(): JSX.Element {
 				<div className={styles.experienceContainer}>
 					<a href='/'>download my cv in pdf</a>
 
-					<div className={styles.experienceContainer}>
-						<div>
-							<div>
-								<h6>company name</h6>
-								<h6>role</h6>
-							</div>
-							<p>2020-2023</p>
-						</div>
-
-						<ul className={styles.experienceList}>
-							<li>Proficient in HTML, CSS, and JavaScript.</li>
-							<li>Experience with modern frontend frameworks like React and Vue.js.</li>
-							<li>Responsive design and mobile-first development.</li>
-						</ul>
-					</div>
+					<DataListCard
+						type='experience'
+						header='company name'
+						role='role'
+						timeRange='2020-2023'
+						data={[
+							'Proficient in HTML, CSS, and JavaScript.',
+							'Experience with modern frontend frameworks like React and Vue.js.',
+							'Responsive design and mobile-first development.',
+						]}
+					/>
+					<DataListCard
+						type='experience'
+						header='company name'
+						role='role'
+						timeRange='2020-2023'
+						data={[
+							'Proficient in HTML, CSS, and JavaScript.',
+							'Experience with modern frontend frameworks like React and Vue.js.',
+							'Responsive design and mobile-first development.',
+						]}
+					/>
 				</div>
 			</div>
 
