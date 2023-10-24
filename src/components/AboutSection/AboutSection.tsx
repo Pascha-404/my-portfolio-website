@@ -17,31 +17,33 @@ function AboutSection(): JSX.Element {
 					Berlin where I can contribute my skills and grow as a developer.
 				</p>
 
-				<div className={styles.skills}>
+				<div className={styles.dataWrapper}>
 					<p>my skills:</p>
 
-					<DataListCard
-						type='skill'
-						header='fontend'
-						data={[
-							'Proficient in HTML, CSS, and JavaScript.',
-							'Experience with modern frontend frameworks like React and Vue.js.',
-							'Responsive design and mobile-first development.',
-						]}
-					/>
-					<DataListCard
-						type='skill'
-						header='backend'
-						data={[
-							'Proficient in HTML, CSS, and JavaScript.',
-							'Experience with modern frontend frameworks like React and Vue.js.',
-							'Responsive design and mobile-first development.',
-						]}
-					/>
+					<div className={styles.dataCardWrapper}>
+						<DataListCard
+							type='skill'
+							header='fontend'
+							data={[
+								'Proficient in HTML, CSS, and JavaScript.',
+								'Experience with modern frontend frameworks like React and Vue.js.',
+								'Responsive design and mobile-first development.',
+							]}
+						/>
+						<DataListCard
+							type='skill'
+							header='backend'
+							data={[
+								'Proficient in HTML, CSS, and JavaScript.',
+								'Experience with modern frontend frameworks like React and Vue.js.',
+								'Responsive design and mobile-first development.',
+							]}
+						/>
+					</div>
 				</div>
 			</div>
 
-			<div className={styles.myExperience}>
+			<div className={styles.dataWrapper}>
 				<h5>
 					My <span className={styles.colorHighlight}>experience</span>
 				</h5>
@@ -49,28 +51,30 @@ function AboutSection(): JSX.Element {
 				<div className={styles.experienceContainer}>
 					<a href='/'>download my cv in pdf</a>
 
-					<DataListCard
-						type='experience'
-						header='company name'
-						role='role'
-						timeRange='2020-2023'
-						data={[
-							'Proficient in HTML, CSS, and JavaScript.',
-							'Experience with modern frontend frameworks like React and Vue.js.',
-							'Responsive design and mobile-first development.',
-						]}
-					/>
-					<DataListCard
-						type='experience'
-						header='company name'
-						role='role'
-						timeRange='2020-2023'
-						data={[
-							'Proficient in HTML, CSS, and JavaScript.',
-							'Experience with modern frontend frameworks like React and Vue.js.',
-							'Responsive design and mobile-first development.',
-						]}
-					/>
+					<div className={styles.dataCardWrapper}>
+						<DataListCard
+							type='experience'
+							header='company name'
+							role='role'
+							timeRange='2020-2023'
+							data={[
+								'Proficient in HTML, CSS, and JavaScript.',
+								'Experience with modern frontend frameworks like React and Vue.js.',
+								'Responsive design and mobile-first development.',
+							]}
+						/>
+						<DataListCard
+							type='experience'
+							header='company name'
+							role='role'
+							timeRange='2020-2023'
+							data={[
+								'Proficient in HTML, CSS, and JavaScript.',
+								'Experience with modern frontend frameworks like React and Vue.js.',
+								'Responsive design and mobile-first development.',
+							]}
+						/>
+					</div>
 				</div>
 			</div>
 
