@@ -49,7 +49,7 @@ function AboutSection(): JSX.Element {
 				</h5>
 
 				<div className={styles.dataWrapper}>
-					<a href='/'>download my cv in pdf</a>
+					<a href='/' className={styles.cvDownload}>[download my cv in pdf]</a>
 
 					<div className={styles.dataCardWrapper}>
 						<DataListCard
