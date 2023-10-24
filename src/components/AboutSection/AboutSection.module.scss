@@ -1,5 +1,55 @@
 @use '../../sass/abstracts/' as *;
 
-.aboutSection{
-    
+.aboutSection {
+	width: 90%;
+	margin-top: pxToRem(76px);
+	// padding-right: pxToRem(120px);
+
+	h5 {
+		font-size: 50px;
+
+		.colorHighlight {
+			color: $txt-highlight-100;
+		}
+	}
+
+	.aboutMe {
+		h5 {
+			margin-bottom: pxToRem(20px);
+		}
+	}
+	.aboutMe,
+	.letsChat {
+		p {
+			font-size: 24px;
+			max-width: 1147px;
+		}
+	}
+
+	.dataWrapper {
+		width: 100%;
+		margin-top: pxToRem(76px);
+		margin-bottom: pxToRem(110px);
+		@include flexbox();
+		@include justify-content(space-between);
+
+		p,
+		.cvDownload {
+			font-size: 20px;
+			text-transform: uppercase;
+		}
+		p {
+			font-weight: 700;
+		}
+        .cvDownload{
+            color: $txt-blue;
+        }
+	}
+
+	.letsChat {
+		margin-bottom: pxToRem(248px);
+		h5 {
+			margin-bottom: pxToRem(60px);
+		}
+	}
 }
