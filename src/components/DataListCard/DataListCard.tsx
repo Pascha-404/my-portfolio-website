@@ -19,17 +19,17 @@ function DataListCard({
 		case 'experience':
 			return (
 				<div className={styles.dataListCard}>
-					<div>
+					<div className={styles.cardHeaderWrapper}>
 						<div>
-							<h6>{header}</h6>
-							<h6>{role}</h6>
+							<h6 className={styles.cardHeader}>{header}</h6>
+							<h6 className={styles.cardRole}>{role}</h6>
 						</div>
-						<p>{timeRange}</p>
+						<p className={styles.cardTimeRange}>{timeRange}</p>
 					</div>
 
-					<ul className={styles.dataList}>
+					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.dataItem}>{item}</li>
+							<li className={styles.cardListItem}>{item}</li>
 						))}
 					</ul>
 				</div>
@@ -37,11 +37,11 @@ function DataListCard({
 		case 'skill':
 			return (
 				<div className={styles.dataListCard}>
-					<h6>{header}</h6>
+					<h6 className={styles.cardHeader}>{header}</h6>
 
-					<ul className={styles.dataList}>
+					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.dataItem}>{item}</li>
+							<li className={styles.cardListItem}>{item}</li>
 						))}
 					</ul>
 				</div>

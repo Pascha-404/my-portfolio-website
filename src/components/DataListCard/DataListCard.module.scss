@@ -1,5 +1,27 @@
 @use '../../sass/abstracts/' as *;
+@use '../../sass/base/fonts.scss' as *;
 
-.dataListCard{
-    
+.dataListCard {
+	width: 100%;
+
+	@include flexbox(column);
+
+	.cardHeaderWrapper,
+	.cardHeaderWrapper div {
+		@include flexbox();
+        
+		p.cardTimeRange {
+			font-family: $font-header;
+			font-size: 20px;
+			font-weight: 300;
+		}
+	}
+
+	.cardHeader,
+	.cardRole {
+		text-transform: uppercase;
+	}
+	.cardHeader {
+		color: $txt-highlight-100;
+	}
 }
