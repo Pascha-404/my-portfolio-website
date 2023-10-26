@@ -23,7 +23,7 @@ function AboutSection(): JSX.Element {
 					<div className={styles.dataCardWrapper}>
 						<DataListCard
 							type='skill'
-							header='fontend'
+							header='frontend'
 							data={[
 								'Proficient in HTML, CSS, and JavaScript.',
 								'Experience with modern frontend frameworks like React and Vue.js.',
