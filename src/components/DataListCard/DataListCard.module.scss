@@ -3,12 +3,15 @@
 
 .dataListCard {
 	width: 100%;
+	margin-bottom: pxToRem(43px);
 
 	@include flexbox(column);
 
 	.cardHeaderWrapper,
 	.cardHeaderWrapper div {
 		@include flexbox();
+		@include justify-content(space-between);
+		@include align-items(flex-end);
         
 		p.cardTimeRange {
 			font-family: $font-header;
@@ -20,8 +23,30 @@
 	.cardHeader,
 	.cardRole {
 		text-transform: uppercase;
+		font-family: $font-header;
+		font-size: 20px;
+		font-weight: 700;
 	}
 	.cardHeader {
 		color: $txt-highlight-100;
+		margin-right: pxToRem(19px);
+	}
+
+	.cardList{
+		margin-top: pxToRem(30px);
+
+		.cardListItem{
+			font-size: 18px;
+			line-height: 28px;
+
+			&:before{
+				content: "";
+				background: url(/icons/icon-bulletpoint.svg) no-repeat;
+				width: 13px;
+				height: 13px;
+				display: inline-block;
+				margin-right: pxToRem(37px);
+			}
+		}
 	}
 }
