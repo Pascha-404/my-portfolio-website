@@ -1,7 +1,7 @@
 @use '../../sass/abstracts/' as *;
 
 .heroSection {
-	width: 90vw;
+	width: 90%;
 	height: 100vh;
 	max-height: 837px;
 	@include flexbox();
