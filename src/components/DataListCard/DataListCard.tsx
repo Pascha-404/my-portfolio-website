@@ -70,7 +70,7 @@ function DataListCard({
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item.data}</li>
+							<li className={styles.cardListItem}><span className={styles.colorHighlight}>{item.header + ':'}</span>{" "}{item.data}</li>
 						))}
 					</ul>
 				</div>
