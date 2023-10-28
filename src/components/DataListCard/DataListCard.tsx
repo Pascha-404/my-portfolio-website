@@ -1,11 +1,16 @@
 import styles from './DataListCard.module.scss';
 
+interface Data{
+	header?: string;
+	data: string;
+}
+
 interface DataListCardProps {
-	type: 'home_experience' | 'home_skill' | 'project_bulletlist';
+	type: 'home_experience' | 'home_skill' | 'project_bulletList' | 'project_highlightList';
 	header: string;
 	role?: string;
 	timeRange?: string;
-	data: string[];
+	data: Data[];
 }
 
 function DataListCard({
@@ -29,7 +34,7 @@ function DataListCard({
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item}</li>
+							<li className={styles.cardListItem}>{item.data}</li>
 						))}
 					</ul>
 				</div>
@@ -41,19 +46,31 @@ function DataListCard({
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item}</li>
+							<li className={styles.cardListItem}>{item.data}</li>
 						))}
 					</ul>
 				</div>
 			);
-		case 'project_bulletlist':
+		case 'project_bulletList':
 			return (
 				<div className={styles.dataListCard}>
 					<h2 className={styles.cardHeader}>{header}</h2>
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item}</li>
+							<li className={styles.cardListItem}>{item.data}</li>
+						))}
+					</ul>
+				</div>
+			);
+		case 'project_highlightList':
+			return (
+				<div className={styles.dataListCard}>
+					<h2 className={styles.cardHeader}>{header}</h2>
+
+					<ul className={styles.cardList}>
+						{data.map(item => (
+							<li className={styles.cardListItem}>{item.data}</li>
 						))}
 					</ul>
 				</div>
