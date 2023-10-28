@@ -1,6 +1,6 @@
 import styles from './DataListCard.module.scss';
 
-interface Data{
+interface Data {
 	header?: string;
 	data: string;
 }
@@ -68,11 +68,12 @@ function DataListCard({
 				<div className={styles.dataListCard}>
 					<h2 className={styles.cardHeader}>{header}</h2>
 
-					<ul className={styles.cardList}>
-						{data.map(item => (
-							<li className={styles.cardListItem}><span className={styles.colorHighlight}>{item.header + ':'}</span>{" "}{item.data}</li>
-						))}
-					</ul>
+					{data.map(item => (
+						<p className={styles.cardListItem}>
+							<span className={styles.colorHighlight}>{item.header + ':'}</span>{' '}
+							{item.data}
+						</p>
+					))}
 				</div>
 			);
 		default:
