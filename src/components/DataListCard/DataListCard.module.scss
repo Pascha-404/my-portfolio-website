@@ -12,7 +12,7 @@
 		@include flexbox();
 		@include justify-content(space-between);
 		@include align-items(flex-end);
-        
+
 		p.cardTimeRange {
 			font-family: $font-header;
 			font-size: 20px;
@@ -30,23 +30,19 @@
 	.cardHeader {
 		color: $txt-highlight-100;
 		margin-right: pxToRem(19px);
+		margin-bottom: pxToRem(30px);
 	}
-	h2.cardHeader{
+	h2.cardHeader {
 		color: $txt-light-100;
 	}
 
-	.cardList{
-		margin-top: pxToRem(30px);
-
-		.cardListItem{
+	.cardList {
+		.cardListItem {
 			font-size: 18px;
 			line-height: 28px;
 
-			.colorHighlight{
-				color: $txt-highlight-100;
-			}
-			&:before{
-				content: "";
+			&:before {
+				content: '';
 				background: url(/icons/icon-bulletpoint.svg) no-repeat;
 				width: 13px;
 				height: 13px;
@@ -54,5 +50,8 @@
 				margin-right: pxToRem(37px);
 			}
 		}
+	}
+	.colorHighlight {
+		color: $txt-highlight-100;
 	}
 }
