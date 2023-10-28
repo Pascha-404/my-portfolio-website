@@ -25,18 +25,22 @@ function AboutSection(): JSX.Element {
 							type='home_skill'
 							header='frontend'
 							data={[
-								'Proficient in HTML, CSS, and JavaScript.',
-								'Experience with modern frontend frameworks like React and Vue.js.',
-								'Responsive design and mobile-first development.',
+								{ data: 'Proficient in HTML, CSS, and JavaScript.' },
+								{
+									data: 'Experience with modern frontend frameworks like React and Vue.js.',
+								},
+								{ data: 'Responsive design and mobile-first development.' },
 							]}
 						/>
 						<DataListCard
 							type='home_skill'
 							header='backend'
 							data={[
-								'Proficient in HTML, CSS, and JavaScript.',
-								'Experience with modern frontend frameworks like React and Vue.js.',
-								'Responsive design and mobile-first development.',
+								{ data: 'Proficient in HTML, CSS, and JavaScript.' },
+								{
+									data: 'Experience with modern frontend frameworks like React and Vue.js.',
+								},
+								{ data: 'Responsive design and mobile-first development.' },
 							]}
 						/>
 					</div>
@@ -49,7 +53,9 @@ function AboutSection(): JSX.Element {
 				</h5>
 
 				<div className={styles.dataWrapper}>
-					<a href='/' className={styles.cvDownload}>[download my cv in pdf]</a>
+					<a href='/' className={styles.cvDownload}>
+						[download my cv in pdf]
+					</a>
 
 					<div className={styles.dataCardWrapper}>
 						<DataListCard
@@ -58,9 +64,11 @@ function AboutSection(): JSX.Element {
 							role='role'
 							timeRange='2020-2023'
 							data={[
-								'Proficient in HTML, CSS, and JavaScript.',
-								'Experience with modern frontend frameworks like React and Vue.js.',
-								'Responsive design and mobile-first development.',
+								{ data: 'Proficient in HTML, CSS, and JavaScript.' },
+								{
+									data: 'Experience with modern frontend frameworks like React and Vue.js.',
+								},
+								{ data: 'Responsive design and mobile-first development.' },
 							]}
 						/>
 						<DataListCard
@@ -69,9 +77,11 @@ function AboutSection(): JSX.Element {
 							role='role'
 							timeRange='2020-2023'
 							data={[
-								'Proficient in HTML, CSS, and JavaScript.',
-								'Experience with modern frontend frameworks like React and Vue.js.',
-								'Responsive design and mobile-first development.',
+								{ data: 'Proficient in HTML, CSS, and JavaScript.' },
+								{
+									data: 'Experience with modern frontend frameworks like React and Vue.js.',
+								},
+								{ data: 'Responsive design and mobile-first development.' },
 							]}
 						/>
 					</div>
