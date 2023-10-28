@@ -42,6 +42,9 @@
 			font-size: 18px;
 			line-height: 28px;
 
+			.colorHighlight{
+				color: $txt-highlight-100;
+			}
 			&:before{
 				content: "";
 				background: url(/icons/icon-bulletpoint.svg) no-repeat;
