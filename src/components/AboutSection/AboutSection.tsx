@@ -22,7 +22,7 @@ function AboutSection(): JSX.Element {
 
 					<div className={styles.dataCardWrapper}>
 						<DataListCard
-							type='skill'
+							type='home_skill'
 							header='frontend'
 							data={[
 								'Proficient in HTML, CSS, and JavaScript.',
@@ -31,7 +31,7 @@ function AboutSection(): JSX.Element {
 							]}
 						/>
 						<DataListCard
-							type='skill'
+							type='home_skill'
 							header='backend'
 							data={[
 								'Proficient in HTML, CSS, and JavaScript.',
@@ -53,7 +53,7 @@ function AboutSection(): JSX.Element {
 
 					<div className={styles.dataCardWrapper}>
 						<DataListCard
-							type='experience'
+							type='home_experience'
 							header='company name'
 							role='role'
 							timeRange='2020-2023'
@@ -64,7 +64,7 @@ function AboutSection(): JSX.Element {
 							]}
 						/>
 						<DataListCard
-							type='experience'
+							type='home_experience'
 							header='company name'
 							role='role'
 							timeRange='2020-2023'
