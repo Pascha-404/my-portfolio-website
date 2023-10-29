@@ -11,14 +11,14 @@ function Project({ params }: ProjectParams): JSX.Element {
 	return (
 		<main className={styles.main}>
 			<h1>
-				<span className={styles.uppercase}>project:</span>
+				<span className={styles.uppercase}>project:</span>{' '}
 				<span className={styles.colorHighlight}>xy</span>
 			</h1>
 			<div className={styles.roleDateWrapper}>
 				<p>role</p>
 				<p>date</p>
 			</div>
-			<Image src={defaultImage} alt='Default image showing two phones' priority />
+			<Image src={defaultImage} alt='Default image showing two phones' priority className={styles.projectImage} />
 			<div className={styles.overviewWrapper}>
 				<h2 className={styles.uppercase}>project overview</h2>
 				<p>
@@ -95,7 +95,7 @@ function Project({ params }: ProjectParams): JSX.Element {
 				/>
 			</div>
 
-			<div className={styles.technologys}>
+			<div className={styles.technologysWrapper}>
 				<h2 className={styles.uppercase}>technologies used</h2>
 				<div>
 					<p>Frontend: React, Redux</p>
