@@ -4,6 +4,7 @@
 	width: 90%;
 	padding-left: pxToRem(144px);
 	margin-top: pxToRem(120px);
+	margin-bottom: pxToRem(300px);
 	max-width: 1161px;
 
 	.projectImage,
@@ -37,7 +38,7 @@
 		margin-bottom: pxToRem(62px);
 	}
 
-	.overviewWrapper {
+	.overviewWrapper, .technologysWrapper{
 		margin-bottom: pxToRem(60px);
 
 		h2 {
@@ -45,6 +46,16 @@
 			font-size: 20px;
 			font-weight: 700;
 			margin-bottom: pxToRem(43px);
+		}
+	}
+
+	.approachWrapper{
+		p{
+			margin-bottom: pxToRem(20px);
+
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 
