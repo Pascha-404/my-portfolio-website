@@ -1,0 +1,69 @@
+@use '@/sass/abstracts' as *;
+
+.main {
+	width: 90%;
+	padding-left: pxToRem(144px);
+	margin-top: pxToRem(120px);
+	margin-bottom: pxToRem(300px);
+	max-width: 1161px;
+
+	.projectImage,
+	.overviewWrapper,
+	.challengesWrapper,
+	.approachWrapper,
+	.resultsWrapper {
+		margin-bottom: pxToRem(64px);
+	}
+
+	h1 {
+		font-size: 50px;
+		margin-bottom: pxToRem(36px);
+	}
+
+	.roleDateWrapper {
+		margin-bottom: pxToRem(18px);
+
+		@include flexbox();
+		@include justify-content(space-between);
+
+		p {
+			font-weight: 700;
+		}
+	}
+
+	.projectImage {
+		width: 100%;
+		max-height: 420px;
+		object-fit: cover;
+		margin-bottom: pxToRem(62px);
+	}
+
+	.overviewWrapper, .technologysWrapper{
+		margin-bottom: pxToRem(60px);
+
+		h2 {
+			color: $txt-light-100;
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: pxToRem(43px);
+		}
+	}
+
+	.approachWrapper{
+		p{
+			margin-bottom: pxToRem(20px);
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.uppercase {
+		text-transform: uppercase;
+	}
+
+	.colorHighlight {
+		color: $txt-highlight-100;
+	}
+}

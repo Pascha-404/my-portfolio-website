@@ -1,11 +1,16 @@
 import styles from './DataListCard.module.scss';
 
+interface Data {
+	header?: string;
+	data: string;
+}
+
 interface DataListCardProps {
-	type: 'experience' | 'skill';
+	type: 'home_experience' | 'home_skill' | 'project_bulletList' | 'project_highlightList';
 	header: string;
 	role?: string;
 	timeRange?: string;
-	data: string[];
+	data: Data[];
 }
 
 function DataListCard({
@@ -16,7 +21,7 @@ function DataListCard({
 	data,
 }: DataListCardProps): JSX.Element {
 	switch (type) {
-		case 'experience':
+		case 'home_experience':
 			return (
 				<div className={styles.dataListCard}>
 					<div className={styles.cardHeaderWrapper}>
@@ -29,21 +34,46 @@ function DataListCard({
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item}</li>
+							<li className={styles.cardListItem}>{item.data}</li>
 						))}
 					</ul>
 				</div>
 			);
-		case 'skill':
+		case 'home_skill':
 			return (
 				<div className={styles.dataListCard}>
 					<h6 className={styles.cardHeader}>{header}</h6>
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item}</li>
+							<li className={styles.cardListItem}>{item.data}</li>
 						))}
 					</ul>
+				</div>
+			);
+		case 'project_bulletList':
+			return (
+				<div className={styles.dataListCard}>
+					<h2 className={styles.cardHeader}>{header}</h2>
+
+					<ul className={styles.cardList}>
+						{data.map(item => (
+							<li className={styles.cardListItem}>{item.data}</li>
+						))}
+					</ul>
+				</div>
+			);
+		case 'project_highlightList':
+			return (
+				<div className={styles.dataListCard}>
+					<h2 className={styles.cardHeader}>{header}</h2>
+
+					{data.map(item => (
+						<p className={styles.cardListItem}>
+							<span className={styles.colorHighlight}>{item.header + ':'}</span>{' '}
+							{item.data}
+						</p>
+					))}
 				</div>
 			);
 		default:
