@@ -11,7 +11,6 @@
 	.cardHeaderWrapper div {
 		@include flexbox();
 		@include justify-content(space-between);
-		@include align-items(flex-end);
 
 		p.cardTimeRange {
 			font-family: $font-header;
@@ -38,14 +37,17 @@
 
 	.cardList {
 		.cardListItem {
+			@include flexbox();
+			@include align-items(center);
 			font-size: 18px;
 			line-height: 28px;
-
 			&:before {
 				content: '';
 				background: url(/icons/icon-bulletpoint.svg) no-repeat;
 				width: 13px;
 				height: 13px;
+				min-width: 13px;
+				min-height: 13px;
 				display: inline-block;
 				margin-right: pxToRem(37px);
 			}
