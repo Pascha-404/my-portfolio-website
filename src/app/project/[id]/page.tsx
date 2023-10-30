@@ -18,7 +18,9 @@ function Project({ params }: ProjectParams): JSX.Element {
 				<p>role</p>
 				<p>date</p>
 			</div>
+
 			<Image src={defaultImage} alt='Default image showing two phones' priority className={styles.projectImage} />
+			
 			<div className={styles.overviewWrapper}>
 				<h2 className={styles.uppercase}>project overview</h2>
 				<p>
@@ -28,6 +30,7 @@ function Project({ params }: ProjectParams): JSX.Element {
 					efficiently. This case study outlines the key aspects of this project.
 				</p>
 			</div>
+
 			<div className={styles.challengesWrapper}>
 				<DataListCard
 					type='project_bulletList'
@@ -45,6 +48,7 @@ function Project({ params }: ProjectParams): JSX.Element {
 					]}
 				/>
 			</div>
+
 			<div className={styles.approachWrapper}>
 				<DataListCard
 					type='project_highlightList'
@@ -77,6 +81,7 @@ function Project({ params }: ProjectParams): JSX.Element {
 					]}
 				/>
 			</div>
+			
 			<div className={styles.resultsWrapper}>
 				<DataListCard
 					type='project_bulletList'
