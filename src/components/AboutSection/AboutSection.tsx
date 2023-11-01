@@ -3,7 +3,7 @@ import styles from './AboutSection.module.scss';
 
 function AboutSection(): JSX.Element {
 	return (
-		<section className={styles.aboutSection}>
+		<section id='aboutSection' className={styles.aboutSection}>
 			<div className={styles.aboutMe}>
 				<h5>
 					About <span className={styles.colorHighlight}>me</span>
