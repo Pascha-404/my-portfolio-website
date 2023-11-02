@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 import styles from './NavigationButton.module.scss';
 import React from 'react';
