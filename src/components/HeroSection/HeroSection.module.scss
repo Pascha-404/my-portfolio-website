@@ -38,15 +38,6 @@
 			@include flexbox();
 			@include align-items(center);
 			@include justify-content(space-between);
-
-			a {
-				text-transform: uppercase;
-				color: $txt-yellow;
-				border-bottom: 1px solid $txt-yellow;
-				font-size: 20px;
-				font-weight: 700;
-				cursor: pointer;
-			}
 		}
 	}
 
