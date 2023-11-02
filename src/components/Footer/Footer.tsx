@@ -2,15 +2,21 @@ import { iconArrowUp } from '../../../public/icons';
 import personalLogo from '../../../public/personal-logo.svg';
 
 import Image from 'next/image';
+import NavigationButton from '../NavigationButton';
 
 import styles from './Footer.module.scss';
 
 function Footer(): JSX.Element {
 	return (
 		<footer className={styles.footer}>
-			<a className={styles.upLink} href='/'>
-				up to the beginning
-			</a>
+			<div className={styles.upLinkWrapper}>
+				<NavigationButton
+					text='up to the beginning'
+					style='underlined'
+					targetId='navbar'
+				/>
+			</div>
+
 			<div className={styles.middleContent}>
 				<Image src={iconArrowUp} alt='Yellow arrow pointing upwards' />
 
