@@ -1,0 +1,27 @@
+@use '../../sass/abstracts/' as *;
+
+.navigationButton {
+	text-transform: uppercase;
+
+	&.normal,
+	&.underlined {
+		color: $txt-yellow;
+	}
+
+	&.button {
+		width: pxToRem(196px);
+		height: pxToRem(49px);
+        text-align: center;
+		color: $txt-blue;
+		border-radius: 2px;
+		border: 3px solid $txt-blue;
+
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+}
