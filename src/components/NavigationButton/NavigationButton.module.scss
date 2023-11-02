@@ -8,18 +8,26 @@
 		color: $txt-yellow;
 	}
 
+	&.underlined {
+		border-bottom: 1px solid $txt-yellow;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
 	&.button {
+		font-size: 20px;
+		font-weight: 700;
 		width: pxToRem(196px);
 		height: pxToRem(49px);
-        text-align: center;
+		text-align: center;
 		color: $txt-blue;
 		border-radius: 2px;
 		border: 3px solid $txt-blue;
 
-        @include flexbox();
-        @include justify-content(center);
-        @include align-items(center);
-        
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+
 		&:active {
 			transform: scale(0.9);
 		}
