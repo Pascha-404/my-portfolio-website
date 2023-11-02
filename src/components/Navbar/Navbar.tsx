@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Logo from '../../../public/personal-logo.svg';
 
 import LanguageButton from '../LanguageButton';
-import ContactButton from '../ContactButton';
+import NavigationButton from '../NavigationButton';
 
 import styles from './Navbar.module.scss';
 
@@ -10,20 +10,22 @@ function Navbar(): JSX.Element {
 	return (
 		<nav id='navbar' className={styles.navbar}>
 			<div>
-				<Image
-					src={Logo}
-					width={200}
-					height={37}
-					alt='Patrick Pavliuchik typed in code syntax'
-					priority
-				/>
+				<a href="/">
+					<Image
+						src={Logo}
+						width={200}
+						height={37}
+						alt='Patrick Pavliuchik typed in code syntax'
+						priority
+					/>
+				</a>
 			</div>
 			<div className={styles.navbarLinks}>
 				<LanguageButton currentLanguage='eng' />
-				<a href=''>about</a>
-				<a href=''>projects</a>
-				<a href=''>contacts</a>
-				<ContactButton text="Let's talk?"/>
+				<NavigationButton text='about' style='normal' targetId='aboutSection' />
+				<NavigationButton text='projects' style='normal' targetId='projectsSection' />
+				<NavigationButton text='contact' style='normal' targetId='contactSection' />
+				<NavigationButton text="Let's talk?" style='button' targetId='contactSection'/>
 			</div>
 		</nav>
 	);
