@@ -12,10 +12,5 @@
         @include flexbox();
         @include justify-content(space-around);
         @include align-items(center);
-
-        a{
-            text-transform: uppercase;
-            color: $txt-yellow;
-        }
     }
 }
