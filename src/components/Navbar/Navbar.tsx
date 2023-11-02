@@ -8,7 +8,7 @@ import styles from './Navbar.module.scss';
 
 function Navbar(): JSX.Element {
 	return (
-		<nav className={styles.navbar}>
+		<nav id='navbar' className={styles.navbar}>
 			<div>
 				<Image
 					src={Logo}
