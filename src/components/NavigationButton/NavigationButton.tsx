@@ -1,8 +1,11 @@
-"use client"
+'use client';
+
+import React from 'react';
+import { useRouter } from 'next/navigation';
 
 import Link from 'next/link';
+
 import styles from './NavigationButton.module.scss';
-import React from 'react';
 
 interface NavigationButtonProps {
 	style: 'button' | 'underlined' | 'normal';
@@ -11,14 +14,18 @@ interface NavigationButtonProps {
 }
 
 function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX.Element {
+	const router = useRouter();
+
 	function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
 		e.preventDefault();
 		const targetElement = document.querySelector(`#${targetId}`);
 
+		// If targetElement exists (Route is '/') scroll to element
 		if (targetElement) {
 			targetElement.scrollIntoView({ behavior: 'smooth' });
 		} else {
-			console.log('Section not here')
+			// If element doesn't exists (Outside of Route '/') go to Route '/' and scroll to section
+			router.push(`/#${targetId}`);
 		}
 	}
 
