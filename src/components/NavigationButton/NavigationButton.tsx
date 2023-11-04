@@ -8,7 +8,7 @@ import Link from 'next/link';
 import styles from './NavigationButton.module.scss';
 
 interface NavigationButtonProps {
-	style: 'button' | 'underlined' | 'normal';
+	style: 'button' | 'underlined' | 'normal' | 'normalSmall';
 	text: string;
 	targetId: string; // section where view should go to
 }
@@ -36,6 +36,15 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 					href='#'
 					onClick={handleClick}
 					className={`${styles.navigationButton} ${styles.normal}`}>
+					{text}
+				</Link>
+			);
+		case 'normalSmall':
+			return (
+				<Link
+					href='#'
+					onClick={handleClick}
+					className={`${styles.navigationButton} ${styles.normalSmall}`}>
 					{text}
 				</Link>
 			);

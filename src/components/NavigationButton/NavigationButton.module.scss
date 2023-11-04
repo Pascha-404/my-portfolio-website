@@ -1,11 +1,16 @@
 @use '../../sass/abstracts/' as *;
 
 .navigationButton {
-	text-transform: uppercase;
-
 	&.normal,
 	&.underlined {
 		color: $txt-yellow;
+		text-transform: uppercase;
+	}
+
+	&.normalSmall {
+		text-transform: capitalize;
+		color: $txt-light-50;
+		font-size: 16px;
 	}
 
 	&.underlined {
@@ -15,6 +20,7 @@
 	}
 
 	&.button {
+		text-transform: uppercase;
 		font-size: 20px;
 		font-weight: 700;
 		width: pxToRem(196px);
