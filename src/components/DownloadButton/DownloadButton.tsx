@@ -1,22 +1,29 @@
+'use client';
+
 import React, { useRef } from 'react';
 
 import styles from './DownloadButton.module.scss';
 
-function DownloadButton(text: string) {
+interface DownloadButtonProps {
+	text: string;
+	id: string;
+}
+
+function DownloadButton({ text, id }: DownloadButtonProps) {
 	const downloadRef = useRef<HTMLAnchorElement | null>(null);
 
 	const handleDownload = () => {
-		const fileUrl = './personal-logo.svg';
+		const fileUrl = './patrick-hero-img.png';
 
 		if (downloadRef.current) {
 			downloadRef.current.href = fileUrl;
-			downloadRef.current.click();
 		}
 	};
 
 	return (
 		<a
 			ref={downloadRef}
+			id={id}
 			className={styles.downloadButton}
 			href='#'
 			download
