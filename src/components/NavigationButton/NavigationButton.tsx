@@ -30,7 +30,7 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 	}
 
 	switch (style) {
-		case 'normal':
+		case 'normal': // will be upercased with yellow text
 			return (
 				<Link
 					href='#'
@@ -39,7 +39,7 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 					{text}
 				</Link>
 			);
-		case 'normalSmall':
+		case 'normalSmall': // will be capitalized with white text
 			return (
 				<Link
 					href='#'
@@ -49,7 +49,7 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 				</Link>
 			);
 
-		case 'underlined':
+		case 'underlined': // will be upercased AND underlined with yellow text
 			return (
 				<Link
 					href='#'
@@ -59,7 +59,7 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 				</Link>
 			);
 
-		case 'button':
+		case 'button': // will be upercased with blue text and borders
 			return (
 				<Link
 					href='#'
