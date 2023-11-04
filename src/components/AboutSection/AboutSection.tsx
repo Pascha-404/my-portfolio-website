@@ -1,4 +1,5 @@
 import DataListCard from '../DataListCard';
+import DownloadButton from '../DownloadButton';
 import styles from './AboutSection.module.scss';
 
 function AboutSection(): JSX.Element {
@@ -53,9 +54,7 @@ function AboutSection(): JSX.Element {
 				</h5>
 
 				<div className={styles.dataWrapper}>
-					<a id='resume' href='/' className={styles.cvDownload}>
-						[download my cv in pdf]
-					</a>
+					<DownloadButton text={'[download my cv as pdf]'} id='resume' />
 
 					<div className={styles.dataCardWrapper}>
 						<DataListCard

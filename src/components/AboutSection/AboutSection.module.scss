@@ -32,17 +32,11 @@
 		@include flexbox();
 		@include justify-content(space-between);
 
-		p,
-		.cvDownload {
+		p {
 			font-size: 20px;
 			text-transform: uppercase;
-		}
-		p {
 			font-weight: 700;
 		}
-        .cvDownload{
-            color: $txt-blue;
-        }
 	}
 
 	.letsChat {
