@@ -41,7 +41,9 @@ function Footer(): JSX.Element {
 
 			<div className={styles.bottomContent}>
 				<div className={styles.logoWrapper}>
-					<Image src={personalLogo} alt='Patrick Pavliuchik typed in code syntax' />
+					<a href="/">
+						<Image src={personalLogo} alt='Patrick Pavliuchik typed in code syntax' />
+					</a>
 					<p>&copy;</p>
 				</div>
 
