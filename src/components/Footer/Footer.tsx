@@ -32,9 +32,9 @@ function Footer(): JSX.Element {
 				<div className={styles.sitemap}>
 					<h6>sitemap</h6>
 					<div>
-						<a href='/'>Projects</a>
-						<a href='/'>About me</a>
-						<a href='/'>Resume</a>
+						<NavigationButton text='projects' targetId='projectsSection' style='normalSmall'/>
+						<NavigationButton text='about me' targetId='aboutSection' style='normalSmall'/>
+						<NavigationButton text='resume' targetId='resume' style='normalSmall'/>
 					</div>
 				</div>
 			</div>
