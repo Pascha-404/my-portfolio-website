@@ -1,8 +1,8 @@
 import HeroImg from '../../../public/patrick-hero-img.png';
-import {iconArrow} from '../../../public/icons';
+import { iconArrow } from '../../../public/icons';
 
 import Image from 'next/image';
-import ContactButton from '../ContactButton';
+import NavigationButton from '../NavigationButton';
 
 import styles from './HeroSection.module.scss';
 
@@ -29,8 +29,12 @@ function HeroSection(): JSX.Element {
 				<p>Maybe we could make a good fit?</p>
 
 				<div className={styles.links}>
-					<a href=''>more about me, my experience and portfolio</a>
-					<ContactButton text='book a call' />
+					<NavigationButton
+						text='more about me, my experience and portfolio'
+						style='underlined'
+						targetId='projectsSection'
+					/>
+					<NavigationButton text='book a call' style='button' targetId='contactSection' />
 				</div>
 
 				<Image src={iconArrow} alt='Long arrow icon pointing downwards' />

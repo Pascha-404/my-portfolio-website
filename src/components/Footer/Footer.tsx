@@ -2,15 +2,21 @@ import { iconArrowUp } from '../../../public/icons';
 import personalLogo from '../../../public/personal-logo.svg';
 
 import Image from 'next/image';
+import NavigationButton from '../NavigationButton';
 
 import styles from './Footer.module.scss';
 
 function Footer(): JSX.Element {
 	return (
 		<footer className={styles.footer}>
-			<a className={styles.upLink} href='/'>
-				up to the beginning
-			</a>
+			<div className={styles.upLinkWrapper}>
+				<NavigationButton
+					text='up to the beginning'
+					style='underlined'
+					targetId='navbar'
+				/>
+			</div>
+
 			<div className={styles.middleContent}>
 				<Image src={iconArrowUp} alt='Yellow arrow pointing upwards' />
 
@@ -26,16 +32,18 @@ function Footer(): JSX.Element {
 				<div className={styles.sitemap}>
 					<h6>sitemap</h6>
 					<div>
-						<a href='/'>Projects</a>
-						<a href='/'>About me</a>
-						<a href='/'>Resume</a>
+						<NavigationButton text='projects' targetId='projectsSection' style='normalSmall'/>
+						<NavigationButton text='about me' targetId='aboutSection' style='normalSmall'/>
+						<NavigationButton text='resume' targetId='resume' style='normalSmall'/>
 					</div>
 				</div>
 			</div>
 
 			<div className={styles.bottomContent}>
 				<div className={styles.logoWrapper}>
-					<Image src={personalLogo} alt='Patrick Pavliuchik typed in code syntax' />
+					<a href="/">
+						<Image src={personalLogo} alt='Patrick Pavliuchik typed in code syntax' />
+					</a>
 					<p>&copy;</p>
 				</div>
 

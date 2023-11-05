@@ -1,9 +1,10 @@
 import DataListCard from '../DataListCard';
+import DownloadButton from '../DownloadButton';
 import styles from './AboutSection.module.scss';
 
 function AboutSection(): JSX.Element {
 	return (
-		<section className={styles.aboutSection}>
+		<section id='aboutSection' className={styles.aboutSection}>
 			<div className={styles.aboutMe}>
 				<h5>
 					About <span className={styles.colorHighlight}>me</span>
@@ -53,9 +54,7 @@ function AboutSection(): JSX.Element {
 				</h5>
 
 				<div className={styles.dataWrapper}>
-					<a href='/' className={styles.cvDownload}>
-						[download my cv in pdf]
-					</a>
+					<DownloadButton text={'[download my cv as pdf]'} id='resume' />
 
 					<div className={styles.dataCardWrapper}>
 						<DataListCard

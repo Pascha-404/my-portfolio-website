@@ -10,14 +10,11 @@
 		text-transform: uppercase;
 	}
 
-	.upLink {
-		font-size: 20px;
-		font-weight: 700;
+	.upLinkWrapper {
 		display: inline-block;
 		margin-left: pxToRem(144px);
 		margin-bottom: pxToRem(28px);
-		color: $txt-yellow;
-		border-bottom: 1px solid $txt-yellow;
+		
 	}
 
 	.middleContent {
