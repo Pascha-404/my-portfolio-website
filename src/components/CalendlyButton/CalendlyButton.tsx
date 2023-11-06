@@ -17,7 +17,7 @@ function CalendlyButton({ text }: CalendlyButtonProps): JSX.Element | null {
 			setRootElement(document.getElementById('root'));
 		}
 	});
-	
+
 	return rootElement ? (
 		<PopupButton
 			className={styles.calendlyButton}
