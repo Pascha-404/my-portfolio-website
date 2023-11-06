@@ -9,7 +9,7 @@ interface CalendlyButtonProps {
 	text: string;
 }
 
-function CalendlyButton({ text }: CalendlyButtonProps): JSX.Element | null {
+function CalendlyButton({ text }: CalendlyButtonProps): JSX.Element {
 	const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
 
 	useEffect(() => {
@@ -25,7 +25,10 @@ function CalendlyButton({ text }: CalendlyButtonProps): JSX.Element | null {
 			rootElement={rootElement}
 			text={text}
 		/>
-	) : null;
+	) : (
+		// return dummy button with styling to show on render till PopupButton appears
+		<button className={styles.calendlyButton}>{text}</button>
+	);
 }
 
 export default CalendlyButton;
