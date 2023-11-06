@@ -1,4 +1,20 @@
 @use '@/sass/abstracts/' as *;
 
 .contactSection {
+	margin-bottom: pxToRem(248px);
+
+	h5 {
+		margin-bottom: pxToRem(60px);
+		font-size: 50px;
+
+		.colorHighlight {
+			color: $txt-highlight-100;
+		}
+	}
+
+	p {
+		font-size: 24px;
+		max-width: 1147px;
+		margin-bottom: pxToRem(30px);
+	}
 }
