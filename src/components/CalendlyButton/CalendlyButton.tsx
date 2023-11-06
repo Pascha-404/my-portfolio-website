@@ -5,7 +5,11 @@ import { PopupButton } from 'react-calendly';
 
 import styles from './CalendlyButton.module.scss';
 
-function CalendlyButton(): JSX.Element {
+interface CalendlyButtonProps {
+	text: string;
+}
+
+function CalendlyButton({ text }: CalendlyButtonProps): JSX.Element | null {
 	const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
 
 	useEffect(() => {
@@ -13,14 +17,15 @@ function CalendlyButton(): JSX.Element {
 			setRootElement(document.getElementById('root'));
 		}
 	});
-	return (
+	
+	return rootElement ? (
 		<PopupButton
 			className={styles.calendlyButton}
 			url='https://calendly.com/p-pavliuchik/meeting'
 			rootElement={rootElement}
-			text='Click here to schedule!'
+			text={text}
 		/>
-	);
+	) : null;
 }
 
 export default CalendlyButton;
