@@ -59,16 +59,6 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 				</Link>
 			);
 
-		case 'button': // will be upercased with blue text and borders
-			return (
-				<Link
-					href='#'
-					onClick={handleClick}
-					className={`${styles.navigationButton} ${styles.button}`}>
-					{text}
-				</Link>
-			);
-
 		default:
 			throw new Error(`No case found for provided style: ${style}`);
 	}
