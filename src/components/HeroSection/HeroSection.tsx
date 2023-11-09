@@ -3,6 +3,7 @@ import { iconArrow } from '../../../public/icons';
 
 import Image from 'next/image';
 import NavigationButton from '../NavigationButton';
+import CalendlyButton from '../CalendlyButton';
 
 import styles from './HeroSection.module.scss';
 
@@ -34,7 +35,7 @@ function HeroSection(): JSX.Element {
 						style='underlined'
 						targetId='projectsSection'
 					/>
-					<NavigationButton text='book a call' style='button' targetId='contactSection' />
+					<CalendlyButton text='book a call' />
 				</div>
 
 				<Image src={iconArrow} alt='Long arrow icon pointing downwards' />

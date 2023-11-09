@@ -17,8 +17,7 @@
 			margin-bottom: pxToRem(20px);
 		}
 	}
-	.aboutMe,
-	.letsChat {
+	.aboutMe {
 		p {
 			font-size: 24px;
 			max-width: 1147px;
@@ -36,13 +35,6 @@
 			font-size: 20px;
 			text-transform: uppercase;
 			font-weight: 700;
-		}
-	}
-
-	.letsChat {
-		margin-bottom: pxToRem(248px);
-		h5 {
-			margin-bottom: pxToRem(60px);
 		}
 	}
 }

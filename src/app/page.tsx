@@ -3,6 +3,7 @@ import ProjectsSection from '@/components/ProjectsSection';
 
 import styles from './page.module.scss';
 import AboutSection from '@/components/AboutSection';
+import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
 	return (
@@ -10,6 +11,7 @@ export default function Home() {
 			<HeroSection />
 			<ProjectsSection />
 			<AboutSection />
+			<ContactSection />
 		</main>
 	);
 }
