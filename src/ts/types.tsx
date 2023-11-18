@@ -30,4 +30,10 @@ interface IStaticContent {
 	logo_alt?: ITranslations;
 }
 
-export type { TechType };
+interface INavbarContent extends IStaticContent{
+	about: ITranslations;
+	projects: ITranslations;
+	contact: ITranslations;
+}
+
+export type { TechType, INavbarContent };
