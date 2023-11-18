@@ -69,4 +69,11 @@ interface IAboutSectionContent extends IStaticContent {
 	};
 }
 
-export type { TechType, INavbarContent, IHeroSectionContent, IAboutSectionContent };
+interface IFooterContent extends IStaticContent {
+	contacts: ITranslations;
+	sitemap: { projects: ITranslations; about: ITranslations; resume: ITranslations };
+	imprint: ITranslations;
+	privacy: ITranslations;
+}
+
+export type { TechType, INavbarContent, IHeroSectionContent, IAboutSectionContent, IFooterContent };
