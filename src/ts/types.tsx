@@ -11,9 +11,21 @@ type TechType =
 	| 'MongoDB'
 	| 'Cloudinary';
 
+interface ITranslationsArray {
+	en: string[];
+	de: string[];
+}
+
 interface ITranslations {
 	en: string;
 	de: string;
+}
+
+interface ICompanyData {
+	company_name: string;
+	company_role: string;
+	time: string;
+	skills: string[];
 }
 
 interface IHighlight extends ITranslations {
@@ -30,7 +42,7 @@ interface IStaticContent {
 	logo_alt?: ITranslations;
 }
 
-interface INavbarContent extends IStaticContent{
+interface INavbarContent extends IStaticContent {
 	about: ITranslations;
 	projects: ITranslations;
 	contact: ITranslations;
@@ -41,4 +53,20 @@ interface IHeroSectionContent extends IStaticContent {
 	image_alt: ITranslations;
 }
 
-export type { TechType, INavbarContent, IHeroSectionContent };
+interface IAboutSectionContent extends IStaticContent {
+	skills: {
+		header: ITranslations;
+		frontend: ITranslationsArray;
+		backend: ITranslationsArray;
+	};
+	experience: {
+		header: IHighlight;
+		pdfLink: ITranslations;
+		companys: {
+			en: ICompanyData[];
+			de: ICompanyData[];
+		};
+	};
+}
+
+export type { TechType, INavbarContent, IHeroSectionContent, IAboutSectionContent };
