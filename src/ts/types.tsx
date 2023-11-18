@@ -36,4 +36,9 @@ interface INavbarContent extends IStaticContent{
 	contact: ITranslations;
 }
 
-export type { TechType, INavbarContent };
+interface IHeroSectionContent extends IStaticContent {
+	fit: ITranslations;
+	image_alt: ITranslations;
+}
+
+export type { TechType, INavbarContent, IHeroSectionContent };
