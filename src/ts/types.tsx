@@ -51,6 +51,7 @@ interface INavbarContent extends IStaticContent {
 interface IHeroSectionContent extends IStaticContent {
 	fit: ITranslations;
 	image_alt: ITranslations;
+	arrow_alt: ITranslations;
 }
 
 interface IAboutSectionContent extends IStaticContent {
