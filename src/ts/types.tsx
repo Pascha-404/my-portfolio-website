@@ -76,4 +76,11 @@ interface IFooterContent extends IStaticContent {
 	privacy: ITranslations;
 }
 
-export type { TechType, INavbarContent, IHeroSectionContent, IAboutSectionContent, IFooterContent };
+export type {
+	TechType,
+	INavbarContent,
+	IHeroSectionContent,
+	IAboutSectionContent,
+	IFooterContent,
+	IStaticContent,
+};
