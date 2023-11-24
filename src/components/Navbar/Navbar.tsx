@@ -1,3 +1,4 @@
+'use client';
 import dynamic from 'next/dynamic';
 import Logo from '../../../public/personal-logo.svg';
 import { INavbarContent } from '@/ts/types';
@@ -7,11 +8,12 @@ import LanguageButton from '../LanguageButton';
 import NavigationButton from '../NavigationButton';
 
 import styles from './Navbar.module.scss';
+import { useLanguage } from '@/utils/LanguageContext';
 
 const CalendlyButton = dynamic(() => import('../CalendlyButton'), { ssr: false });
 
 function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Element {
-	const currentLanguage = 'en';
+	const { currentLanguage } = useLanguage();
 	const aboutText = staticContent.about[currentLanguage] || 'about';
 	const projectsText = staticContent.projects[currentLanguage] || 'projects';
 	const contactText = staticContent.contact[currentLanguage] || 'contact';
@@ -27,7 +29,7 @@ function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Eleme
 			</div>
 
 			<div className={styles.navbarLinks}>
-				<LanguageButton currentLanguage='eng' />
+				<LanguageButton />
 				<NavigationButton text={aboutText} style='normal' targetId='aboutSection' />
 				<NavigationButton text={projectsText} style='normal' targetId='projectsSection' />
 				<NavigationButton text={contactText} style='normal' targetId='contactSection' />
