@@ -1,13 +1,19 @@
 import HeroImg from '../../../public/patrick-hero-img.png';
 import { iconArrow } from '../../../public/icons';
 
+import { IHeroSectionContent } from '@/ts/types';
+
 import Image from 'next/image';
 import NavigationButton from '../NavigationButton';
 import CalendlyButton from '../CalendlyButton';
 
 import styles from './HeroSection.module.scss';
 
-function HeroSection(): JSX.Element {
+function HeroSection({
+	staticContent,
+}: {
+	staticContent: IHeroSectionContent;
+}): JSX.Element {
 	return (
 		<section className={styles.heroSection}>
 			<div className={styles.heroFirstHalf}>

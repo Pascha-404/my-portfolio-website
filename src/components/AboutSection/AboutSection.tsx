@@ -1,8 +1,15 @@
 import DataListCard from '../DataListCard';
 import DownloadButton from '../DownloadButton';
+
+import { IAboutSectionContent } from '@/ts/types';
+
 import styles from './AboutSection.module.scss';
 
-function AboutSection(): JSX.Element {
+function AboutSection({
+	staticContent,
+}: {
+	staticContent: IAboutSectionContent;
+}): JSX.Element {
 	return (
 		<section id='aboutSection' className={styles.aboutSection}>
 			<div className={styles.aboutMe}>
@@ -87,9 +94,7 @@ function AboutSection(): JSX.Element {
 				</div>
 			</div>
 
-			<div className={styles.letsChat}>
-				
-			</div>
+			<div className={styles.letsChat}></div>
 		</section>
 	);
 }

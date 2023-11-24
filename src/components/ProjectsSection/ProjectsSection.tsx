@@ -3,9 +3,15 @@ import { iconArrow } from '../../../public/icons';
 import Image from 'next/image';
 import ProjectCard from '../ProjectCard';
 
+import { IStaticContent } from '@/ts/types';
+
 import styles from './ProjectsSection.module.scss';
 
-function ProjectsSection(): JSX.Element {
+function ProjectsSection({
+	staticContent,
+}: {
+	staticContent: IStaticContent;
+}): JSX.Element {
 	return (
 		<section id='projectsSection' className={styles.projectsSection}>
 			<h3>

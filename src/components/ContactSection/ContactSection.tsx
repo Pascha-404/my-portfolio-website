@@ -1,8 +1,14 @@
 import CalendlyButton from '../CalendlyButton';
 
+import { IStaticContent } from '@/ts/types';
+
 import styles from './ContactSection.module.scss';
 
-function ContactSection(): JSX.Element {
+function ContactSection({
+	staticContent,
+}: {
+	staticContent: IStaticContent;
+}): JSX.Element {
 	return (
 		<section id='contactSection' className={styles.contactSection}>
 			<h5>
