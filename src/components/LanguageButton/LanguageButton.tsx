@@ -1,22 +1,38 @@
+import { useLanguage } from '@/utils/LanguageContext';
 import styles from './LanguageButton.module.scss';
 
-interface LanguageButtonProps {
-	currentLanguage: 'eng' | 'de';
-}
+function LanguageButton(): JSX.Element {
+	const { currentLanguage, setCurrentLanguage } = useLanguage();
 
-function LanguageButton({ currentLanguage }: LanguageButtonProps): JSX.Element {
+	function handleClick(): void {
+		switch (currentLanguage) {
+			case 'de':
+				setCurrentLanguage('en');
+				break;
+			case 'en':
+				setCurrentLanguage('de');
+				break;
+			default:
+				setCurrentLanguage('en');
+		}
+	}
+
 	const text =
-		currentLanguage === 'eng' ? (
+		currentLanguage === 'en' ? (
 			<p>
-				<span className={styles.highlight}>ENG</span>/DE
+				<span className={styles.highlight}>EN</span>/DE
 			</p>
 		) : (
 			<p>
-				ENG/<span className={styles.highlight}>DE</span>
+				EN/<span className={styles.highlight}>DE</span>
 			</p>
 		);
 
-	return <button className={styles.languageButton}>{text}</button>;
+	return (
+		<button onClick={handleClick} className={styles.languageButton}>
+			{text}
+		</button>
+	);
 }
 
 export default LanguageButton;
