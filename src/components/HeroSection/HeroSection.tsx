@@ -3,7 +3,7 @@
 import HeroImg from '../../../public/patrick-hero-img.png';
 import { iconArrow } from '../../../public/icons';
 
-import fallbackTexts from './fallbackTexts';
+import fallbackContent from './fallbackContent';
 import { IHeroSectionContent } from '@/ts/types';
 
 import Image from 'next/image';
@@ -19,21 +19,21 @@ function HeroSection({
 	staticContent: IHeroSectionContent;
 }): JSX.Element {
 	const { currentLanguage } = useLanguage();
-	const headerText = staticContent.header?.[currentLanguage] || fallbackTexts.header;
+	const headerText = staticContent.header?.[currentLanguage] || fallbackContent.header;
 	const subHeaderText =
-		staticContent.sub_header?.[currentLanguage] || fallbackTexts.sub_header;
+		staticContent.sub_header?.[currentLanguage] || fallbackContent.sub_header;
 	const descriptionText =
-		staticContent.description?.[currentLanguage] || fallbackTexts.description;
-	const fitText = staticContent.fit[currentLanguage] || fallbackTexts.fit;
+		staticContent.description?.[currentLanguage] || fallbackContent.description;
+	const fitText = staticContent.fit[currentLanguage] || fallbackContent.fit;
 	const navigationBtnText =
-		staticContent.navigation_btn?.[currentLanguage] || fallbackTexts.navigation_btn;
+		staticContent.navigation_btn?.[currentLanguage] || fallbackContent.navigation_btn;
 	const actionBtnText =
-		staticContent.action_btn?.[currentLanguage] || fallbackTexts.action_btn;
+		staticContent.action_btn?.[currentLanguage] || fallbackContent.action_btn;
 	const imageAltText =
-		staticContent.image_alt[currentLanguage] || fallbackTexts.image_alt;
+		staticContent.image_alt[currentLanguage] || fallbackContent.image_alt;
 	const arrowAltText =
-		staticContent.arrow_alt[currentLanguage] || fallbackTexts.arrow_alt;
-	
+		staticContent.arrow_alt[currentLanguage] || fallbackContent.arrow_alt;
+
 	return (
 		<section className={styles.heroSection}>
 			<div className={styles.heroFirstHalf}>
