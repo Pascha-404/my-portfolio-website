@@ -21,6 +21,11 @@ interface ITranslations {
 	de: string;
 }
 
+interface ITextSegment {
+	text: ITranslations;
+	highlight: boolean;
+}
+
 interface ICompanyData {
 	company_name: string;
 	company_role: string;
@@ -28,14 +33,10 @@ interface ICompanyData {
 	skills: string[];
 }
 
-interface IHighlight extends ITranslations {
-	highlight: ITranslations;
-}
-
 interface IStaticContent {
 	section_name: string;
 	description?: ITranslations;
-	header?: ITranslations | IHighlight;
+	header?: ITextSegment[];
 	sub_header?: ITranslations;
 	action_btn?: ITranslations;
 	navigation_btn?: ITranslations;
@@ -61,7 +62,7 @@ interface IAboutSectionContent extends IStaticContent {
 		backend: ITranslationsArray;
 	};
 	experience: {
-		header: IHighlight;
+		header: ITextSegment;
 		pdfLink: ITranslations;
 		companys: {
 			en: ICompanyData[];
@@ -81,6 +82,7 @@ export type {
 	TechType,
 	INavbarContent,
 	IHeroSectionContent,
+	IProjectsSectionContent,
 	IAboutSectionContent,
 	IFooterContent,
 	IStaticContent,
