@@ -82,7 +82,6 @@ export type {
 	TechType,
 	INavbarContent,
 	IHeroSectionContent,
-	IProjectsSectionContent,
 	IAboutSectionContent,
 	IFooterContent,
 	IStaticContent,
