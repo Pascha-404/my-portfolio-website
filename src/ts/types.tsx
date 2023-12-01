@@ -80,6 +80,7 @@ interface IFooterContent extends IStaticContent {
 
 export type {
 	TechType,
+	ITextSegment,
 	INavbarContent,
 	IHeroSectionContent,
 	IAboutSectionContent,
