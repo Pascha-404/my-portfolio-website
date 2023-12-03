@@ -32,6 +32,8 @@ function textMapFunction({
 				</span>
 			);
 		}
-		return <React.Fragment key={`textSegment-${uuid()}`}>{text}</React.Fragment>;
+		return <React.Fragment key={`textSegment-${uuid()}`}>{text} </React.Fragment>;
 	});
 }
+
+export default textMapFunction;
