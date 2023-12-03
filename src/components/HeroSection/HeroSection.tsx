@@ -3,6 +3,7 @@
 import HeroImg from '../../../public/patrick-hero-img.png';
 import { iconArrow } from '../../../public/icons';
 
+import textMapFunction from '@/utils/textMapFunction';
 import fallbackContent from './fallbackContent';
 import { IHeroSectionContent } from '@/ts/types';
 
@@ -19,7 +20,12 @@ function HeroSection({
 	staticContent: IHeroSectionContent;
 }): JSX.Element {
 	const { currentLanguage } = useLanguage();
-	const headerText = staticContent.header?.[currentLanguage] || fallbackContent.header;
+	const headerText = textMapFunction({
+		objectArray: staticContent.header || fallbackContent.header,
+		currentLanguage,
+		stylingClass: '',
+		styles,
+	});
 	const subHeaderText =
 		staticContent.sub_header?.[currentLanguage] || fallbackContent.sub_header;
 	const descriptionText =
