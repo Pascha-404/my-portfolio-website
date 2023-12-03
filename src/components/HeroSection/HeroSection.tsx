@@ -38,7 +38,7 @@ function HeroSection({
 	const imageAltText =
 		staticContent.image_alt[currentLanguage] || fallbackContent.image_alt;
 	const arrowAltText =
-		staticContent.arrow_alt[currentLanguage] || fallbackContent.arrow_alt;
+		staticContent.arrow_alt?.[currentLanguage] || fallbackContent.arrow_alt;
 
 	return (
 		<section className={styles.heroSection}>
