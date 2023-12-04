@@ -1,4 +1,5 @@
 import connectToDatabase from './dbConnect';
 import { getStaticContent } from './getStaticContent';
+import textMapFunction from './textMapFunction';
 
-export { connectToDatabase, getStaticContent };
+export { connectToDatabase, getStaticContent, textMapFunction };
