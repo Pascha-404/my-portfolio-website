@@ -1,4 +1,4 @@
-import { useLanguage } from '@/utils/LanguageContext';
+import { useLanguage } from '@/utils/client';
 import styles from './LanguageButton.module.scss';
 
 function LanguageButton(): JSX.Element {

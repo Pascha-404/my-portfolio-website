@@ -7,10 +7,10 @@ import ProjectCard from '../ProjectCard';
 
 import { IStaticContent } from '@/ts/types';
 import fallbackContent from './fallbackContent';
-import textMapFunction from '@/utils/textMapFunction';
+import { textMapFunction } from '@/utils/client';
+import { useLanguage } from '@/utils/client';
 
 import styles from './ProjectsSection.module.scss';
-import { useLanguage } from '@/utils/LanguageContext';
 
 function ProjectsSection({
 	staticContent,

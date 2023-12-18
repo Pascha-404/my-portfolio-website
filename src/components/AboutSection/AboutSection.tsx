@@ -4,10 +4,10 @@ import DataListCard from '../DataListCard';
 import DownloadButton from '../DownloadButton';
 
 import { IAboutSectionContent } from '@/ts/types';
-import { useLanguage } from '@/utils/LanguageContext';
+import { useLanguage } from '@/utils/client';
 
 import styles from './AboutSection.module.scss';
-import textMapFunction  from '@/utils/textMapFunction';
+import { textMapFunction } from '@/utils/client';
 
 function AboutSection({
 	staticContent,
@@ -24,9 +24,7 @@ function AboutSection({
 	return (
 		<section id='aboutSection' className={styles.aboutSection}>
 			<div className={styles.aboutMe}>
-				<h5>
-					{headerText}
-				</h5>
+				<h5>{headerText}</h5>
 
 				<p>
 					Hi there! I'm a passionate Fullstack Engineer with a knack for turning ideas

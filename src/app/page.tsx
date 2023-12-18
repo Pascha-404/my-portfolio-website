@@ -1,4 +1,4 @@
-import { getStaticContent } from '@/utils';
+import { getStaticContent } from '@/utils/server';
 
 import HeroSection from '@/components/HeroSection';
 import ProjectsSection from '@/components/ProjectsSection';

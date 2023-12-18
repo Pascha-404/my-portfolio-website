@@ -1,14 +1,15 @@
 'use client';
+
 import dynamic from 'next/dynamic';
-import Logo from '../../../public/personal-logo.svg';
 import { INavbarContent } from '@/ts/types';
+import { useLanguage } from '@/utils/client';
 
 import Image from 'next/image';
 import LanguageButton from '../LanguageButton';
 import NavigationButton from '../NavigationButton';
 
+import Logo from '../../../public/personal-logo.svg';
 import styles from './Navbar.module.scss';
-import { useLanguage } from '@/utils/LanguageContext';
 
 const CalendlyButton = dynamic(() => import('../CalendlyButton'), { ssr: false });
 

@@ -4,9 +4,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 import '../sass/main.scss';
-import { getStaticContent } from '@/utils';
+import { getStaticContent } from '@/utils/server';
 import { INavbarContent } from '@/ts/types';
-import { LanguageProvider } from '@/utils/LanguageContext';
+import { LanguageProvider } from '@/utils/client';
 
 export const metadata: Metadata = {
 	title: 'Patrick Pavliuchik',

@@ -3,7 +3,7 @@
 import HeroImg from '../../../public/patrick-hero-img.png';
 import { iconArrow } from '../../../public/icons';
 
-import textMapFunction from '@/utils/textMapFunction';
+import { textMapFunction } from '@/utils/client';
 import fallbackContent from './fallbackContent';
 import { IHeroSectionContent } from '@/ts/types';
 
@@ -12,7 +12,7 @@ import NavigationButton from '../NavigationButton';
 import CalendlyButton from '../CalendlyButton';
 
 import styles from './HeroSection.module.scss';
-import { useLanguage } from '@/utils/LanguageContext';
+import { useLanguage } from '@/utils/client';
 
 function HeroSection({
 	staticContent,
