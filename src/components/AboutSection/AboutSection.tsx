@@ -1,20 +1,31 @@
+'use client';
+
 import DataListCard from '../DataListCard';
 import DownloadButton from '../DownloadButton';
 
 import { IAboutSectionContent } from '@/ts/types';
+import { useLanguage } from '@/utils/LanguageContext';
 
 import styles from './AboutSection.module.scss';
+import textMapFunction  from '@/utils/textMapFunction';
 
 function AboutSection({
 	staticContent,
 }: {
 	staticContent: IAboutSectionContent;
 }): JSX.Element {
+	const { currentLanguage } = useLanguage();
+	const headerText = textMapFunction({
+		objectArray: staticContent.header!,
+		currentLanguage,
+		stylingClass: 'colorHighlight',
+		styles,
+	});
 	return (
 		<section id='aboutSection' className={styles.aboutSection}>
 			<div className={styles.aboutMe}>
 				<h5>
-					About <span className={styles.colorHighlight}>me</span>
+					{headerText}
 				</h5>
 
 				<p>
