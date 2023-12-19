@@ -1,18 +1,15 @@
 import { v4 as uuid } from 'uuid';
 
-import styles from './DataListCard.module.scss';
+import { IDataListData } from '@/ts/types';
 
-interface Data {
-	header?: string;
-	data: string;
-}
+import styles from './DataListCard.module.scss';
 
 interface DataListCardProps {
 	type: 'home_experience' | 'home_skill' | 'project_bulletList' | 'project_highlightList';
 	header: string;
 	role?: string;
 	timeRange?: string;
-	data: Data[];
+	data: IDataListData[];
 }
 
 function DataListCard({
