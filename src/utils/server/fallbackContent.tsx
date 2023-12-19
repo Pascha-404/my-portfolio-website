@@ -123,26 +123,26 @@ const static_sections = [
 			],
 			frontend: {
 				en: [
-					'Proficient in HTML, CSS, and JavaScript.',
-					'Experience with modern frontend frameworks like React and Vue.js.',
-					'Responsive design and mobile-first development.',
+					{ data: 'Proficient in HTML, CSS, and JavaScript.' },
+					{ data: 'Experience with modern frontend frameworks like React and Vue.js.' },
+					{ data: 'Responsive design and mobile-first development.' },
 				],
 				de: [
-					'Beherrscht HTML, CSS und JavaScript.',
-					'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.',
-					'Responsives Design und Mobile-First-Entwicklung.',
+					{ data: 'Beherrscht HTML, CSS und JavaScript.' },
+					{ data: 'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.' },
+					{ data: 'Responsives Design und Mobile-First-Entwicklung.' },
 				],
 			},
 			backend: {
 				en: [
-					'Proficient in HTML, CSS, and JavaScript.',
-					'Experience with modern frontend frameworks like React and Vue.js.',
-					'Responsive design and mobile-first development.',
+					{ data: 'Proficient in HTML, CSS, and JavaScript.' },
+					{ data: 'Experience with modern frontend frameworks like React and Vue.js.' },
+					{ data: 'Responsive design and mobile-first development.' },
 				],
 				de: [
-					'Beherrscht HTML, CSS und JavaScript.',
-					'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.',
-					'Responsives Design und Mobile-First-Entwicklung.',
+					{ data: 'Beherrscht HTML, CSS und JavaScript.' },
+					{ data: 'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.' },
+					{ data: 'Responsives Design und Mobile-First-Entwicklung.' },
 				],
 			},
 		},
@@ -174,9 +174,11 @@ const static_sections = [
 						company_role: 'Mechanic',
 						time: '2020-2023',
 						skills: [
-							'Proficient in HTML, CSS, and JavaScript.',
-							'Experience with modern frontend frameworks like React and Vue.js.',
-							'Responsive design and mobile-first development.',
+							{ data: 'Proficient in HTML, CSS, and JavaScript.' },
+							{
+								data: 'Experience with modern frontend frameworks like React and Vue.js.',
+							},
+							{ data: 'Responsive design and mobile-first development.' },
 						],
 					},
 				],
@@ -186,9 +188,11 @@ const static_sections = [
 						company_role: 'KFZ-Mechatroniker',
 						time: '2020-2023',
 						skills: [
-							'Beherrscht HTML, CSS und JavaScript.',
-							'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.',
-							'Responsives Design und Mobile-First-Entwicklung.',
+							{ data: 'Beherrscht HTML, CSS und JavaScript.' },
+							{
+								data: 'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.',
+							},
+							{ data: 'Responsives Design und Mobile-First-Entwicklung.' },
 						],
 					},
 				],
