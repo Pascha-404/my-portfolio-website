@@ -57,12 +57,12 @@ interface IHeroSectionContent extends IStaticContent {
 
 interface IAboutSectionContent extends IStaticContent {
 	skills: {
-		header: ITranslations;
+		header: ITextSegment[];
 		frontend: ITranslationsArray;
 		backend: ITranslationsArray;
 	};
 	experience: {
-		header: ITextSegment;
+		header: ITextSegment[];
 		pdfLink: ITranslations;
 		companys: {
 			en: ICompanyData[];
