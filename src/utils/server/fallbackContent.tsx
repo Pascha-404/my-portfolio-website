@@ -269,4 +269,31 @@ const static_sections = [
 	},
 ];
 
+const projects = [
+	{
+		_id: 3423,
+		name: 'mueller',
+		imgSrc: null,
+		role: 'Full-Stack Developer',
+		stack: ['React', 'SASS', 'AWS', 'Cloudinary'],
+		tasks: [null],
+		description: 'Some text',
+		longDescription: 'Some long text',
+		githubLink: null,
+		liveLink: null,
+		yearCreated: 2023,
+		challenges: [{ data: 'Challenge text' }, { data: 'Challenge Text' }],
+		approach: [
+			{ header: 'Technology Stack', data: 'Technologys' },
+			{ header: 'Frontend Development', data: 'What and why' },
+		],
+		results: [{ data: 'Result here' }, { data: 'Result here' }],
+		technologie: [
+			{ category: 'Frontend', detail: ['React', 'SASS'] },
+			{ category: 'Backend', detail: ['AWS'] },
+			{ category: 'Deployment', detail: ['Cloudinary', 'Strato'] },
+		],
+	},
+];
+
 export { static_sections };
