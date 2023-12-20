@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 import '../sass/main.scss';
 import { getStaticContent } from '@/utils/server';
-import { INavbarContent } from '@/ts/types';
+import { IFooterContent, INavbarContent } from '@/ts/types';
 import { LanguageProvider } from '@/utils/client';
 
 export const metadata: Metadata = {
@@ -19,6 +19,9 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
 	const navbarContent: INavbarContent = staticContent.find(
 		(obj: INavbarContent) => obj.section_name === 'navbar'
 	);
+	const footerContent: IFooterContent = staticContent.find(
+		(obj: IFooterContent) => obj.section_name === 'footer'
+	);
 
 	return (
 		<html lang='en'>
@@ -26,7 +29,7 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
 				<LanguageProvider>
 					<Navbar staticContent={navbarContent} />
 					{children}
-					<Footer />
+					<Footer staticContent={footerContent} />
 				</LanguageProvider>
 			</body>
 		</html>
