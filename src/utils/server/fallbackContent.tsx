@@ -228,6 +228,14 @@ const static_sections = [
 	},
 	{
 		section_name: 'footer',
+		arrow_alt: {
+			en: 'Long arrow icon pointing upwards',
+			de: 'Langer Pfeil der nach oben zeigt',
+		},
+		logo_alt: {
+			en: 'Patrick Pavliuchik typed in code syntax',
+			de: 'Patrick Pavliuchik geschrieben in code syntax',
+		},
 		navigation_btn: {
 			en: 'Up to the beginning',
 			de: 'Zurück zum Anfang',
