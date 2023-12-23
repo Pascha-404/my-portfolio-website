@@ -272,102 +272,216 @@ const static_sections = [
 const projects = [
 	{
 		_id: null,
-		name: 'mueller',
+		name: 'Baufachbetrieb Müller',
 		imgSrc: null,
-		role: 'Full-Stack Developer',
+		role: 'Full-stack Developer',
 		stack: ['React', 'SASS', 'AWS', 'Cloudinary'],
-		tasks: [null],
-		description: 'Some text',
-		longDescription: 'Some long text',
+		task: 'Develop a user-friendly, one-page application for a local business to replace their outdated webpage',
+		description:
+			'This project involved creating a new web presence for Baufachbetrieb Müller, focusing on user experience and functionality. The main feature was a form that sends information to the business and simultaneously forwards a copy to the user.',
+		longDescription:
+			"The project required a complete overhaul of the existing web presence. The application was designed to be simple yet effective, ensuring ease of navigation for users. Key features included a contact form, business information display, and integration of the business's branding elements.",
 		githubLink: null,
 		liveLink: null,
 		yearCreated: 2023,
-		challenges: [{ data: 'Challenge text' }, { data: 'Challenge Text' }],
-		approach: [
-			{ header: 'Technology Stack', data: 'Technologys' },
-			{ header: 'Frontend Development', data: 'What and why' },
+		challenges: [
+			{
+				data: 'Designing a user-friendly and visually appealing interface adaptable to various display sizes.',
+			},
+			{
+				data: 'Implementing a backend solution for the form to process and send data securely to both the business and the user.',
+			},
 		],
-		results: [{ data: 'Result here' }, { data: 'Result here' }],
-		technologie: [
-			{ category: 'Frontend', detail: ['React', 'SASS'] },
-			{ category: 'Backend', detail: ['AWS'] },
-			{ category: 'Deployment', detail: ['Cloudinary', 'Strato'] },
+		approach: [
+			{
+				header: 'Technology Stack',
+				data: "Conducted a thorough analysis of the client's requirements and the limitations of their existing website.",
+			},
+			{
+				header: 'Frontend Development',
+				data: 'Designed a responsive layout using React and SASS, ensuring compatibility across different devices.',
+			},
+			{
+				header: 'Backend Development',
+				data: 'Developed a secure backend using Firebase Functions for email triggers and Firestore for database management.',
+			},
+			{
+				header: 'Testing and Quality Assurance',
+				data: 'Implemented client-based reCaptcha for added security.',
+			},
+		],
+		results: [
+			{
+				data: 'Delivered a highly functional, responsive, and aesthetically pleasing web application.',
+			},
+			{
+				data: 'Enhanced user engagement and satisfaction through an intuitive interface and quick loading times.',
+			},
+			{
+				data: "Improved client's online presence, leading to better business visibility and potential customer growth.",
+			},
+		],
+		technology: [
+			{ category: 'Frontend', detail: ['React', 'SASS', 'reCaptcha'] },
+			{ category: 'Backend', detail: ['Firebase', 'Functions', 'Firestore'] },
+			{ category: 'Deployment', detail: ['AWS', 'Cloudinary', 'Strato'] },
 		],
 	},
 	{
 		_id: null,
-		name: 'moodbooster',
-		imgSrc: null,
-		role: 'Frontend Developer',
-		stack: ['HTML', 'CSS'],
-		tasks: [null],
-		description: 'Some text',
-		longDescription: 'Some long text',
-		githubLink: null,
-		liveLink: null,
-		yearCreated: 2020,
-		challenges: [{ data: 'Challenge text' }, { data: 'Challenge Text' }],
-		approach: [
-			{ header: 'Technology Stack', data: 'Technologys' },
-			{ header: 'Frontend Development', data: 'What and why' },
-		],
-		results: [{ data: 'Result here' }, { data: 'Result here' }],
-		technologie: [
-			{ category: 'Frontend', detail: ['HTML', 'CSS'] },
-			{ category: 'Backend', detail: ['Node.js'] },
-			{ category: 'Deployment', detail: ['Heroku'] },
-		],
-	},
-	{
-		_id: null,
-		name: 'goksenia',
+		name: 'Goksenia Portfolio',
 		imgSrc: null,
 		role: 'Full-Stack Developer',
-		stack: ['JavaScript', 'HTML', 'CSS', 'Cloudinary', 'MongoDB', 'Node.js'],
-		tasks: [null],
-		description: 'Some text',
-		longDescription: 'Some long text',
+		stack: [
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'Node.js',
+			'Express.js',
+			'MongoDB',
+			'Cloudinary',
+		],
+		task: 'Create a portfolio website for Kseniia Pavliuchik, a UI/UX Designer, that showcases her skills and projects in an intuitive and engaging way.',
+		description:
+			'This project was about developing a digital portfolio for Kseniia Pavliuchik, highlighting her expertise in UI/UX design. The website featured a main page with her professional profile and a separate section for detailed case studies.',
+		longDescription:
+			"The project's focus was on demonstrating Kseniia's talents in UI/UX design through a platform that was visually appealing and user-friendly. A critical aspect was the custom CMS development, enabling efficient management of portfolio content.",
 		githubLink: null,
 		liveLink: null,
 		yearCreated: 2021,
-		challenges: [{ data: 'Challenge text' }, { data: 'Challenge Text' }],
-		approach: [
-			{ header: 'Technology Stack', data: 'Technologys' },
-			{ header: 'Frontend Development', data: 'What and why' },
+		challenges: [
+			{
+				data: 'Creating a responsive design for various screen sizes, ensuring fluid transitions and a pleasant user experience.',
+			},
+			{
+				data: 'Developing a custom CMS with complete CRUD operations and features for managing projects on the main page, built with JavaScript.',
+			},
+			{
+				data: 'Integrating a system for managing file uploads and content updates through the CMS.',
+			},
 		],
-		results: [{ data: 'Result here' }, { data: 'Result here' }],
-		technologie: [
-			{ category: 'Frontend', detail: ['JavaScript', 'HTML', 'CSS'] },
-			{ category: 'Backend', detail: ['Node.js', 'Express.js'] },
-			{ category: 'Database', detail: ['MongoDB'] },
-			{ category: 'Deployment', detail: ['Cloudinary', 'DigitalOcean'] },
+		approach: [
+			{
+				header: 'Frontend Development',
+				data: 'Designed the frontend using HTML, CSS, and JavaScript, prioritizing responsiveness to adapt to different devices.',
+			},
+			{
+				header: 'Backend Development',
+				data: 'Utilized Node.js and Express.js, focusing on security enhancements with sanitize-html and helmet. Implemented user authentication with Passport and chose MongoDB for storing project and user data.',
+			},
+			{
+				header: 'Deployment',
+				data: 'Deployed the application on a DigitalOcean server, using a reverse Nginx proxy for reliable connectivity.',
+			},
+		],
+		results: [
+			{
+				data: 'Successfully delivered a functional and responsive portfolio website with an integrated custom CMS.',
+			},
+			{
+				data: "The CMS allowed for effective showcasing and updating of Kseniia's work, enhancing her professional online presence.",
+			},
+			{
+				data: 'The website was well-received for its user-friendly design and efficient content management capabilities.',
+			},
+		],
+		technology: [
+			{ category: 'Frontend', detail: ['HTML', 'CSS', 'JavaScript'] },
+			{
+				category: 'Backend',
+				detail: [
+					'Node.js',
+					'Express.js',
+					'sanitize-html',
+					'helmet',
+					'Passport',
+					'MongoDB',
+				],
+			},
+			{ category: 'Deployment', detail: ['DigitalOcean', 'Nginx'] },
 		],
 	},
 	{
 		_id: null,
-		name: 'webChat',
+		name: 'WebChatApp',
 		imgSrc: null,
 		role: 'Full-Stack Developer',
-		stack: ['React', 'SASS', 'AWS', 'Cloudinary'],
-		tasks: [null],
-		description: 'Some text',
-		longDescription: 'Some long text',
+		stack: ['React', 'CSS', 'Material UI', 'Firebase'],
+		task: 'Develop a fully functional web chat application with a range of familiar chat features.',
+		description:
+			'This project was focused on creating a comprehensive chat application incorporating key functionalities of modern chat platforms. Initially envisioned as an extensive project, it was later refined to an MVP to showcase crucial functionalities in a more manageable scope.',
+		longDescription:
+			"The WebChatApp was conceived as a platform to demonstrate my capabilities in developing a full-fledged chat application. However, recognizing the project's demands, I reevaluated and streamlined it to focus on core features. This included a robust registration system, an engaging chat interface with emoticons, and functionalities to manage contacts and groups.",
 		githubLink: null,
 		liveLink: null,
-		yearCreated: 2022,
-		challenges: [{ data: 'Challenge text' }, { data: 'Challenge Text' }],
-		approach: [
-			{ header: 'Technology Stack', data: 'Technologys' },
-			{ header: 'Frontend Development', data: 'What and why' },
+		yearCreated: 2021,
+		challenges: [
+			{
+				data: 'Rapidly designing an appealing front-end for larger screens using a CSS framework.',
+			},
+			{
+				data: 'Integrating diverse authentication methods, including GitHub and Google, using Firebase Authentication.',
+			},
+			{
+				data: 'Developing real-time chat functionality leveraging Firebase Realtime Database API.',
+			},
 		],
-		results: [{ data: 'Result here' }, { data: 'Result here' }],
-		technologie: [
-			{ category: 'Frontend', detail: ['React', 'CSS'] },
-			{ category: 'Backend', detail: ['AWS'] },
-			{ category: 'Database', detail: ['Firebase'] },
-			{ category: 'Deployment', detail: ['Cloudinary', 'Strato'] },
+		approach: [
+			{
+				header: 'Frontend Development',
+				data: 'Employed React along with Material UI and CSS to create a user-friendly interface tailored for large screens.',
+			},
+			{
+				header: 'Backend Development',
+				data: 'Developed the backend using Firebase, with a focus on diverse authentication options and real-time communication capabilities with Firebase Realtime Database.',
+			},
+		],
+		results: [
+			{
+				data: 'Successfully built a functional MVP of the WebChatApp, showcasing essential features of a chat application.',
+			},
+			{
+				data: 'Demonstrated proficiency in utilizing Firebase for both authentication and real-time data handling.',
+			},
+			{
+				data: "Effectively highlighted skill in developing functionality-focused web applications, even though it's not responsive for smaller screens.",
+			},
+		],
+		technology: [
+			{ category: 'Frontend', detail: ['React', 'Material UI', 'CSS'] },
+			{
+				category: 'Backend',
+				detail: ['Firebase Authentication', 'Firebase Realtime Database'],
+			},
+			{ category: 'Deployment', detail: ['Firebase'] },
 		],
 	},
 ];
 
-export { static_sections };
+/* Original idea for structure */
+// {
+// 		_id: null,
+// 		name: 'mueller',
+// 		imgSrc: null,
+// 		role: 'Full-Stack Developer',
+// 		stack: ['React', 'SASS', 'AWS', 'Cloudinary'],
+// 		task: 'Create a web presence for local business',
+// 		description: 'Some text',
+// 		longDescription: 'Some long text',
+// 		githubLink: null,
+// 		liveLink: null,
+// 		yearCreated: 2023,
+// 		challenges: [{ data: 'Challenge text' }, { data: 'Challenge Text' }],
+// 		approach: [
+// 			{ header: 'Technology Stack', data: 'Technologys' },
+// 			{ header: 'Frontend Development', data: 'What and why' },
+// 		],
+// 		results: [{ data: 'Result here' }, { data: 'Result here' }],
+// 		technologie: [
+// 			{ category: 'Frontend', detail: ['React', 'SASS'] },
+// 			{ category: 'Backend', detail: ['AWS'] },
+// 			{ category: 'Deployment', detail: ['Cloudinary', 'Strato'] },
+// 		],
+// 	}
+
+export { static_sections, projects };
