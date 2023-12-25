@@ -322,7 +322,7 @@ const projects = [
 			},
 		],
 		technology: [
-			{ category: 'Frontend', detail: ['React', 'SASS', 'reCaptcha'] },
+			{ category: 'Frontend', detail: ['React', 'SASS'] },
 			{ category: 'Backend', detail: ['Firebase', 'Functions', 'Firestore'] },
 			{ category: 'Deployment', detail: ['AWS', 'Cloudinary', 'Strato'] },
 		],
@@ -406,7 +406,7 @@ const projects = [
 		name: 'WebChatApp',
 		imgSrc: null,
 		role: 'Full-Stack Developer',
-		stack: ['React', 'CSS', 'Material UI', 'Firebase'],
+		stack: ['React', 'CSS', 'Material UI', 'AWS'],
 		task: 'Develop a fully functional web chat application with a range of familiar chat features.',
 		description:
 			'This project was focused on creating a comprehensive chat application incorporating key functionalities of modern chat platforms. Initially envisioned as an extensive project, it was later refined to an MVP to showcase crucial functionalities in a more manageable scope.',
@@ -454,6 +454,63 @@ const projects = [
 				detail: ['Firebase Authentication', 'Firebase Realtime Database'],
 			},
 			{ category: 'Deployment', detail: ['Firebase'] },
+		],
+	},
+	{
+		_id: null,
+		name: 'Mood Booster',
+		imgSrc:
+			'https://res.cloudinary.com/drpmdiapv/image/upload/v1703419049/patrick.pavliuchik.com/moodBooster-overview_r1mdz8.png',
+		role: 'Frontend Developer',
+		stack: ['HTML', 'CSS'],
+		task: 'Implement the design of a digital journal in HTML and CSS for a Hackathon project focused on mental health.',
+		description:
+			"The project, developed for a Hackathon with the theme of 'Mental Health,' aimed to create an MVP of a digital journal. The journal was designed to help users uplift their mood through various mediums like visuals, poems, dad jokes, and music.",
+		longDescription:
+			"Mood Booster was conceived as a digital aid for mental wellbeing, offering personalized mood enhancement options. My involvement began just two weeks after I started learning web development, presenting both a challenge and an opportunity for rapid growth. My primary responsibility was to bring the UI/UX designer's vision to life through HTML and CSS, ensuring the application was both functional and visually appealing.",
+		githubLink: 'https://github.com/id-TechTeam/Mood-Booster/tree/master',
+		liveLink: 'https://devpost.com/software/mood-booster-r0seax',
+		yearCreated: 2020,
+		challenges: [
+			{
+				data: 'Rapidly acclimating to frontend development and effectively implementing a given design.',
+			},
+			{
+				data: 'Collaborating efficiently within a diverse team of four members, including another frontend developer, a UI/UX designer, and a backend developer.',
+			},
+			{
+				data: 'Participating in an online Hackathon, which involved not only development but also the preparation of a compelling project presentation.',
+			},
+		],
+		approach: [
+			{
+				header: 'Frontend Development',
+				data: 'Dived headfirst into frontend development, focusing on structuring HTML and styling with CSS to achieve a responsive and engaging design.',
+			},
+			{
+				header: 'Team Collaboration',
+				data: 'Worked closely with the team, contributing to the development process and ensuring seamless integration of frontend and backend elements.',
+			},
+			{
+				header: 'Project Presentation',
+				data: 'Created a product video with a voiceover to effectively showcase the application during the Hackathon presentation.',
+			},
+		],
+		results: [
+			{
+				data: 'Successfully implemented a responsive design, marking a significant personal achievement only two weeks into my web development journey.',
+			},
+			{
+				data: 'The application featured a journal function and a variety of mood-boosting options, demonstrating the potential of digital tools in supporting mental health.',
+			},
+			{
+				data: "The project was well-received at the Hackathon, highlighting the effectiveness of our teamwork and the application's relevance to the theme.",
+			},
+		],
+		technology: [
+			{ category: 'Frontend', detail: ['HTML', 'CSS', 'JavaScript'] },
+			{ category: 'Backend', detail: ['Node.js', 'Mongoose', 'Express', 'Passport'] },
+			{ category: 'Deployment', detail: ['Heroku'] },
 		],
 	},
 ];
