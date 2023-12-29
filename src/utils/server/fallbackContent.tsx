@@ -271,7 +271,7 @@ const static_sections = [
 
 const projects = [
 	{
-		_id: null,
+		_id: '658ef4b9f0e9b6a1ddc52e1d',
 		name: 'Baufachbetrieb Müller',
 		imgSrc:
 			'https://res.cloudinary.com/drpmdiapv/image/upload/v1703765625/patrick.pavliuchik.com/mueller-screen_rlpg13.png',
@@ -381,7 +381,7 @@ const projects = [
 		},
 	},
 	{
-		_id: null,
+		_id: '658ef4bbf0e9b6a1ddc52e1e',
 		name: 'Goksenia Portfolio',
 		imgSrc: null,
 		stack: [
@@ -517,7 +517,7 @@ const projects = [
 	},
 
 	{
-		_id: null,
+		_id: '658ef4bbf0e9b6a1ddc52e1f',
 		name: 'WebChatApp',
 		imgSrc: null,
 		stack: ['React', 'CSS', 'Material UI', 'Firebase'],
@@ -622,7 +622,7 @@ const projects = [
 		},
 	},
 	{
-		_id: null,
+		_id: '658ef4bbf0e9b6a1ddc52e20',
 		name: 'Mood Booster',
 		imgSrc:
 			'https://res.cloudinary.com/drpmdiapv/image/upload/v1703419049/patrick.pavliuchik.com/moodBooster-overview_r1mdz8.png',
