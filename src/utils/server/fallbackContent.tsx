@@ -273,10 +273,11 @@ const projects = [
 	{
 		_id: null,
 		name: 'Baufachbetrieb Müller',
-		imgSrc: null,
+		imgSrc:
+			'https://res.cloudinary.com/drpmdiapv/image/upload/v1703765625/patrick.pavliuchik.com/mueller-screen_rlpg13.png',
 		stack: ['React', 'SASS', 'AWS', 'Cloudinary'],
-		githubLink: null,
-		liveLink: null,
+		githubLink: 'https://github.com/Pascha-404/business-mueller',
+		liveLink: 'https://www.fliesenleger-mueller.de/',
 		yearCreated: 2023,
 		en: {
 			role: 'Full-stack Developer',
@@ -392,8 +393,8 @@ const projects = [
 			'MongoDB',
 			'Cloudinary',
 		],
-		githubLink: null,
-		liveLink: null,
+		githubLink: 'https://github.com/Pascha-404/goksenia-portfolio-homepage',
+		liveLink: 'https://patrick.pavliuchik.com/goksenia',
 		yearCreated: 2021,
 		en: {
 			role: 'Full-Stack Developer',
@@ -520,8 +521,8 @@ const projects = [
 		name: 'WebChatApp',
 		imgSrc: null,
 		stack: ['React', 'CSS', 'Material UI', 'Firebase'],
-		githubLink: null,
-		liveLink: null,
+		githubLink: 'https://github.com/Pascha-404/webChatApp',
+		liveLink: 'https://patrick.pavliuchik.com/webchatapp',
 		yearCreated: 2021,
 		en: {
 			role: 'Full-Stack Developer',
