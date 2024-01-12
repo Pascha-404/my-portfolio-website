@@ -1,4 +1,4 @@
 import connectToDatabase from './dbConnect';
-import { getStaticContent } from './getStaticContent';
+import { getContent } from './getContent';
 
-export { connectToDatabase, getStaticContent };
+export { connectToDatabase, getContent };

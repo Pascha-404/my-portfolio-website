@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 import '../sass/main.scss';
-import { getStaticContent } from '@/utils/server';
+import { getContent } from '@/utils/server';
 import { IFooterContent, INavbarContent } from '@/ts/types';
 import { LanguageProvider } from '@/utils/client';
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 async function RootLayout({ children }: { children: React.ReactNode }) {
-	const staticContent = await getStaticContent();
+	const staticContent = await getContent('static_content');
 	const navbarContent: INavbarContent = staticContent.find(
 		(obj: INavbarContent) => obj.section_name === 'navbar'
 	);

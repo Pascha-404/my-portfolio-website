@@ -1,4 +1,4 @@
-import { getStaticContent } from '@/utils/server';
+import { getContent } from '@/utils/server';
 
 import HeroSection from '@/components/HeroSection';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -9,7 +9,7 @@ import styles from './page.module.scss';
 import { IHeroSectionContent, IStaticContent, IAboutSectionContent } from '@/ts/types';
 
 async function Home() {
-	const staticContent = await getStaticContent();
+	const staticContent = await getContent('static_content');
 	const heroContent: IHeroSectionContent = staticContent.find(
 		(obj: IHeroSectionContent) => obj.section_name === 'heroSection'
 	);
