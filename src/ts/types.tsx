@@ -11,6 +11,8 @@ type TechType =
 	| 'MongoDB'
 	| 'Cloudinary';
 
+type TContent = 'projects' | 'static_content';
+
 interface ITranslations {
 	en: string;
 	de: string;
@@ -80,6 +82,7 @@ interface IFooterContent extends IStaticContent {
 
 export type {
 	TechType,
+	TContent,
 	ITextSegment,
 	INavbarContent,
 	IHeroSectionContent,
