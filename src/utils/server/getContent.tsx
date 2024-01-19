@@ -14,7 +14,7 @@ const getContent = cache(async (kind: TContent) => {
 				const transformedData = JSON.parse(JSON.stringify(fetchedData));
 				return transformedData[0].static_sections;
 			}
-			case 'static_content': {
+			case 'projects': {
 				const fetchedData = await db.collection('projects').find({}).toArray();
 				const transformedData = JSON.parse(JSON.stringify(fetchedData));
 				return transformedData;
