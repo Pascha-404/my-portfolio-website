@@ -11,6 +11,8 @@ import iconNextjs from './icon-nextjs.svg';
 import iconNode from './icon-node.svg';
 import iconSass from './icon-sass.svg';
 import iconArrowUp from './icon-arrow-up.svg';
+import iconMui from './icon-mui.png';
+import iconFirebase from './icon-firebase.svg';
 
 export {
 	iconReact,
@@ -25,5 +27,7 @@ export {
 	iconNextjs,
 	iconNode,
 	iconSass,
-	iconArrowUp
+	iconArrowUp,
+	iconMui,
+	iconFirebase
 };

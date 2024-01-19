@@ -9,7 +9,9 @@ type TechType =
 	| 'CSS'
 	| 'AWS'
 	| 'MongoDB'
-	| 'Cloudinary';
+	| 'Cloudinary'
+	| 'Material UI'
+	| 'Firebase';
 
 type TContent = 'projects' | 'static_content';
 
@@ -55,7 +57,7 @@ interface IProjectData {
 	_id: string;
 	name: string;
 	imgSrc: string | null;
-	stack: string[];
+	stack: TechType[];
 	githubLink: string;
 	liveLink: string | null;
 	yearCreated: number;

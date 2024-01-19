@@ -11,6 +11,8 @@ import {
 	iconNextjs,
 	iconNode,
 	iconSass,
+	iconMui,
+	iconFirebase,
 } from '../../../public/icons';
 import { TechType } from '@/ts/types';
 
@@ -48,6 +50,10 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 			return (
 				<Image className={styles.techIcon} src={iconCloudinary} alt='Cloudinary icon' />
 			);
+		case 'Material UI':
+			return <Image className={styles.techIcon} src={iconMui} alt='Material UI icon' />;
+		case 'Firebase':
+			return <Image className={styles.techIcon} src={iconFirebase} alt='Firebase icon' />;
 
 		default:
 			throw new Error(`No Case found for provided property: ${technology}`);
