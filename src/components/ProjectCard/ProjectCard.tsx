@@ -14,7 +14,7 @@ interface ProjectCardProps {
 	name: string;
 	role: string;
 	stack: TechType[];
-	tasks: string[];
+	task: string;
 	description: string;
 	githubLink: string;
 	liveLink?: string;
@@ -33,7 +33,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 					<p className={styles.weightHighlight}>Role:</p>
 					<p>{props.role}</p>
 					<p className={styles.weightHighlight}>Tasks:</p>
-					<p>{props.tasks.join(', ')}</p>
+					<p>{props.task}</p>
 					<p className={styles.weightHighlight}>Stack:</p>
 					<p>{props.stack.join(', ')}</p>
 				</div>
