@@ -35,6 +35,34 @@ interface ICompanyData {
 	skills: IDataListData[];
 }
 
+interface IProjectTechnology {
+	category: string;
+	detail: string[];
+}
+
+interface IProjectLocale {
+	role: string;
+	task: string;
+	description: string;
+	longDescription: string;
+	challenges: IDataListData[];
+	approach: IDataListData[];
+	results: IDataListData[];
+	technology: IProjectTechnology[];
+}
+
+interface IProjectData {
+	_id: string;
+	name: string;
+	imgSrc: string | null;
+	stack: string[];
+	githubLink: string;
+	liveLink: string | null;
+	yearCreated: number;
+	en: IProjectLocale;
+	de: IProjectLocale;
+}
+
 interface IStaticContent {
 	section_name: string;
 	description?: ITranslations;
@@ -84,6 +112,7 @@ export type {
 	TechType,
 	TContent,
 	ITextSegment,
+	IProjectData,
 	INavbarContent,
 	IHeroSectionContent,
 	IAboutSectionContent,
