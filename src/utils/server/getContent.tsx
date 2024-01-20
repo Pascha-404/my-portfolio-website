@@ -25,8 +25,14 @@ const getContent = cache(async (kind: TContent) => {
 	}
 
 	console.error('application uses fallback content');
+	
+	switch (kind) {
+		case 'static_content':
+			return static_sections;
 
-	return static_sections;
+		case 'projects':
+			return projects;
+	}
 });
 
 export { getContent };
