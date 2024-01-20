@@ -5,7 +5,7 @@ import { iconArrow } from '../../../public/icons';
 import Image from 'next/image';
 import ProjectCard from '../ProjectCard';
 
-import { IStaticContent } from '@/ts/types';
+import { IProjectData, IStaticContent } from '@/ts/types';
 import fallbackContent from './fallbackContent';
 import { textMapFunction } from '@/utils/client';
 import { useLanguage } from '@/utils/client';
@@ -14,8 +14,10 @@ import styles from './ProjectsSection.module.scss';
 
 function ProjectsSection({
 	staticContent,
+	projects,
 }: {
 	staticContent: IStaticContent;
+	projects: IProjectData[];
 }): JSX.Element {
 	const { currentLanguage } = useLanguage();
 	const headerText = textMapFunction({
@@ -33,36 +35,22 @@ function ProjectsSection({
 	return (
 		<section id='projectsSection' className={styles.projectsSection}>
 			<h3>{headerText}</h3>
-			<ProjectCard
-				id='1'
-				name='Test-Project'
-				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'AWS', 'Node.js']}
-				tasks={['Task', 'Task1', 'Task2']}
-				liveLink='/'
-				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
-				githubLink='https://github.com/Pascha-404/my-portfolio-website'
-			/>
-			<ProjectCard
-				id='2'
-				name='Test-Project'
-				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'AWS', 'Node.js']}
-				tasks={['Task', 'Task1', 'Task2']}
-				liveLink='/'
-				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
-				githubLink='https://github.com/Pascha-404/my-portfolio-website'
-			/>
-			<ProjectCard
-				id='3'
-				name='Test-Project'
-				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'AWS', 'Node.js']}
-				tasks={['Task', 'Task1', 'Task2']}
-				liveLink='/'
-				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
-				githubLink='https://github.com/Pascha-404/my-portfolio-website'
-			/>
+
+			{projects.map(project => {
+				return (
+					<ProjectCard
+						key={project._id}
+						id={project._id}
+						name={project.name}
+						role={project[currentLanguage].role}
+						stack={project.stack}
+						task={project[currentLanguage].task}
+						liveLink={project.liveLink ? project.liveLink : undefined}
+						description={project[currentLanguage].description}
+						githubLink={project.githubLink}
+					/>
+				);
+			})}
 
 			<a className={styles.aboutLink} href='/'>
 				{navButtonText}
