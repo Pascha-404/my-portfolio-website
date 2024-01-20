@@ -10,6 +10,7 @@ import { IHeroSectionContent, IStaticContent, IAboutSectionContent } from '@/ts/
 
 async function Home() {
 	const staticContent = await getContent('static_content');
+	const projectsData = await getContent('projects');
 	const heroContent: IHeroSectionContent = staticContent.find(
 		(obj: IHeroSectionContent) => obj.section_name === 'heroSection'
 	);
@@ -26,7 +27,7 @@ async function Home() {
 	return (
 		<main className={styles.main}>
 			<HeroSection staticContent={heroContent} />
-			<ProjectsSection staticContent={projectsContent} />
+			<ProjectsSection staticContent={projectsContent} projects={projectsData} />
 			<AboutSection staticContent={aboutContent} />
 			<ContactSection staticContent={contactContent} />
 		</main>

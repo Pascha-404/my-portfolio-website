@@ -2,12 +2,14 @@ import Image from 'next/image';
 import styles from './page.module.scss';
 import defaultImage from '../../../../public/projectCard-default-img.jpeg';
 import DataListCard from '@/components/DataListCard';
+import { getContent } from '@/utils/server';
 
 interface ProjectParams {
 	params: { id: string };
 }
 
 function Project({ params }: ProjectParams): JSX.Element {
+	const projectsData = getContent('projects');
 	return (
 		<main className={styles.main}>
 			<h1>

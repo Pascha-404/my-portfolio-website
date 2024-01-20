@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 async function RootLayout({ children }: { children: React.ReactNode }) {
 	const staticContent = await getContent('static_content');
+	const projectContent = await getContent('projects');
 	const navbarContent: INavbarContent = staticContent.find(
 		(obj: INavbarContent) => obj.section_name === 'navbar'
 	);
