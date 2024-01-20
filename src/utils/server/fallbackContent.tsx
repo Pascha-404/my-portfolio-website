@@ -275,7 +275,7 @@ const projects = [
 		name: 'Baufachbetrieb Müller',
 		imgSrc:
 			'https://res.cloudinary.com/drpmdiapv/image/upload/v1703765625/patrick.pavliuchik.com/mueller-screen_rlpg13.png',
-		stack: ['React', 'SASS', 'AWS', 'Cloudinary'],
+		stack: ['React', 'SASS', 'Firebase', 'Cloudinary'],
 		githubLink: 'https://github.com/Pascha-404/business-mueller',
 		liveLink: 'https://www.fliesenleger-mueller.de/',
 		yearCreated: 2023,
@@ -325,8 +325,8 @@ const projects = [
 			],
 			technology: [
 				{ category: 'Frontend', detail: ['React', 'SASS', 'reCaptcha'] },
-				{ category: 'Backend', detail: ['Firebase', 'Functions', 'Firestore'] },
-				{ category: 'Deployment', detail: ['AWS', 'Cloudinary', 'Strato'] },
+				{ category: 'Backend', detail: ['Firebase Functions', 'Firebase Firestore'] },
+				{ category: 'Deployment', detail: ['Cloudinary', 'Strato'] },
 			],
 		},
 		de: {
@@ -375,8 +375,8 @@ const projects = [
 			],
 			technology: [
 				{ category: 'Frontend', detail: ['React', 'SASS', 'reCaptcha'] },
-				{ category: 'Backend', detail: ['Firebase', 'Functions', 'Firestore'] },
-				{ category: 'Bereitstellung', detail: ['AWS', 'Cloudinary', 'Strato'] },
+				{ category: 'Backend', detail: ['Firebase Functions', 'Firebase Firestore'] },
+				{ category: 'Bereitstellung', detail: ['Cloudinary', 'Strato'] },
 			],
 		},
 	},
@@ -730,31 +730,5 @@ const projects = [
 		},
 	},
 ];
-
-/* Original idea for structure */
-// {
-// 		_id: null,
-// 		name: 'mueller',
-// 		imgSrc: null,
-// 		role: 'Full-Stack Developer',
-// 		stack: ['React', 'SASS', 'AWS', 'Cloudinary'],
-// 		task: 'Create a web presence for local business',
-// 		description: 'Some text',
-// 		longDescription: 'Some long text',
-// 		githubLink: null,
-// 		liveLink: null,
-// 		yearCreated: 2023,
-// 		challenges: [{ data: 'Challenge text' }, { data: 'Challenge Text' }],
-// 		approach: [
-// 			{ header: 'Technology Stack', data: 'Technologys' },
-// 			{ header: 'Frontend Development', data: 'What and why' },
-// 		],
-// 		results: [{ data: 'Result here' }, { data: 'Result here' }],
-// 		technologie: [
-// 			{ category: 'Frontend', detail: ['React', 'SASS'] },
-// 			{ category: 'Backend', detail: ['AWS'] },
-// 			{ category: 'Deployment', detail: ['Cloudinary', 'Strato'] },
-// 		],
-// 	}
 
 export { static_sections, projects };
