@@ -22,6 +22,8 @@ interface ProjectCardProps {
 
 function ProjectCard(props: ProjectCardProps): JSX.Element {
 	const img = props.imgSrc || defaultImg;
+	const { role, task, stack, name, description, liveLink, githubLink } = props;
+	
 	return (
 		<article className={styles.projectCard}>
 			<div className={styles.cardFirstHalf}>
@@ -31,28 +33,28 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 
 				<div className={styles.cardDetails}>
 					<p className={styles.weightHighlight}>Role:</p>
-					<p>{props.role}</p>
+					<p>{role}</p>
 					<p className={styles.weightHighlight}>Tasks:</p>
-					<p>{props.task}</p>
+					<p>{task}</p>
 					<p className={styles.weightHighlight}>Stack:</p>
-					<p>{props.stack.join(', ')}</p>
+					<p>{stack.join(', ')}</p>
 				</div>
 
 				<div className={styles.cardLive}>
 					<div className={styles.techLogos}>
-						{props.stack.map(tech => (
+						{stack.map(tech => (
 							<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
 						))}
 					</div>
 
-					{props.liveLink && <a href={props.liveLink}>visit live product</a>}
+					{liveLink && <a href={liveLink}>visit live product</a>}
 				</div>
 			</div>
 
 			<div className={styles.cardSecondHalf}>
-				<h4>project: {props.name}</h4>
-				<p>{props.description}</p>
-				<a href={props.githubLink}>[github link]</a>
+				<h4>project: {name}</h4>
+				<p>{description}</p>
+				<a href={githubLink}>[github link]</a>
 			</div>
 		</article>
 	);
