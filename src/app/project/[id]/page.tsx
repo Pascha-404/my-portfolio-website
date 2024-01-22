@@ -11,7 +11,7 @@ async function Project({ params }: ProjectParams) {
 	const filteredData = projectsData.filter(
 		(project: IProjectData) => project._id === params.id
 	);
-	return <ProjectPage projectData={filteredData} />;
+	return <ProjectPage projectData={filteredData[0]} />;
 }
 
 export default Project;
