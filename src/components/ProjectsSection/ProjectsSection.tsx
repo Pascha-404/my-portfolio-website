@@ -41,6 +41,7 @@ function ProjectsSection({
 					<ProjectCard
 						key={project._id}
 						id={project._id}
+						imgSrc={project.imgSrc}
 						name={project.name}
 						role={project[currentLanguage].role}
 						stack={project.stack}
