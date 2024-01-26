@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { v4 as uuid } from 'uuid';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
 import { TechType } from '@/ts/types';
@@ -10,7 +11,7 @@ import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
 	readonly id: string;
-	imgSrc?: string;
+	imgSrc?: string | null;
 	name: string;
 	role: string;
 	stack: TechType[];
@@ -22,13 +23,21 @@ interface ProjectCardProps {
 
 function ProjectCard(props: ProjectCardProps): JSX.Element {
 	const img = props.imgSrc || defaultImg;
-	const { role, task, stack, name, description, liveLink, githubLink } = props;
-	
+	const { id, role, task, stack, name, description, liveLink, githubLink } = props;
+
 	return (
 		<article className={styles.projectCard}>
 			<div className={styles.cardFirstHalf}>
 				<div className={styles.imgWrapper}>
-					<Image src={img} alt='Project Preview' />
+					<Link href={`/project/${id}`}>
+						<Image
+							src={img}
+							width='455'
+							height='172'
+							objectFit='cover'
+							alt='Project Preview'
+						/>
+					</Link>
 				</div>
 
 				<div className={styles.cardDetails}>
@@ -52,9 +61,11 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 			</div>
 
 			<div className={styles.cardSecondHalf}>
-				<h4>project: {name}</h4>
+				<Link href={`/project/${id}`}>
+					<h4>project: {name}</h4>
+				</Link>
 				<p>{description}</p>
-				<a href={githubLink}>[github link]</a>
+				<Link href={githubLink}>[github link]</Link>
 			</div>
 		</article>
 	);
