@@ -16,7 +16,7 @@ function ProjectPage({ projectData }: ProjectPageProps): JSX.Element {
 	const { name, imgSrc, githubLink, liveLink, yearCreated } = projectData;
 	const { role, longDescription, challenges, approach, results, technology } =
 		projectData[currentLanguage];
-	
+
 	return (
 		<main className={styles.main}>
 			<h1>
@@ -31,6 +31,9 @@ function ProjectPage({ projectData }: ProjectPageProps): JSX.Element {
 			{imgSrc ? (
 				<Image
 					src={imgSrc}
+					width='1161'
+					height='424'
+					layout='cover'
 					alt='Project Screenshot'
 					priority
 					className={styles.projectImage}
