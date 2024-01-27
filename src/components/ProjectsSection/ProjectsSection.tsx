@@ -2,7 +2,7 @@
 
 import { iconArrow } from '../../../public/icons';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import ProjectCard from '../ProjectCard';
 
 import { IProjectData, IStaticContent } from '@/ts/types';

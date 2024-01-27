@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
 import { TechType } from '@/ts/types';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import TechIcon from '../TechIcon';
 
 import styles from './ProjectCard.module.scss';

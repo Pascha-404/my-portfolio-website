@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import { INavbarContent } from '@/ts/types';
 import { useLanguage } from '@/utils/client';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import LanguageButton from '../LanguageButton';
 import NavigationButton from '../NavigationButton';
 

@@ -7,7 +7,7 @@ import { textMapFunction } from '@/utils/client';
 import fallbackContent from './fallbackContent';
 import { IHeroSectionContent } from '@/ts/types';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import NavigationButton from '../NavigationButton';
 import CalendlyButton from '../CalendlyButton';
 

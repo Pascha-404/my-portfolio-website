@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './ProjectPage.module.scss';
 import defaultImage from '../../../public/projectCard-default-img.jpeg';
 import DataListCard from '@/components/DataListCard';
@@ -32,8 +32,8 @@ function ProjectPage({ projectData }: ProjectPageProps): JSX.Element {
 				<Image
 					src={imgSrc}
 					width='1161'
-					height='424'
-					layout='cover'
+					height='600'
+					layout='responsive'
 					alt='Project Screenshot'
 					priority
 					className={styles.projectImage}

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import {
 	iconReact,
 	iconAws,
@@ -23,37 +23,139 @@ type TechIconProp = {
 };
 
 function TechIcon({ technology }: TechIconProp): JSX.Element {
+	const iconWidth = '31';
+	const iconHeight = '33';
 	switch (technology) {
 		case 'React':
-			return <Image className={styles.techIcon} src={iconReact} alt='React icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconReact}
+					alt='React icon'
+				/>
+			);
 		case 'Next.js':
-			return <Image className={styles.techIcon} src={iconNextjs} alt='Nextjs icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconNextjs}
+					alt='Nextjs icon'
+				/>
+			);
 		case 'Express.js':
 			return (
-				<Image className={styles.techIcon} src={iconExpress} alt='Express.js icon' />
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconExpress}
+					alt='Express.js icon'
+				/>
 			);
 		case 'Node.js':
-			return <Image className={styles.techIcon} src={iconNode} alt='Node.js icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconNode}
+					alt='Node.js icon'
+				/>
+			);
 		case 'JavaScript':
-			return <Image className={styles.techIcon} src={iconJs} alt='JavaScript icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconJs}
+					alt='JavaScript icon'
+				/>
+			);
 		case 'SASS':
-			return <Image className={styles.techIcon} src={iconSass} alt='SASS icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconSass}
+					alt='SASS icon'
+				/>
+			);
 		case 'HTML':
-			return <Image className={styles.techIcon} src={iconHtml} alt='HTML icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconHtml}
+					alt='HTML icon'
+				/>
+			);
 		case 'CSS':
-			return <Image className={styles.techIcon} src={iconCss} alt='CSS icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconCss}
+					alt='CSS icon'
+				/>
+			);
 		case 'AWS':
-			return <Image className={styles.techIcon} src={iconAws} alt='AWS icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconAws}
+					alt='AWS icon'
+				/>
+			);
 		case 'MongoDB':
-			return <Image className={styles.techIcon} src={iconMongodb} alt='MongoDB icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconMongodb}
+					alt='MongoDB icon'
+				/>
+			);
 		case 'Cloudinary':
 			return (
-				<Image className={styles.techIcon} src={iconCloudinary} alt='Cloudinary icon' />
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconCloudinary}
+					alt='Cloudinary icon'
+				/>
 			);
 		case 'Material UI':
-			return <Image className={styles.techIcon} src={iconMui} alt='Material UI icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconMui}
+					alt='Material UI icon'
+				/>
+			);
 		case 'Firebase':
-			return <Image className={styles.techIcon} src={iconFirebase} alt='Firebase icon' />;
+			return (
+				<Image
+					width={iconWidth}
+					height={iconHeight}
+					className={styles.techIcon}
+					src={iconFirebase}
+					alt='Firebase icon'
+				/>
+			);
 
 		default:
 			throw new Error(`No Case found for provided property: ${technology}`);

@@ -3,7 +3,7 @@
 import { iconArrowUp } from '../../../public/icons';
 import personalLogo from '../../../public/personal-logo.svg';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import NavigationButton from '../NavigationButton';
 import { IFooterContent } from '@/ts/types';
 import { useLanguage } from '@/utils/client';
