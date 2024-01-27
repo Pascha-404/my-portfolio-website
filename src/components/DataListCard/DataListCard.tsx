@@ -1,16 +1,15 @@
-import styles from './DataListCard.module.scss';
+import { v4 as uuid } from 'uuid';
 
-interface Data {
-	header?: string;
-	data: string;
-}
+import { IDataListData } from '@/ts/types';
+
+import styles from './DataListCard.module.scss';
 
 interface DataListCardProps {
 	type: 'home_experience' | 'home_skill' | 'project_bulletList' | 'project_highlightList';
 	header: string;
 	role?: string;
 	timeRange?: string;
-	data: Data[];
+	data: IDataListData[];
 }
 
 function DataListCard({
@@ -34,7 +33,9 @@ function DataListCard({
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item.data}</li>
+							<li key={`dataListCard-li-${uuid()}`} className={styles.cardListItem}>
+								{item.data}
+							</li>
 						))}
 					</ul>
 				</div>
@@ -46,7 +47,9 @@ function DataListCard({
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item.data}</li>
+							<li key={`dataListCard-li-${uuid()}`} className={styles.cardListItem}>
+								{item.data}
+							</li>
 						))}
 					</ul>
 				</div>
@@ -58,7 +61,9 @@ function DataListCard({
 
 					<ul className={styles.cardList}>
 						{data.map(item => (
-							<li className={styles.cardListItem}>{item.data}</li>
+							<li key={`dataListCard-li-${uuid()}`} className={styles.cardListItem}>
+								{item.data}
+							</li>
 						))}
 					</ul>
 				</div>
@@ -69,7 +74,7 @@ function DataListCard({
 					<h2 className={styles.cardHeader}>{header}</h2>
 
 					{data.map(item => (
-						<p className={styles.cardListItem}>
+						<p key={`dataListCard-li-${uuid()}`} className={styles.cardListItem}>
 							<span className={styles.colorHighlight}>{item.header + ':'}</span>{' '}
 							{item.data}
 						</p>

@@ -1,53 +1,64 @@
+'use client';
+
 import { iconArrow } from '../../../public/icons';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import ProjectCard from '../ProjectCard';
+
+import { IProjectData, IStaticContent } from '@/ts/types';
+import fallbackContent from './fallbackContent';
+import { textMapFunction } from '@/utils/client';
+import { useLanguage } from '@/utils/client';
 
 import styles from './ProjectsSection.module.scss';
 
-function ProjectsSection(): JSX.Element {
+function ProjectsSection({
+	staticContent,
+	projects,
+}: {
+	staticContent: IStaticContent;
+	projects: IProjectData[];
+}): JSX.Element {
+	const { currentLanguage } = useLanguage();
+	const headerText = textMapFunction({
+		objectArray: staticContent.header || fallbackContent.header,
+		currentLanguage,
+		stylingClass: 'colorHighlight',
+		styles,
+	});
+	const navButtonText =
+		staticContent.navigation_btn?.[currentLanguage] ||
+		fallbackContent.navigation_btn[currentLanguage];
+	const arrowAltText =
+		staticContent.arrow_alt?.[currentLanguage] ||
+		fallbackContent.arrow_alt[currentLanguage];
 	return (
 		<section id='projectsSection' className={styles.projectsSection}>
-			<h3>
-				My <span className={styles.colorHighlight}>projects</span>
-			</h3>
-			<ProjectCard
-				id='1'
-				name='Test-Project'
-				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'AWS', 'Node.js']}
-				tasks={['Task', 'Task1', 'Task2']}
-				liveLink='/'
-				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
-				githubLink='https://github.com/Pascha-404/my-portfolio-website'
-			/>
-			<ProjectCard
-				id='2'
-				name='Test-Project'
-				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'AWS', 'Node.js']}
-				tasks={['Task', 'Task1', 'Task2']}
-				liveLink='/'
-				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
-				githubLink='https://github.com/Pascha-404/my-portfolio-website'
-			/>
-			<ProjectCard
-				id='3'
-				name='Test-Project'
-				role='Full-Stack Developer'
-				stack={['React', 'Next.js', 'AWS', 'Node.js']}
-				tasks={['Task', 'Task1', 'Task2']}
-				liveLink='/'
-				description='A full-stack e-commerce application using React for the frontend and Node.js for the backend. Implemented user authentication, product listings, and cart functionality.'
-				githubLink='https://github.com/Pascha-404/my-portfolio-website'
-			/>
+			<h3>{headerText}</h3>
+
+			{projects.map(project => {
+				return (
+					<ProjectCard
+						key={project._id}
+						id={project._id}
+						imgSrc={project.imgSrc}
+						name={project.name}
+						role={project[currentLanguage].role}
+						stack={project.stack}
+						task={project[currentLanguage].task}
+						liveLink={project.liveLink ? project.liveLink : undefined}
+						description={project[currentLanguage].description}
+						githubLink={project.githubLink}
+					/>
+				);
+			})}
 
 			<a className={styles.aboutLink} href='/'>
-				more about me and my experience
+				{navButtonText}
 			</a>
 
 			<div className={styles.imgWrapper}>
-				<Image src={iconArrow} alt='Yellow arrow pointing downwards' />
+				<Image src={iconArrow} alt={arrowAltText} />
 			</div>
 		</section>
 	);
