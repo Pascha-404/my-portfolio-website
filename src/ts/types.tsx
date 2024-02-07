@@ -15,6 +15,8 @@ type TechType =
 
 type TContent = 'projects' | 'static_content';
 
+type TLanguage = 'en' | 'de'
+
 interface ITranslations {
 	en: string;
 	de: string;
@@ -113,6 +115,7 @@ interface IFooterContent extends IStaticContent {
 export type {
 	TechType,
 	TContent,
+	TLanguage,
 	ITextSegment,
 	IProjectData,
 	INavbarContent,
