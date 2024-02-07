@@ -1,11 +1,16 @@
-"use client"
+'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { TLanguage } from '@/ts/types';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 type TLanguageContext = {
-	currentLanguage: 'en' | 'de';
-	setCurrentLanguage: (language: 'en' | 'de') => void;
+	currentLanguage: TLanguage;
+	setCurrentLanguage: (language: TLanguage) => void;
 };
+
+interface LanguageProviderProps {
+	children: ReactNode;
+}
 
 const LanguageContext = createContext<TLanguageContext>({
 	currentLanguage: 'en',
@@ -20,16 +25,32 @@ function useLanguage() {
 	return context;
 }
 
-interface LanguageProviderProps {
-	children: ReactNode;
-}
-
 function LanguageProvider({ children }: LanguageProviderProps) {
-	const [currentLanguage, setCurrentLanguage] = useState<'en' | 'de'>('en');
+	const [currentLanguage, setCurrentLanguage] = useState<TLanguage>('en');
+	const [loaded, setLoaded] = useState(false);
 
+	useEffect(() => {
+		// Perform this operation only on the client side
+		const storedLanguage = localStorage.getItem(
+			'patrick.pavliuchik.language'
+		) as TLanguage | null;
+		if (storedLanguage) {
+			setCurrentLanguage(storedLanguage);
+		}
+		setLoaded(true);
+	}, []);
+
+	useEffect(() => {
+		// Only persist to localStorage after initial load to prevent hydration mismatch
+		if (loaded) {
+			localStorage.setItem('patrick.pavliuchik.language', currentLanguage);
+		}
+	}, [currentLanguage, loaded]);
+
+	// Render children only after verifying the language to prevent hydration issues
 	return (
 		<LanguageContext.Provider value={{ currentLanguage, setCurrentLanguage }}>
-			{children}
+			{loaded ? children : null}
 		</LanguageContext.Provider>
 	);
 }
