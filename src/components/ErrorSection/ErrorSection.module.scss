@@ -1,0 +1,11 @@
+@use '@/sass/abstracts' as *;
+
+.error {
+	width: 100%;
+	min-height: 60vh;
+	margin: 0 auto;
+
+	@include flexbox(column);
+	@include align-items(center);
+	@include justify-content(center);
+}
