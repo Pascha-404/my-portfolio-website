@@ -13,6 +13,9 @@ import iconSass from './icon-sass.svg';
 import iconArrowUp from './icon-arrow-up.svg';
 import iconMui from './icon-mui.png';
 import iconFirebase from './icon-firebase.svg';
+import iconError from './icon-error.png';
+import iconNoData from './icon-noData.png';
+import iconFolder from './icon-folder.png';
 
 export {
 	iconReact,
@@ -29,5 +32,8 @@ export {
 	iconSass,
 	iconArrowUp,
 	iconMui,
-	iconFirebase
+	iconFirebase,
+	iconError,
+	iconFolder,
+	iconNoData
 };
