@@ -8,4 +8,16 @@
 	@include flexbox(column);
 	@include align-items(center);
 	@include justify-content(center);
+
+	h2 {
+		margin: 1rem 0 1rem 0;
+	}
+
+	button {
+		padding: 10px 20px;
+		background-color: transparent;
+		color: $txt-highlight-100;
+		border: 2px solid $txt-highlight-100;
+		cursor: pointer;
+	}
 }
