@@ -1,5 +1,6 @@
 'use client'; // Error components must be Client Components
 
+import { CSSProperties } from 'react';
 import ErrorSection from '@/components/ErrorSection';
 import { LanguageProvider } from '@/utils/client';
 
@@ -10,12 +11,23 @@ function GlobalError({
 	error: Error & { digest?: string };
 	reset: () => void;
 }) {
+	const styles: { [key: string]: CSSProperties } = {
+		main: {
+			width: '100vw',
+			height: '100vh',
+			display: 'flex',
+			flexDirection: 'column',
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+	};
+
 	return (
 		<html>
-			<body>
-				<main>
+			<body id='root'>
+				<main style={styles.main}>
 					<LanguageProvider>
-						<ErrorSection reset={reset} />;
+						<ErrorSection reset={reset} />
 					</LanguageProvider>
 				</main>
 			</body>
