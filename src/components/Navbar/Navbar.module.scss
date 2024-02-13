@@ -30,14 +30,13 @@
 
 	.burgerContainer {
 		display: none;
-		height: 90vh;
 		@include flexbox(column);
 		@include align-items(center);
 		z-index: 2;
-		margin-top: pxToRem(70px);
+		margin-top: 70px;
 
 		* {
-			margin-bottom: pxToRem(70px);
+			margin-bottom: 70px;
 		}
 	}
 }
@@ -55,7 +54,7 @@
 
 		.navbarHeader {
 			width: 100%;
-			min-height: pxToRem(120px);
+			min-height: pxToRem(150px);
 			background-color: $bg-color-menu;
 			padding-left: pxToRem(50px);
 			padding-right: pxToRem(50px);
@@ -76,6 +75,22 @@
 
 		.burgerContainer {
 			@include flexbox(column);
+		}
+	}
+}
+
+@include breakpoint(m) {
+	.navbar {
+		.navbarHeader {
+			min-height: pxToRem(200px);
+		}
+	}
+}
+
+@include breakpoint(xs) {
+	.navbar {
+		.navbarHeader {
+			min-height: pxToRem(300px);
 		}
 	}
 }
