@@ -1,16 +1,81 @@
 @use '../../sass/abstracts/' as *;
 
+.burgerShade {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 1;
+}
+
 .navbar {
 	width: 100vw;
 	@include flexbox();
 	@include justify-content(space-around);
 	@include align-items(center);
-    padding-bottom: pxToRem(31px);
+	padding-bottom: pxToRem(31px);
 
-    .navbarLinks{
-        width: 65%;
-        @include flexbox();
-        @include justify-content(space-around);
-        @include align-items(center);
-    }
+	.navbarLinks {
+		width: 65%;
+		@include flexbox();
+		@include justify-content(space-around);
+		@include align-items(center);
+	}
+
+	.burgerIcon {
+		display: none;
+	}
+
+	.burgerContainer {
+		display: none;
+		height: 90vh;
+		@include flexbox(column);
+		@include align-items(center);
+		z-index: 2;
+		margin-top: pxToRem(70px);
+
+		* {
+			margin-bottom: pxToRem(70px);
+		}
+	}
+}
+
+@include breakpoint(l) {
+	.navbar {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+
+		@include flexbox(column);
+
+		.navbarHeader {
+			width: 100%;
+			min-height: pxToRem(120px);
+			background-color: $bg-color-menu;
+			padding-left: pxToRem(50px);
+			padding-right: pxToRem(50px);
+			box-sizing: border-box;
+
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(space-between);
+
+			.burgerIcon {
+				display: block;
+			}
+		}
+
+		.navbarLinks {
+			display: none;
+		}
+
+		.burgerContainer {
+			@include flexbox(column);
+		}
+	}
 }
