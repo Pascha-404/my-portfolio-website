@@ -25,7 +25,7 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
 	);
 
 	return (
-		<html lang='en'>
+		<html id='html' lang='en'>
 			<body id='root'>
 				<LanguageProvider>
 					<Navbar staticContent={navbarContent} />
