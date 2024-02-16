@@ -10,7 +10,6 @@
 	box-sizing: inherit;
 }
 
-
 html body {
 	position: relative;
 	color: $txt-light-50;
@@ -24,38 +23,36 @@ html body {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
-
-
-@include breakpoint(xl){
-	#html{
+@include breakpoint(xl) {
+	#html {
 		font-size: 15px;
 	}
 }
 
-@include breakpoint(l){
-	#html{
+@include breakpoint(l) {
+	#html {
 		font-size: 12px;
 	}
-	html body{
-		padding-top: pxToRem(200px);
+	html body {
+		padding-top: pxToRem(100px);
 	}
 }
-@include breakpoint(m){
-	#html{
+@include breakpoint(m) {
+	#html {
 		font-size: 9px;
 	}
 }
-@include breakpoint(s){
-	#html{
+@include breakpoint(s) {
+	#html {
 		font-size: 7px;
 	}
 }
-@include breakpoint(xs){
-	#html{
+@include breakpoint(xs) {
+	#html {
 		font-size: 4px;
 	}
 }
