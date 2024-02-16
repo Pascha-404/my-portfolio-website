@@ -1,7 +1,15 @@
 @use '../sass/abstracts/' as *;
 
-.main{
-    width: 90%;
-    max-width: 1920px;
-    padding-left: pxToRem(144px);
+.main {
+	width: 90%;
+	max-width: 1920px;
+	padding-left: pxToRem(144px);
+
+	@include breakpoint(m) {
+		padding-left: pxToRem(105px);
+	}
+
+	@include breakpoint(s) {
+		padding-left: pxToRem(80px);
+	}
 }
