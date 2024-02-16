@@ -22,4 +22,15 @@
 	.imgWrapper {
 		margin-top: pxToRem(69px);
 	}
+
+	@include breakpoint(l) {
+		h3 {
+			margin-bottom: pxToRem(70px);
+		}
+	}
+	@include breakpoint(s) {
+		h3 {
+			margin-bottom: pxToRem(120px);
+		}
+	}
 }
