@@ -42,6 +42,9 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 							/>
 						</Link>
 					</div>
+					<Link href={`/project/${id}`} className={styles.showPhone}>
+						<h4>project: {name}</h4>
+					</Link>
 					<div className={styles.cardLive}>
 						<div className={styles.techLogos}>
 							{stack.map(tech => (
@@ -97,7 +100,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 			</div>
 
 			<div className={styles.cardSecondHalf}>
-				<Link href={`/project/${id}`}>
+				<Link href={`/project/${id}`} className={styles.hidePhone}>
 					<h4>project: {name}</h4>
 				</Link>
 				<p>{description}</p>
