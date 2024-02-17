@@ -6,6 +6,13 @@
 	padding-right: 100px;
 	margin-bottom: pxToRem(100px);
 
+	.showPhone {
+		display: none;
+	}
+	.hidePhone {
+		display: block;
+	}
+
 	.cardFirstHalf {
 		width: 100%;
 		margin-bottom: pxToRem(30px);
@@ -61,7 +68,9 @@
 		h4 {
 			display: inline-block;
 			text-transform: uppercase;
-			border-bottom: 1px solid $txt-light-100;
+			text-decoration: underline;
+			line-height: 30px;
+			text-underline-position: under;
 			margin-bottom: pxToRem(20px);
 		}
 		p {
@@ -95,7 +104,7 @@
 				display: none;
 			}
 			.displaySmallScreen {
-					@include flexbox(column);
+				@include flexbox(column);
 			}
 			.imgWrapper {
 				margin-bottom: pxToRem(30px);
@@ -129,6 +138,37 @@
 		.cardFirstHalf {
 			.cardDetails {
 				grid-template-columns: 1fr 2fr;
+			}
+		}
+	}
+}
+
+@include breakpoint(xs) {
+	.projectCard {
+		margin-bottom: 50px;
+		.showPhone {
+			display: inline-block;
+		}
+		.hidePhone {
+			display: none;
+		}
+		.cardFirstHalf {
+			margin-bottom: 20px;
+			h4 {
+				white-space: nowrap;
+				color: $txt-blue;
+				border: none;
+				text-decoration: underline;
+				text-underline-position: under;
+				line-height: 30px;
+				display: inline-block;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				margin-top: 10px;
+			}
+
+			.cardLive{
+				margin-bottom: 30px;
 			}
 		}
 	}
