@@ -17,6 +17,7 @@
 	}
 
 	@include breakpoint(l) {
+		margin-top: pxToRem(150px);
 		h3 {
 			margin-bottom: pxToRem(70px);
 		}

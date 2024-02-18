@@ -37,4 +37,8 @@
 			font-weight: 700;
 		}
 	}
+
+	@include breakpoint(l){
+		margin-top: pxToRem(150px);
+	}
 }

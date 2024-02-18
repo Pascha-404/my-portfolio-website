@@ -1,6 +1,7 @@
 @use '@/sass/abstracts/' as *;
 
 .contactSection {
+	width: 90%;
 	margin-bottom: pxToRem(248px);
 
 	h5 {
@@ -16,5 +17,9 @@
 		font-size: 24px;
 		max-width: 1147px;
 		margin-bottom: pxToRem(30px);
+	}
+
+	@include breakpoint(l){
+		margin-top: pxToRem(150px);
 	}
 }
