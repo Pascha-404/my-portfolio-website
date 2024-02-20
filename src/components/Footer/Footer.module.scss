@@ -126,6 +126,7 @@
 		}
 		.bottomContent {
 			@include justify-content(center);
+			margin: 30px 0 40px;
 		}
 	}
 }
