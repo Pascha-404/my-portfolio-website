@@ -3,7 +3,7 @@
 import { iconArrowUp } from '../../../public/icons';
 import personalLogo from '../../../public/personal-logo.svg';
 
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import NavigationButton from '../NavigationButton';
 import { IFooterContent } from '@/ts/types';
 import { useLanguage } from '@/utils/client';
@@ -25,39 +25,36 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.upLinkWrapper}>
-				<NavigationButton
-					text={navBtnText}
-					style='underlined'
-					targetId='navbar'
-				/>
+				<NavigationButton text={navBtnText} style='underlined' targetId='navbar' />
 			</div>
 
 			<div className={styles.middleContent}>
 				<Image src={iconArrowUp} alt={arrowAltText} />
 
-				<div className={styles.contactWrapper}>
-					<h6>{contactsText}</h6>
-					<div>
-						<p>Patrick Pavliuchik,</p>
-						<a href='tel:04917782934'>+49 17782934</a>
-						<a href='mailto:patrick@pavliuchik.com'>patrick@pavliuchik.com</a>
+				<div className={styles.middleSeparator}>
+					<div className={styles.contactWrapper}>
+						<h6>{contactsText}</h6>
+						<div>
+							<p>Patrick Pavliuchik,</p>
+							<a href='tel:04917782934'>+49 17782934</a>
+							<a href='mailto:patrick@pavliuchik.com'>patrick@pavliuchik.com</a>
+						</div>
 					</div>
-				</div>
-
-				<div className={styles.sitemap}>
-					<h6>sitemap</h6>
-					<div>
-						<NavigationButton
-							text={projectsText}
-							targetId='projectsSection'
-							style='normalSmall'
-						/>
-						<NavigationButton
-							text={aboutText}
-							targetId='aboutSection'
-							style='normalSmall'
-						/>
-						<NavigationButton text={resumeText} targetId='resume' style='normalSmall' />
+					<div className={styles.sitemap}>
+						<h6>sitemap</h6>
+						<div>
+							<NavigationButton
+								text={projectsText}
+								targetId='projectsSection'
+								style='normalSmall'
+							/>
+							<NavigationButton
+								text={aboutText}
+								targetId='aboutSection'
+								style='normalSmall'
+							/>
+							<NavigationButton text={resumeText} targetId='resume' style='normalSmall' />
+						</div>
 					</div>
 				</div>
 			</div>
