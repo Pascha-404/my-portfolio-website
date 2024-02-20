@@ -14,31 +14,35 @@
 		display: inline-block;
 		margin-left: pxToRem(144px);
 		margin-bottom: pxToRem(28px);
-		
 	}
 
 	.middleContent {
 		padding-left: pxToRem(144px);
+		min-height: 165px;
+		max-width: 800px;
 		@include flexbox();
+		@include justify-content(space-between);
 
 		img {
 			margin-right: pxToRem(372px);
 		}
-
-		.contactWrapper,
-		.sitemap {
-			@include flexbox(column);
-			@include justify-content(space-around);
-			margin-right: pxToRem(94px);
-
-			h6 {
-				font-size: 20px;
-				font-weight: 700;
-			}
-			div {
+		.middleSeparator {
+			@include flexbox(row);
+			.contactWrapper,
+			.sitemap {
 				@include flexbox(column);
-				line-height: 28px;
-				font-family: $font-header;
+				@include justify-content(space-around);
+				margin-right: pxToRem(94px);
+
+				h6 {
+					font-size: 20px;
+					font-weight: 700;
+				}
+				div {
+					@include flexbox(column);
+					line-height: 28px;
+					font-family: $font-header;
+				}
 			}
 		}
 	}
@@ -67,6 +71,41 @@
 			}
 			a:first-child {
 				margin-right: pxToRem(92px);
+			}
+		}
+	}
+
+	@include breakpoint(l) {
+		.middleContent {
+			@include justify-content(flex-start);
+
+			& > :first-child{
+				margin-right: pxToRem(300px) !important;
+			}
+		}
+	}
+
+	@include breakpoint(m){
+		.upLinkWrapper{
+			margin-left: pxToRem(105px);
+			margin-bottom: pxToRem(100px);
+		}
+		.middleContent{
+			padding-left: pxToRem(105px);
+			& > :first-child{
+				margin-right: pxToRem(200px) !important;
+			}
+		}
+	}
+	@include breakpoint(s){
+		.upLinkWrapper{
+			margin-left: pxToRem(80px);
+			margin-bottom: pxToRem(130px);
+		}
+		.middleContent{
+			padding-left: pxToRem(80px);
+			& > :first-child{
+				margin-right: pxToRem(20px) !important;
 			}
 		}
 	}
