@@ -79,34 +79,53 @@
 		.middleContent {
 			@include justify-content(flex-start);
 
-			& > :first-child{
+			& > :first-child {
 				margin-right: pxToRem(300px) !important;
 			}
 		}
 	}
 
-	@include breakpoint(m){
-		.upLinkWrapper{
+	@include breakpoint(m) {
+		.upLinkWrapper {
 			margin-left: pxToRem(105px);
 			margin-bottom: pxToRem(100px);
 		}
-		.middleContent{
+		.middleContent {
 			padding-left: pxToRem(105px);
-			& > :first-child{
+			& > :first-child {
 				margin-right: pxToRem(200px) !important;
+				display: block;
 			}
 		}
 	}
-	@include breakpoint(s){
-		.upLinkWrapper{
+	@include breakpoint(s) {
+		.upLinkWrapper {
 			margin-left: pxToRem(80px);
 			margin-bottom: pxToRem(130px);
 		}
-		.middleContent{
+		.middleContent {
 			padding-left: pxToRem(80px);
-			& > :first-child{
-				margin-right: pxToRem(20px) !important;
+			& > :first-child {
+				display: none !important;
 			}
+		}
+		.bottomContent {
+			@include justify-content(flex-end);
+			.logoWrapper {
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint(xs) {
+		.middleContent {
+			.middleSeparator {
+				width: 100%;
+				@include justify-content(space-between);
+			}
+		}
+		.bottomContent {
+			@include justify-content(center);
 		}
 	}
 }
