@@ -28,6 +28,7 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
 		<html id='html' lang='en'>
 			<body id='root'>
 				<LanguageProvider>
+					<div id='topScrollContainer' />
 					<Navbar staticContent={navbarContent} />
 					{children}
 					<Footer staticContent={footerContent} />

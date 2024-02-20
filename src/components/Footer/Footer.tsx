@@ -25,7 +25,11 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.upLinkWrapper}>
-				<NavigationButton text={navBtnText} style='underlined' targetId='navbar' />
+				<NavigationButton
+					text={navBtnText}
+					style='underlined'
+					targetId='topScrollContainer'
+				/>
 			</div>
 
 			<div className={styles.middleContent}>
