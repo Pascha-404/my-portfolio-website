@@ -36,7 +36,8 @@
 		margin-bottom: pxToRem(62px);
 	}
 
-	.overviewWrapper, .technologysWrapper{
+	.overviewWrapper,
+	.technologysWrapper {
 		margin-bottom: pxToRem(60px);
 
 		h2 {
@@ -47,21 +48,48 @@
 		}
 	}
 
-	.approachWrapper{
-		p{
-			margin-bottom: pxToRem(20px);
-
-			&:last-child{
-				margin-bottom: 0;
-			}
-		}
-	}
-
 	.uppercase {
 		text-transform: uppercase;
 	}
 
 	.colorHighlight {
 		color: $txt-highlight-100;
+	}
+
+	@include breakpoint(m) {
+		padding-left: pxToRem(105px);
+		
+		.projectImageWrapper,
+		.overviewWrapper,
+		.challengesWrapper,
+		.approachWrapper,
+		.resultsWrapper {
+			margin-bottom: pxToRem(120px);
+		}
+
+		h1 {
+			margin-bottom: pxToRem(90px);
+		}
+	}
+
+	@include breakpoint(s) {
+		width: 95%;
+		padding-left: pxToRem(80px);
+		h1 {
+			font-size: 40px;
+			margin: 80px 0 50px;
+		}
+	}
+	@include breakpoint(xs) {
+		.projectImageWrapper,
+		.overviewWrapper,
+		.challengesWrapper,
+		.approachWrapper,
+		.resultsWrapper {
+			margin-bottom: pxToRem(250px);
+		}
+
+		h1 {
+		}
 	}
 }
