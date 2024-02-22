@@ -1,11 +1,11 @@
 @use '@/sass/abstracts' as *;
 
 .main {
+	box-sizing: border-box;
 	width: 90%;
 	padding-left: pxToRem(144px);
 	margin-top: pxToRem(120px);
 	margin-bottom: pxToRem(300px);
-	max-width: 1161px;
 
 	.projectImage,
 	.overviewWrapper,
@@ -31,10 +31,8 @@
 		}
 	}
 
-	.projectImage {
+	.projectImageWrapper {
 		width: 100%;
-		max-height: 420px;
-		object-fit: cover;
 		margin-bottom: pxToRem(62px);
 	}
 

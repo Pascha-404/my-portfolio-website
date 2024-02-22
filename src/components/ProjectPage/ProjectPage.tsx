@@ -1,6 +1,6 @@
 'use client';
 
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from './ProjectPage.module.scss';
 import defaultImage from '../../../public/projectCard-default-img.jpeg';
 import DataListCard from '@/components/DataListCard';
@@ -28,24 +28,26 @@ function ProjectPage({ projectData }: ProjectPageProps): JSX.Element {
 				<p>{yearCreated}</p>
 			</div>
 
-			{imgSrc ? (
-				<Image
-					src={imgSrc}
-					width='1161'
-					height='600'
-					layout='responsive'
-					alt='Project Screenshot'
-					priority
-					className={styles.projectImage}
-				/>
-			) : (
-				<Image
-					src={defaultImage}
-					alt='Default image showing two phones'
-					priority
-					className={styles.projectImage}
-				/>
-			)}
+			<div className={styles.projectImageWrapper}>
+				{imgSrc ? (
+					<Image
+						src={imgSrc}
+						width='1161'
+						height='600'
+						layout='responsive'
+						alt='Project Screenshot'
+						priority
+						objectFit='cover'
+					/>
+				) : (
+					<Image
+						src={defaultImage}
+						alt='Default image showing two phones'
+						priority
+						objectFit='cover'
+					/>
+				)}
+			</div>
 
 			<div className={styles.overviewWrapper}>
 				<h2 className={styles.uppercase}>project overview</h2>
