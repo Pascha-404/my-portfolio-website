@@ -84,21 +84,24 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 						<p className={styles.weightHighlight}>Stack:</p>
 						<p>{stack.join(', ')}</p>
 					</div>
-					<div className={styles.cardLive}>
-						<div className={styles.techLogos}>
-							{stack.map(tech => (
-								<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
-							))}
-						</div>
-						{liveLink && (
-							<a href={liveLink} className='liveLink'>
-								visit live product
-							</a>
-						)}
-					</div>
 				</div>
 			</div>
 
+			{/* Display on screens above 992px width */}
+			<div className={`${styles.cardLive} ${styles.displayBigScreen}`}>
+				<div className={styles.techLogos}>
+					{stack.map(tech => (
+						<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
+					))}
+				</div>
+				{liveLink && (
+					<a href={liveLink} className='liveLink'>
+						visit live product
+					</a>
+				)}
+			</div>
+
+			{/* Displays on all screen sizes */}
 			<div className={styles.cardSecondHalf}>
 				<Link href={`/project/${id}`} className={styles.hidePhone}>
 					<h4>project: {name}</h4>

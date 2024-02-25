@@ -1,5 +1,38 @@
 @use '../../sass/abstracts/' as *;
 
+.displayBigScreen {
+	@include flexbox();
+}
+
+.displaySmallScreen {
+	display: none;
+}
+
+.cardLive {
+	@include flexbox(row);
+	@include align-items(center);
+	@include justify-content(space-between);
+	margin-bottom: pxToRem(50px);
+	.techLogos {
+		margin-bottom: pxToRem(28px);
+
+		margin: 0 1rem 0 0;
+		& > * {
+			margin-right: 1rem !important;
+		}
+		img {
+			margin-right: pxToRem(18px);
+		}
+	}
+	a {
+		color: $txt-blue;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 16px;
+		white-space: nowrap;
+	}
+}
+
 .projectCard {
 	width: 100%;
 	max-width: 100%;
@@ -20,19 +53,12 @@
 		@include flexbox();
 		@include justify-content(space-between);
 
-		.displayBigScreen {
-			@include flexbox();
-		}
-
-		.displaySmallScreen {
-			display: none;
-		}
-
 		.imgWrapper {
 			position: relative;
 			width: 100%;
 			max-width: 455px;
 			max-height: 172px;
+			flex-shrink: 0;
 		}
 
 		.cardDetails {
@@ -42,22 +68,7 @@
 
 			.weightHighlight {
 				font-weight: 700;
-			}
-		}
-
-		.cardLive {
-			.techLogos {
-				margin-bottom: pxToRem(28px);
-				img {
-					margin-right: pxToRem(18px);
-				}
-			}
-			a {
-				color: $txt-blue;
-				text-transform: uppercase;
-				font-weight: 700;
-				font-size: 16px;
-				white-space: nowrap;
+				margin-right: 10px;
 			}
 		}
 	}
@@ -95,17 +106,18 @@
 	}
 }
 @include breakpoint(l) {
+	.displayBigScreen {
+		display: none;
+	}
+	.displaySmallScreen {
+		@include flexbox(column);
+	}
+
 	.projectCard {
 		padding-right: 0;
 		.cardFirstHalf {
 			flex-direction: column;
 
-			.displayBigScreen {
-				display: none;
-			}
-			.displaySmallScreen {
-				@include flexbox(column);
-			}
 			.imgWrapper {
 				margin-bottom: pxToRem(30px);
 				max-width: none;
@@ -115,19 +127,6 @@
 				margin: 0;
 				grid-template-columns: 1fr 3fr;
 				margin-bottom: pxToRem(50px);
-			}
-			.cardLive {
-				@include flexbox(row);
-				@include align-items(center);
-				@include justify-content(space-between);
-				margin-bottom: pxToRem(50px);
-
-				.techLogos {
-					margin: 0 2rem 0 0;
-					& > * {
-						margin-right: 1rem !important;
-					}
-				}
 			}
 		}
 	}
@@ -144,6 +143,9 @@
 }
 
 @include breakpoint(xs) {
+	.cardLive {
+		margin-bottom: 30px;
+	}
 	.projectCard {
 		margin-bottom: 80px;
 		.showPhone {
@@ -165,10 +167,6 @@
 				text-transform: uppercase;
 				margin-bottom: 20px;
 				margin-top: 10px;
-			}
-
-			.cardLive{
-				margin-bottom: 30px;
 			}
 		}
 	}
