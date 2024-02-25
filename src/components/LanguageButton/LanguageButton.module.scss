@@ -1,12 +1,12 @@
-@use '../../sass/abstracts' as *;
+@use '$//abstracts' as *;
 
 .languageButton {
 	background: none;
-    border: none;
-    color: $txt-light-50;
-    cursor: pointer;
+	border: none;
+	color: $txt-light-50;
+	cursor: pointer;
 
-    .highlight{
-        color: $txt-highlight-50;
-    }
+	.highlight {
+		color: $txt-highlight-50;
+	}
 }
