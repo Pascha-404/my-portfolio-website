@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+import './fonts.css';
 import '../sass/main.scss';
 import { getContent } from '@/utils/server';
 import { IFooterContent, INavbarContent } from '@/ts/types';
