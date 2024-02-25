@@ -1,4 +1,4 @@
-@use '../../sass/abstracts/' as *;
+@use '$/abstracts/' as *;
 
 .projectsSection {
 	width: 90%;
@@ -12,14 +12,23 @@
 		}
 	}
 
-	.aboutLink {
-		text-transform: uppercase;
-		font-size: 20px;
-		font-weight: 700;
-		color: $txt-yellow;
-		border-bottom: 1px solid $txt-yellow;
-	}
 	.imgWrapper {
 		margin-top: pxToRem(69px);
+	}
+
+	@include breakpoint(l) {
+		margin-top: pxToRem(150px);
+		h3 {
+			margin-bottom: pxToRem(70px);
+		}
+	}
+	@include breakpoint(s) {
+		h3 {
+			margin-bottom: pxToRem(120px);
+		}
+	}
+	@include breakpoint(xs) {
+		width: 100%;
+		margin-top: 60px;
 	}
 }

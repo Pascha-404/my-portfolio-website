@@ -1,10 +1,50 @@
-@use '../../sass/abstracts/' as *;
+@use '$/abstracts/' as *;
+
+.displayBigScreen {
+	@include flexbox();
+}
+
+.displaySmallScreen {
+	display: none;
+}
+
+.cardLive {
+	@include flexbox(row);
+	@include align-items(center);
+	@include justify-content(space-between);
+	margin-bottom: pxToRem(50px);
+	.techLogos {
+		margin-bottom: pxToRem(28px);
+
+		margin: 0 1rem 0 0;
+		& > * {
+			margin-right: 1rem !important;
+		}
+		img {
+			margin-right: pxToRem(18px);
+		}
+	}
+	a {
+		color: $txt-blue;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 16px;
+		white-space: nowrap;
+	}
+}
 
 .projectCard {
 	width: 100%;
 	max-width: 100%;
 	padding-right: 100px;
 	margin-bottom: pxToRem(100px);
+
+	.showPhone {
+		display: none;
+	}
+	.hidePhone {
+		display: block;
+	}
 
 	.cardFirstHalf {
 		width: 100%;
@@ -18,34 +58,17 @@
 			width: 100%;
 			max-width: 455px;
 			max-height: 172px;
-
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
+			flex-shrink: 0;
 		}
 
 		.cardDetails {
 			display: grid;
-			grid-template-columns: 1fr 3fr;
+			grid-template-columns: 1fr 7fr;
+			margin: 0 2rem;
 
 			.weightHighlight {
 				font-weight: 700;
-			}
-		}
-
-		.cardLive {
-			.techLogos {
-				margin-bottom: pxToRem(28px);
-				img {
-					margin-right: pxToRem(18px);
-				}
-			}
-			a {
-				color: $txt-blue;
-				text-transform: uppercase;
-				font-weight: 700;
+				margin-right: 10px;
 			}
 		}
 	}
@@ -56,7 +79,9 @@
 		h4 {
 			display: inline-block;
 			text-transform: uppercase;
-			border-bottom: 1px solid $txt-light-100;
+			text-decoration: underline;
+			line-height: 30px;
+			text-underline-position: under;
 			margin-bottom: pxToRem(20px);
 		}
 		p {
@@ -67,6 +92,82 @@
 			color: $txt-blue;
 			text-transform: uppercase;
 			font-size: 20px;
+		}
+	}
+}
+
+@include breakpoint(xxl) {
+	.projectCard {
+		.cardFirstHalf {
+			.cardDetails {
+				grid-template-columns: 1fr 5fr;
+			}
+		}
+	}
+}
+@include breakpoint(l) {
+	.displayBigScreen {
+		display: none;
+	}
+	.displaySmallScreen {
+		@include flexbox(column);
+	}
+
+	.projectCard {
+		padding-right: 0;
+		.cardFirstHalf {
+			flex-direction: column;
+
+			.imgWrapper {
+				margin-bottom: pxToRem(30px);
+				max-width: none;
+				max-height: none;
+			}
+			.cardDetails {
+				margin: 0;
+				grid-template-columns: 1fr 3fr;
+				margin-bottom: pxToRem(50px);
+			}
+		}
+	}
+}
+@include breakpoint(s) {
+	.projectCard {
+		margin-bottom: pxToRem(150px);
+		.cardFirstHalf {
+			.cardDetails {
+				grid-template-columns: 1fr 2fr;
+			}
+		}
+	}
+}
+
+@include breakpoint(xs) {
+	.cardLive {
+		margin-bottom: 30px;
+	}
+	.projectCard {
+		margin-bottom: 80px;
+		.showPhone {
+			display: inline-block;
+		}
+		.hidePhone {
+			display: none;
+		}
+		.cardFirstHalf {
+			margin-bottom: 20px;
+			h4 {
+				white-space: nowrap;
+				color: $txt-blue;
+				border: none;
+				text-decoration: underline;
+				text-underline-position: under;
+				line-height: 30px;
+				display: inline-block;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				margin-top: 10px;
+			}
 		}
 	}
 }

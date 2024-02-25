@@ -1,4 +1,4 @@
-@use '../../sass/abstracts/' as *;
+@use '$/abstracts/' as *;
 
 .navigationButton {
 	&.normal,
@@ -14,8 +14,10 @@
 	}
 
 	&.underlined {
-		border-bottom: 1px solid $txt-yellow;
 		font-size: 20px;
 		font-weight: 700;
+		text-decoration: underline;
+		text-underline-position: under;
+		line-height: 30px;
 	}
 }

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+import './fonts.css';
 import '../sass/main.scss';
 import { getContent } from '@/utils/server';
 import { IFooterContent, INavbarContent } from '@/ts/types';
@@ -25,9 +26,10 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
 	);
 
 	return (
-		<html lang='en'>
+		<html id='html' lang='en'>
 			<body id='root'>
 				<LanguageProvider>
+					<div id='topScrollContainer' />
 					<Navbar staticContent={navbarContent} />
 					{children}
 					<Footer staticContent={footerContent} />

@@ -1,5 +1,4 @@
-@use '../../sass/abstracts/' as *;
-@use '../../sass/base/fonts.scss' as *;
+@use '$/abstracts/' as *;
 
 .dataListCard {
 	width: 100%;
@@ -41,6 +40,7 @@
 			@include align-items(center);
 			font-size: 18px;
 			line-height: 28px;
+			margin-bottom: 10px;
 			&:before {
 				content: '';
 				background: url(/icons/icon-bulletpoint.svg) no-repeat;
@@ -52,6 +52,10 @@
 				margin-right: pxToRem(37px);
 			}
 		}
+	}
+
+	.cardListItem {
+		margin-bottom: 10px;
 	}
 	.colorHighlight {
 		color: $txt-highlight-100;

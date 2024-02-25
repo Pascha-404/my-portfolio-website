@@ -1,4 +1,4 @@
-@use '../../sass/abstracts/' as *;
+@use '$/abstracts/' as *;
 
 .aboutSection {
 	width: 90%;
@@ -16,11 +16,10 @@
 		h5 {
 			margin-bottom: pxToRem(20px);
 		}
-	}
-	.aboutMe {
 		p {
 			font-size: 24px;
 			max-width: 1147px;
+			line-height: 30px;
 		}
 	}
 
@@ -35,6 +34,77 @@
 			font-size: 20px;
 			text-transform: uppercase;
 			font-weight: 700;
+		}
+	}
+
+	@include breakpoint(l) {
+		margin-top: pxToRem(150px);
+
+		.aboutMe {
+			h5 {
+				margin-bottom: pxToRem(50px);
+			}
+		}
+		.dataWrapper {
+			margin-top: pxToRem(110px);
+			@include flexbox(column);
+
+			& > :first-child {
+				margin-bottom: pxToRem(60px);
+			}
+		}
+	}
+
+	@include breakpoint(m) {
+		.aboutMe {
+			h5 {
+				margin-bottom: pxToRem(80px);
+			}
+		}
+
+		.dataWrapper {
+			& > :first-child {
+				margin-bottom: pxToRem(100px);
+			}
+		}
+
+		.dataWrapper {
+			.dataCardWrapper {
+				& > :first-child {
+					margin-bottom: pxToRem(90px);
+				}
+			}
+		}
+	}
+
+	@include breakpoint(s) {
+		width: 100%;
+		padding-right: 10px;
+		margin-top: 50px;
+
+		.aboutMe {
+			h5 {
+				margin-bottom: 40px;
+			}
+		}
+
+		.dataWrapper {
+			& > :first-child {
+				margin-bottom: 50px;
+				margin-top: 40px;
+			}
+		}
+
+		.dataWrapper {
+			.dataCardWrapper {
+				& > :first-child {
+					margin-bottom: 50px;
+				}
+			}
+		}
+
+		.myExperience {
+			margin: 50px 0 50px 0;
 		}
 	}
 }

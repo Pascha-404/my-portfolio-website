@@ -1,4 +1,4 @@
-@use '../../sass/abstracts/' as *;
+@use '$/abstracts/' as *;
 
 .heroSection {
 	width: 90%;
@@ -38,6 +38,10 @@
 			@include flexbox();
 			@include align-items(center);
 			@include justify-content(space-between);
+
+			& > :first-child {
+				margin-right: 30px;
+			}
 		}
 	}
 
@@ -51,6 +55,50 @@
 			width: 100%;
 			height: auto;
 			max-width: 446px;
+		}
+	}
+
+	@include breakpoint(l) {
+		width: 100%;
+		height: auto;
+		max-height: none;
+		flex-direction: column-reverse;
+
+		@include justify-content(center);
+		@include align-items(start);
+
+		.heroFirstHalf {
+			width: 100%;
+		}
+		.heroSecondHalf {
+			align-self: center;
+			height: auto;
+			width: pxToRem(600px);
+			min-width: 340px;
+			margin-bottom: pxToRem(50px);
+		}
+	}
+
+	@include breakpoint(xs) {
+		width: 100%;
+		margin-top: 50px;
+
+		@include align-items(center);
+
+		.heroFirstHalf {
+			h1 {
+				margin-bottom: pxToRem(30px);
+			}
+			h2 {
+				margin-bottom: pxToRem(100px);
+			}
+			p {
+				margin-bottom: pxToRem(100px);
+			}
+		}
+
+		.heroSecondHalf {
+			margin-bottom: 30px;
 		}
 	}
 }

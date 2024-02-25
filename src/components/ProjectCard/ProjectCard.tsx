@@ -1,10 +1,11 @@
 'use client';
+import React from 'react';
 import Link from 'next/link';
 import { v4 as uuid } from 'uuid';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
 import { TechType } from '@/ts/types';
 
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import TechIcon from '../TechIcon';
 
 import styles from './ProjectCard.module.scss';
@@ -28,40 +29,81 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 	return (
 		<article className={styles.projectCard}>
 			<div className={styles.cardFirstHalf}>
-				<div className={styles.imgWrapper}>
-					<Link href={`/project/${id}`}>
-						<Image
-							src={img}
-							width='455'
-							height='172'
-							objectFit='cover'
-							alt='Project Preview'
-						/>
-					</Link>
-				</div>
-
-				<div className={styles.cardDetails}>
-					<p className={styles.weightHighlight}>Role:</p>
-					<p>{role}</p>
-					<p className={styles.weightHighlight}>Tasks:</p>
-					<p>{task}</p>
-					<p className={styles.weightHighlight}>Stack:</p>
-					<p>{stack.join(', ')}</p>
-				</div>
-
-				<div className={styles.cardLive}>
-					<div className={styles.techLogos}>
-						{stack.map(tech => (
-							<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
-						))}
+				{/* Display on screens under 992px width */}
+				<div className={styles.displaySmallScreen}>
+					<div className={styles.imgWrapper}>
+						<Link href={`/project/${id}`}>
+							<Image
+								src={img}
+								width='800'
+								height='400'
+								objectFit='cover'
+								alt='Project Preview'
+							/>
+						</Link>
 					</div>
+					<Link href={`/project/${id}`} className={styles.showPhone}>
+						<h4>project: {name}</h4>
+					</Link>
+					<div className={styles.cardLive}>
+						<div className={styles.techLogos}>
+							{stack.map(tech => (
+								<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
+							))}
+						</div>
+						{liveLink && <a href={liveLink}>visit live product</a>}
+					</div>
+					<div className={styles.cardDetails}>
+						<p className={styles.weightHighlight}>Role:</p>
+						<p>{role}</p>
+						<p className={styles.weightHighlight}>Tasks:</p>
+						<p>{task}</p>
+						<p className={styles.weightHighlight}>Stack:</p>
+						<p>{stack.join(', ')}</p>
+					</div>
+				</div>
 
-					{liveLink && <a href={liveLink}>visit live product</a>}
+				{/* Display on screens above 992px width */}
+				<div className={styles.displayBigScreen}>
+					<div className={styles.imgWrapper}>
+						<Link href={`/project/${id}`}>
+							<Image
+								src={img}
+								width='455'
+								height='172'
+								objectFit='cover'
+								alt='Project Preview'
+							/>
+						</Link>
+					</div>
+					<div className={styles.cardDetails}>
+						<p className={styles.weightHighlight}>Role:</p>
+						<p>{role}</p>
+						<p className={styles.weightHighlight}>Tasks:</p>
+						<p>{task}</p>
+						<p className={styles.weightHighlight}>Stack:</p>
+						<p>{stack.join(', ')}</p>
+					</div>
 				</div>
 			</div>
 
+			{/* Display on screens above 992px width */}
+			<div className={`${styles.cardLive} ${styles.displayBigScreen}`}>
+				<div className={styles.techLogos}>
+					{stack.map(tech => (
+						<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
+					))}
+				</div>
+				{liveLink && (
+					<a href={liveLink} className='liveLink'>
+						visit live product
+					</a>
+				)}
+			</div>
+
+			{/* Displays on all screen sizes */}
 			<div className={styles.cardSecondHalf}>
-				<Link href={`/project/${id}`}>
+				<Link href={`/project/${id}`} className={styles.hidePhone}>
 					<h4>project: {name}</h4>
 				</Link>
 				<p>{description}</p>

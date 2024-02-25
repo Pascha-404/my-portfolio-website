@@ -16,6 +16,7 @@ import iconFirebase from './icon-firebase.svg';
 import iconError from './icon-error.png';
 import iconNoData from './icon-noData.png';
 import iconFolder from './icon-folder.png';
+import iconMenu from './icon-menu.svg';
 
 export {
 	iconReact,
@@ -35,5 +36,6 @@ export {
 	iconFirebase,
 	iconError,
 	iconFolder,
-	iconNoData
+	iconNoData,
+	iconMenu,
 };

@@ -1,5 +1,4 @@
-@use '../../sass/abstracts/' as *;
-@use '../../sass/base/fonts/' as *;
+@use '$/abstracts/' as *;
 
 .footer {
 	width: 100%;
@@ -14,31 +13,35 @@
 		display: inline-block;
 		margin-left: pxToRem(144px);
 		margin-bottom: pxToRem(28px);
-		
 	}
 
 	.middleContent {
 		padding-left: pxToRem(144px);
+		min-height: 165px;
+		max-width: 800px;
 		@include flexbox();
+		@include justify-content(space-between);
 
 		img {
 			margin-right: pxToRem(372px);
 		}
-
-		.contactWrapper,
-		.sitemap {
-			@include flexbox(column);
-			@include justify-content(space-around);
-			margin-right: pxToRem(94px);
-
-			h6 {
-				font-size: 20px;
-				font-weight: 700;
-			}
-			div {
+		.middleSeparator {
+			@include flexbox(row);
+			.contactWrapper,
+			.sitemap {
 				@include flexbox(column);
-				line-height: 28px;
-				font-family: $font-header;
+				@include justify-content(space-around);
+				margin-right: pxToRem(94px);
+
+				h6 {
+					font-size: 20px;
+					font-weight: 700;
+				}
+				div {
+					@include flexbox(column);
+					line-height: 28px;
+					font-family: $font-header;
+				}
 			}
 		}
 	}
@@ -68,6 +71,61 @@
 			a:first-child {
 				margin-right: pxToRem(92px);
 			}
+		}
+	}
+
+	@include breakpoint(l) {
+		.middleContent {
+			@include justify-content(flex-start);
+
+			& > :first-child {
+				margin-right: pxToRem(300px) !important;
+			}
+		}
+	}
+
+	@include breakpoint(m) {
+		.upLinkWrapper {
+			margin-left: pxToRem(105px);
+			margin-bottom: pxToRem(100px);
+		}
+		.middleContent {
+			padding-left: pxToRem(105px);
+			& > :first-child {
+				margin-right: pxToRem(200px) !important;
+				display: block;
+			}
+		}
+	}
+	@include breakpoint(s) {
+		.upLinkWrapper {
+			margin-left: pxToRem(80px);
+			margin-bottom: pxToRem(130px);
+		}
+		.middleContent {
+			padding-left: pxToRem(80px);
+			& > :first-child {
+				display: none !important;
+			}
+		}
+		.bottomContent {
+			@include justify-content(flex-end);
+			.logoWrapper {
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint(xs) {
+		.middleContent {
+			.middleSeparator {
+				width: 100%;
+				@include justify-content(space-between);
+			}
+		}
+		.bottomContent {
+			@include justify-content(center);
+			margin: 30px 0 40px;
 		}
 	}
 }

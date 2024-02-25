@@ -2,8 +2,9 @@
 
 import { iconArrow } from '../../../public/icons';
 
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import ProjectCard from '../ProjectCard';
+import NavigationButton from '../NavigationButton';
 
 import { IProjectData, IStaticContent } from '@/ts/types';
 import fallbackContent from './fallbackContent';
@@ -53,9 +54,7 @@ function ProjectsSection({
 				);
 			})}
 
-			<a className={styles.aboutLink} href='/'>
-				{navButtonText}
-			</a>
+			<NavigationButton text={navButtonText} targetId='aboutSection' style='underlined' />
 
 			<div className={styles.imgWrapper}>
 				<Image src={iconArrow} alt={arrowAltText} />
