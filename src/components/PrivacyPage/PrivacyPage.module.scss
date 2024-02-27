@@ -1,5 +1,60 @@
 @use '$/abstracts' as *;
 
-.privacyPage {
-	width: 100%;
+.main {
+	box-sizing: border-box;
+	width: 90%;
+	padding-left: pxToRem(144px);
+	margin-top: pxToRem(120px);
+	margin-bottom: pxToRem(300px);
+
+	@include flexbox(column);
+
+	h1 {
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 50px;
+		margin: 3rem 0 2rem;
+		line-height: 48px;
+	}
+	h3 {
+		font-size: 24px;
+		margin-bottom: 1rem;
+		line-height: 30px;
+	}
+
+	h4 {
+		margin: 2rem 0 1rem;
+	}
+
+	.dataSection {
+		margin-bottom: 3rem;
+	}
+
+	@include breakpoint(m) {
+		padding-left: pxToRem(105px);
+	}
+
+	@include breakpoint(s) {
+		width: 95%;
+		padding-left: pxToRem(80px);
+	}
+	@include breakpoint(xs) {
+		margin-top: 80px;
+
+		h1 {
+			font-size: 50px;
+		}
+
+		h2 {
+			font-size: 35px;
+			line-height: 38px;
+		}
+		h3 {
+			font-size: 20px;
+			margin: 2rem 0 1rem;
+			line-height: 30px;
+		}
+	}
 }
