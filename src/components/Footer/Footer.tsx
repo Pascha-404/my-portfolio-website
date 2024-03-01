@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 import { iconArrowUp } from '../../../public/icons';
 import personalLogo from '../../../public/personal-logo.svg';
@@ -72,8 +73,8 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 				</div>
 
 				<div className={styles.legal}>
-					<a href='/'>{imprintText}</a>
-					<a href='/'>{privacyPolicyText}</a>
+					<Link href='/imprint'>{imprintText}</Link>
+					<Link href='/privacy-policy'>{privacyPolicyText}</Link>
 				</div>
 			</div>
 		</footer>

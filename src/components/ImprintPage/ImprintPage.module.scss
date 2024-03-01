@@ -1,0 +1,44 @@
+@use '$/abstracts' as *;
+
+.main {
+	box-sizing: border-box;
+	width: 90%;
+	min-height: 45vh;
+	padding-left: pxToRem(144px);
+	margin-top: pxToRem(120px);
+	// margin-bottom: pxToRem(300px);
+
+	@include flexbox(column);
+	@include justify-content(center);
+
+	h1 {
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 50px;
+		margin: 3rem 0 2rem;
+		line-height: 48px;
+	}
+
+	@include breakpoint(m) {
+		padding-left: pxToRem(105px);
+	}
+
+	@include breakpoint(s) {
+		width: 95%;
+		padding-left: pxToRem(80px);
+	}
+	@include breakpoint(xs) {
+		margin-top: 80px;
+
+		h1 {
+			font-size: 50px;
+		}
+
+		h2 {
+			font-size: 35px;
+			line-height: 38px;
+		}
+	}
+}
