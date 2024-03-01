@@ -1,6 +1,22 @@
+@use '$/abstracts' as *;
+
 .techIcon {
+	position: relative;
+	display: inline-block;
 	width: 33px;
 	height: auto;
 	max-width: 33px;
 	max-height: 33px;
+
+	.iconTooltip {
+		transform: translateY(50%);
+		position: absolute;
+		bottom: -50%;
+		left: 0;
+		text-wrap: nowrap;
+		font-size: 16px;
+		z-index: 1;
+		background-color: $bg-color-menu;
+		padding: 10px 15px;
+	}
 }
