@@ -484,6 +484,31 @@ const content = {
 					</a>
 				</p>
 			</div>
+			<div className={styles.dataSection}>
+				<h3>Calendly</h3>
+				<p>
+					Wir nutzen auf unserer Website den Dienst Calendly, angeboten von der Calendly,
+					LLC, 3423 Piedmont Road NE, Atlanta, GA 30305-1754, USA, um Terminbuchungen
+					online zu ermöglichen. Calendly ist ein Tool zur Terminplanung, das es Benutzern
+					ermöglicht, Termine mit uns über die Calendly-Plattform zu buchen. Wenn Sie
+					Calendly auf unserer Website nutzen, werden Informationen über die Terminbuchung
+					einschließlich Ihres Namens, Ihrer E-Mail-Adresse und des gewählten Termins an
+					Calendly übermittelt. Die Verwendung von Calendly erfolgt im Interesse einer
+					vereinfachten und direkten Terminbuchung. Dies stellt ein berechtigtes Interesse
+					im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Die von Calendly verarbeiteten
+					Daten werden auf Servern in den USA gespeichert. Calendly LLC ist unter dem
+					EU-US-Datenschutzschild zertifiziert, was bedeutet, dass dieses Unternehmen ein
+					Datenschutzniveau gewährleistet, das dem europäischen Standard entspricht.
+				</p>
+				<br />
+				<p>
+					Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der
+					Datenschutzerklärung von Calendly unter{' '}
+					<a href='https://calendly.com/pages/privacy'>
+						https://calendly.com/pages/privacy.
+					</a>
+				</p>
+			</div>
 			<p>
 				Quelle: <a href='https://www.e-recht24.de'>https://www.e-recht24.de</a>
 			</p>
@@ -911,6 +936,30 @@ const content = {
 						target='_blank'
 						rel='noopener noreferrer'>
 						https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
+					</a>
+				</p>
+			</div>
+			<div className={styles.dataSection}>
+				<h3>Calendly</h3>
+				<p>
+					We use the service Calendly, provided by Calendly, LLC, 3423 Piedmont Road NE,
+					Atlanta, GA 30305-1754, USA, on our website to allow online appointment
+					bookings. Calendly is a scheduling tool that enables users to book appointments
+					with us through the Calendly platform. When you use Calendly on our website,
+					information about the booking including your name, email address, and chosen
+					appointment time is transmitted to Calendly. The use of Calendly is in the
+					interest of simplifying and direct appointment booking. This represents a
+					legitimate interest within the meaning of Art. 6 Para. 1 lit. f GDPR. The data
+					processed by Calendly are stored on servers in the USA. Calendly LLC is
+					certified under the EU-US Privacy Shield, which means that this company ensures
+					a level of data protection that corresponds to the European standard.
+				</p>
+				<br />
+				<p>
+					For more information on the handling of user data, please refer to Calendly's
+					privacy policy at{' '}
+					<a href='https://calendly.com/pages/privacy'>
+						https://calendly.com/pages/privacy.
 					</a>
 				</p>
 			</div>
