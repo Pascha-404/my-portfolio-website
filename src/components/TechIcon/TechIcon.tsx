@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Image from 'next/legacy/image';
 import {
 	iconReact,
@@ -23,138 +24,299 @@ type TechIconProp = {
 };
 
 function TechIcon({ technology }: TechIconProp): JSX.Element {
+	const [isHovering, setIsHovering] = useState(false);
 	const iconWidth = '31';
 	const iconHeight = '33';
+
+	function handleMouseEnter(event: React.MouseEvent<HTMLDivElement>): void {
+		setIsHovering(true);
+	}
+
+	function handleMouseLeave(event: React.MouseEvent<HTMLDivElement>): void {
+		setIsHovering(false);
+	}
+
+	function handleOpenClick() {
+		setIsHovering(true);
+	}
+
+	function handleCloseClick() {
+		setIsHovering(false);
+	}
+
 	switch (technology) {
 		case 'React':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconReact}
-					alt='React icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconReact}
+						alt='React icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'Next.js':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconNextjs}
-					alt='Nextjs icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconNextjs}
+						alt='Nextjs icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'Express.js':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconExpress}
-					alt='Express.js icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconExpress}
+						alt='Express.js icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'Node.js':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconNode}
-					alt='Node.js icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconNode}
+						alt='Node.js icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'JavaScript':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconJs}
-					alt='JavaScript icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconJs}
+						alt='JavaScript icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'SASS':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconSass}
-					alt='SASS icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconSass}
+						alt='SASS icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'HTML':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconHtml}
-					alt='HTML icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconHtml}
+						alt='HTML icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'CSS':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconCss}
-					alt='CSS icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconCss}
+						alt='CSS icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'AWS':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconAws}
-					alt='AWS icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconAws}
+						alt='AWS icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'MongoDB':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconMongodb}
-					alt='MongoDB icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconMongodb}
+						alt='MongoDB icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'Cloudinary':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconCloudinary}
-					alt='Cloudinary icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconCloudinary}
+						alt='Cloudinary icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'Material UI':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconMui}
-					alt='Material UI icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconMui}
+						alt='Material UI icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 		case 'Firebase':
 			return (
-				<Image
-					width={iconWidth}
-					height={iconHeight}
+				<div
 					className={styles.techIcon}
-					src={iconFirebase}
-					alt='Firebase icon'
-				/>
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}>
+					<Image
+						onClick={handleOpenClick}
+						width={iconWidth}
+						height={iconHeight}
+						className={styles.techIcon}
+						src={iconFirebase}
+						alt='Firebase icon'
+					/>
+					{isHovering && (
+						<div className={styles.iconTooltip} onClick={handleCloseClick}>
+							{technology}
+						</div>
+					)}
+				</div>
 			);
 
 		default:
