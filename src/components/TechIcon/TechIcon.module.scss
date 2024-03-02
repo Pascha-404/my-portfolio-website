@@ -7,7 +7,8 @@
 	height: auto;
 	max-width: 33px;
 	max-height: 33px;
-
+	cursor: help;
+	
 	.iconTooltip {
 		transform: translateY(50%);
 		position: absolute;
@@ -18,5 +19,6 @@
 		z-index: 1;
 		background-color: $bg-color-menu;
 		padding: 10px 15px;
+		border-radius: 2px;
 	}
 }
