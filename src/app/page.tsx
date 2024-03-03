@@ -1,12 +1,13 @@
+import HomePage from '@/components/HomePage';
+
+import {
+	IHeroSectionContent,
+	IStaticContent,
+	IAboutSectionContent,
+	IProjectData,
+} from '@/ts/types';
+
 import { getContent } from '@/utils/server';
-
-import HeroSection from '@/components/HeroSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import AboutSection from '@/components/AboutSection';
-import ContactSection from '@/components/ContactSection';
-
-import styles from './page.module.scss';
-import { IHeroSectionContent, IStaticContent, IAboutSectionContent } from '@/ts/types';
 
 async function Home() {
 	const staticContent = await getContent('static_content');
@@ -25,12 +26,15 @@ async function Home() {
 	);
 
 	return (
-		<main className={styles.main}>
-			<HeroSection staticContent={heroContent} />
-			<ProjectsSection staticContent={projectsContent} projects={projectsData} />
-			<AboutSection staticContent={aboutContent} />
-			<ContactSection staticContent={contactContent} />
-		</main>
+		<HomePage
+			staticContent={{
+				heroContent,
+				projectsContent,
+				projectsData,
+				aboutContent,
+				contactContent,
+			}}
+		/>
 	);
 }
 
