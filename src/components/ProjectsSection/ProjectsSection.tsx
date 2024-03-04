@@ -1,13 +1,14 @@
 'use client';
 
-import { iconArrow } from '../../../public/icons';
-
+import { motion } from 'framer-motion';
 import Image from 'next/legacy/image';
 import ProjectCard from '../ProjectCard';
 import NavigationButton from '../NavigationButton';
 
-import { IProjectData, IStaticContent } from '@/ts/types';
+import { iconArrow } from '#/icons';
 import fallbackContent from './fallbackContent';
+
+import { IProjectData, IStaticContent } from '@/ts/types';
 import { textMapFunction } from '@/utils/client';
 import { useLanguage } from '@/utils/client';
 
@@ -34,7 +35,13 @@ function ProjectsSection({
 		staticContent.arrow_alt?.[currentLanguage] ||
 		fallbackContent.arrow_alt[currentLanguage];
 	return (
-		<section id='projectsSection' className={styles.projectsSection}>
+		<motion.section
+			id='projectsSection'
+			className={styles.projectsSection}
+			initial={{ opacity: 0, y: 100 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.5 }}
+			viewport={{ once: true }}>
 			<h3>{headerText}</h3>
 
 			{projects.map(project => {
@@ -59,7 +66,7 @@ function ProjectsSection({
 			<div className={styles.imgWrapper}>
 				<Image src={iconArrow} alt={arrowAltText} />
 			</div>
-		</section>
+		</motion.section>
 	);
 }
 
