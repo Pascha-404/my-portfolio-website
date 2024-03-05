@@ -2,10 +2,12 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/legacy/image';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { INavbarContent } from '@/ts/types';
 import { useLanguage } from '@/utils/client';
 
-import Image from 'next/legacy/image';
 import LanguageButton from '../LanguageButton';
 import NavigationButton from '../NavigationButton';
 
@@ -28,16 +30,37 @@ function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Eleme
 		setShowBurgerMenu(!showBurgerMenu);
 	}
 
+	// Shared animation values for burgerContainer and burgerShade
+	const burgerAnimation = {
+		animation: {
+			scale: [0.8, 0.8, 1],
+			y: [-1000, 0, 0],
+		},
+		transition: { duration: 0.5, ease: 'easeIn', times: [0, 0.5, 1] },
+		exit: { scale: [1, 0.8, 0.8], y: [0, 0, -1000] },
+	};
+
 	return (
 		<React.Fragment>
-			{showBurgerMenu && <div className={styles.burgerShade} />}
+			<AnimatePresence mode='wait'>
+				{showBurgerMenu && (
+					<motion.div
+						id='burgerShade'
+						key={`burgerShade-${showBurgerMenu}`}
+						className={styles.burgerShade}
+						animate={burgerAnimation.animation}
+						transition={burgerAnimation.transition}
+						exit={burgerAnimation.exit}
+					/>
+				)}
+			</AnimatePresence>
 			<nav id='navbar' className={styles.navbar}>
 				<div className={styles.navbarHeader}>
 					<a href='/'>
 						<Image src={Logo} width={200} height={37} alt={logoAltText} priority />
 					</a>{' '}
 					<div className={styles.burgerIcon}>
-						<Image src={iconMenu} alt='Menu Icon' onClick={handleClick}/>
+						<Image src={iconMenu} alt='Menu Icon' onClick={handleClick} />
 					</div>
 				</div>
 				<div className={styles.navbarLinks}>
@@ -51,24 +74,30 @@ function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Eleme
 					<NavigationButton text={contactText} style='normal' targetId='contactSection' />
 					<CalendlyButton text={actionBtnText} />
 				</div>
-
-				{showBurgerMenu && (
-					<div className={styles.burgerContainer}>
-						<NavigationButton text={aboutText} style='normal' targetId='aboutSection' />
-						<NavigationButton
-							text={projectsText}
-							style='normal'
-							targetId='projectsSection'
-						/>
-						<NavigationButton
-							text={contactText}
-							style='normal'
-							targetId='contactSection'
-						/>
-						<CalendlyButton text={actionBtnText} />
-						<LanguageButton />
-					</div>
-				)}
+				<AnimatePresence mode='wait'>
+					{showBurgerMenu && (
+						<motion.div
+							key={`burgerContainer-${showBurgerMenu}`}
+							className={styles.burgerContainer}
+							animate={burgerAnimation.animation}
+							transition={burgerAnimation.transition}
+							exit={burgerAnimation.exit}>
+							<NavigationButton text={aboutText} style='normal' targetId='aboutSection' />
+							<NavigationButton
+								text={projectsText}
+								style='normal'
+								targetId='projectsSection'
+							/>
+							<NavigationButton
+								text={contactText}
+								style='normal'
+								targetId='contactSection'
+							/>
+							<CalendlyButton text={actionBtnText} />
+							<LanguageButton />
+						</motion.div>
+					)}
+				</AnimatePresence>
 			</nav>
 		</React.Fragment>
 	);
