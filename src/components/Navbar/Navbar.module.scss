@@ -60,6 +60,7 @@
 			padding-left: pxToRem(50px);
 			padding-right: pxToRem(50px);
 			box-sizing: border-box;
+			z-index: 3;
 
 			@include flexbox();
 			@include align-items(center);
