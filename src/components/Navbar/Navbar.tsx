@@ -12,7 +12,7 @@ import LanguageButton from '../LanguageButton';
 import NavigationButton from '../NavigationButton';
 
 import Logo from '#/personal-logo.svg';
-import { iconMenu } from '#/icons';
+import { iconMenu, iconMenuX } from '#/icons';
 import styles from './Navbar.module.scss';
 
 const CalendlyButton = dynamic(() => import('../CalendlyButton'), { ssr: false });
@@ -54,15 +54,33 @@ function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Eleme
 					/>
 				)}
 			</AnimatePresence>
+
 			<nav id='navbar' className={styles.navbar}>
 				<div className={styles.navbarHeader}>
 					<a href='/'>
 						<Image src={Logo} width={200} height={37} alt={logoAltText} priority />
 					</a>{' '}
-					<div className={styles.burgerIcon}>
-						<Image src={iconMenu} alt='Menu Icon' onClick={handleClick} />
-					</div>
+					<AnimatePresence mode='wait'>
+						{!showBurgerMenu ? (
+							<motion.div
+								className={styles.burgerIcon}
+								key={'burgerIcon'}
+								exit={{ rotate: 180 }}
+								transition={{ duration: 0.5 }}>
+								<Image src={iconMenu} alt='Menu Icon' onClick={handleClick} />
+							</motion.div>
+						) : (
+							<motion.div
+								key={'burgerIcon-X'}
+								className={styles.burgerIcon}
+								exit={{ rotate: 180 }}
+								transition={{ duration: 0.5 }}>
+								<Image src={iconMenuX} alt='Menu Icon' onClick={handleClick} />
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
+
 				<div className={styles.navbarLinks}>
 					<LanguageButton />
 					<NavigationButton text={aboutText} style='normal' targetId='aboutSection' />
@@ -74,6 +92,7 @@ function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Eleme
 					<NavigationButton text={contactText} style='normal' targetId='contactSection' />
 					<CalendlyButton text={actionBtnText} />
 				</div>
+
 				<AnimatePresence mode='wait'>
 					{showBurgerMenu && (
 						<motion.div
