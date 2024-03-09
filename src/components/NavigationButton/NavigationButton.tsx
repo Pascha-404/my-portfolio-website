@@ -30,35 +30,31 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 	}
 
 	switch (style) {
-		case 'normal': // will be upercased with yellow text
+		case 'normal': // will be uppercased with yellow text
 			return (
-				<Link
-					href='#'
-					onClick={handleClick}
-					className={`${styles.navigationButton} ${styles.normal}`}>
-					{text}
+				<Link href='#' onClick={handleClick}>
+					<button className={`${styles.navigationButton} ${styles.normal}`}>
+						{text}
+					</button>
 				</Link>
 			);
 		case 'normalSmall': // will be capitalized with white text
 			return (
-				<Link
-					href='#'
-					onClick={handleClick}
-					className={`${styles.navigationButton} ${styles.normalSmall}`}>
-					{text}
+				<Link href='#' onClick={handleClick}>
+					<button className={`${styles.navigationButton} ${styles.normalSmall}`}>
+						{text}
+					</button>
 				</Link>
 			);
 
 		case 'underlined': // will be upercased AND underlined with yellow text
 			return (
-				<Link
-					href='#'
-					onClick={handleClick}
-					className={`${styles.navigationButton} ${styles.underlined}`}>
-					{text}
+				<Link href='#' onClick={handleClick}>
+					<button className={`${styles.navigationButton} ${styles.underlined}`}>
+						{text}
+					</button>
 				</Link>
 			);
-
 		default:
 			throw new Error(`No case found for provided style: ${style}`);
 	}

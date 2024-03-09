@@ -1,10 +1,27 @@
 @use '$/abstracts/' as *;
 
 .navigationButton {
+	cursor: pointer;
+	background: none;
+	border: none;
 	&.normal,
 	&.underlined {
 		color: $txt-yellow;
 		text-transform: uppercase;
+	}
+
+	&.normal::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: $txt-yellow;
+		transition: width 0.3s;
+	}
+
+	&.normal:hover::after {
+		width: 100%;
+		transition: width 0.3s;
 	}
 
 	&.normalSmall {
