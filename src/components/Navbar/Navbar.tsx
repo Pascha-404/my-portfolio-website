@@ -101,16 +101,23 @@ function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Eleme
 							animate={burgerAnimation.animation}
 							transition={burgerAnimation.transition}
 							exit={burgerAnimation.exit}>
-							<NavigationButton text={aboutText} style='normal' targetId='aboutSection' />
+							<NavigationButton
+								text={aboutText}
+								style='normal'
+								targetId='aboutSection'
+								onClick={handleClick}
+							/>
 							<NavigationButton
 								text={projectsText}
 								style='normal'
 								targetId='projectsSection'
+								onClick={handleClick}
 							/>
 							<NavigationButton
 								text={contactText}
 								style='normal'
 								targetId='contactSection'
+								onClick={handleClick}
 							/>
 							<CalendlyButton text={actionBtnText} />
 							<LanguageButton />
