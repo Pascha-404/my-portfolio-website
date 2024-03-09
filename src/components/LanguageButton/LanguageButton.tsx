@@ -25,6 +25,7 @@ function LanguageButton(): JSX.Element {
 			<AnimatePresence mode='wait'>
 				{currentLanguage === 'en' ? (
 					<motion.p
+						className={styles.languageEN}
 						key={`language-${currentLanguage}`}
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -34,6 +35,7 @@ function LanguageButton(): JSX.Element {
 					</motion.p>
 				) : (
 					<motion.p
+						className={styles.languageDE}
 						key={`language-${currentLanguage}`}
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
