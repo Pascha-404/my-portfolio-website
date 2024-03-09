@@ -1,18 +1,21 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/legacy/image';
+import { usePathname } from 'next/navigation';
+
+import NavigationButton from '../NavigationButton';
+
+import { IFooterContent } from '@/ts/types';
+import { useLanguage } from '@/utils/client';
 
 import { iconArrowUp } from '../../../public/icons';
 import personalLogo from '../../../public/personal-logo.svg';
-
-import Image from 'next/legacy/image';
-import NavigationButton from '../NavigationButton';
-import { IFooterContent } from '@/ts/types';
-import { useLanguage } from '@/utils/client';
 
 import styles from './Footer.module.scss';
 
 function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Element {
 	const { currentLanguage } = useLanguage();
+	const pathname = usePathname();
 	const navBtnText = staticContent.navigation_btn![currentLanguage];
 	const arrowAltText = staticContent.arrow_alt![currentLanguage];
 	const contactsText = staticContent.contacts[currentLanguage];
@@ -25,13 +28,15 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 
 	return (
 		<footer className={styles.footer}>
-			<div className={styles.upLinkWrapper}>
-				<NavigationButton
-					text={navBtnText}
-					style='underlined'
-					targetId='topScrollContainer'
-				/>
-			</div>
+			{pathname !== '/imprint' && (
+				<div className={styles.upLinkWrapper}>
+					<NavigationButton
+						text={navBtnText}
+						style='underlined'
+						targetId='topScrollContainer'
+					/>
+				</div>
+			)}
 
 			<div className={styles.middleContent}>
 				<Image src={iconArrowUp} alt={arrowAltText} />
