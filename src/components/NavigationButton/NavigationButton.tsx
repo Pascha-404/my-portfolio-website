@@ -11,9 +11,15 @@ interface NavigationButtonProps {
 	style: 'button' | 'underlined' | 'normal' | 'normalSmall';
 	text: string;
 	targetId: string; // section where view should go to
+	onClick?: () => void;
 }
 
-function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX.Element {
+function NavigationButton({
+	style,
+	text,
+	targetId,
+	onClick,
+}: NavigationButtonProps): JSX.Element {
 	const router = useRouter();
 
 	function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
@@ -30,15 +36,17 @@ function NavigationButton({ style, text, targetId }: NavigationButtonProps): JSX
 	}
 
 	switch (style) {
-		case 'normal': // will be uppercased with yellow text
+		case 'normal': // will be uppercased with yellow text (navbar)
 			return (
 				<Link href='#' onClick={handleClick}>
-					<button className={`${styles.navigationButton} ${styles.normal}`}>
+					<button
+						className={`${styles.navigationButton} ${styles.normal}`}
+						onClick={onClick}>
 						{text}
 					</button>
 				</Link>
 			);
-		case 'normalSmall': // will be capitalized with white text
+		case 'normalSmall': // will be capitalized with white text (footer)
 			return (
 				<Link href='#' onClick={handleClick}>
 					<button className={`${styles.navigationButton} ${styles.normalSmall}`}>
