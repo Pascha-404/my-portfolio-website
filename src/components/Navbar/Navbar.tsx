@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/legacy/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll } from 'framer-motion';
 
 import { INavbarContent } from '@/ts/types';
 import { useLanguage } from '@/utils/client';
@@ -19,6 +19,7 @@ const CalendlyButton = dynamic(() => import('../CalendlyButton'), { ssr: false }
 
 function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Element {
 	const { currentLanguage } = useLanguage();
+	const { scrollYProgress } = useScroll();
 	const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 	const aboutText = staticContent.about[currentLanguage] || 'about';
 	const projectsText = staticContent.projects[currentLanguage] || 'projects';
@@ -54,6 +55,8 @@ function Navbar({ staticContent }: { staticContent: INavbarContent }): JSX.Eleme
 					/>
 				)}
 			</AnimatePresence>
+
+			<motion.div className={styles.progressBar} style={{ scaleX: scrollYProgress }} />
 
 			<nav id='navbar' className={styles.navbar}>
 				<div className={styles.navbarHeader}>
