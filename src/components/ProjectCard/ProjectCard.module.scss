@@ -96,6 +96,33 @@
 	}
 }
 
+@keyframes hover {
+	50% {
+		transform: translateY(-3px);
+	}
+
+	100% {
+		transform: translateY(-6px);
+	}
+}
+
+.githubLink,
+.liveLink {
+	display: inline-block;
+	transition-duration: 0.5s;
+	transition-property: transform;
+
+	&:hover {
+		transform: translateY(-6px);
+		animation-name: hover;
+		animation-duration: 1.5s;
+		animation-delay: 0.3s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+}
+
 @include breakpoint(xxl) {
 	.projectCard {
 		.cardFirstHalf {
