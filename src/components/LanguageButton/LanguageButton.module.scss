@@ -7,6 +7,23 @@
 	color: $txt-light-50;
 	cursor: pointer;
 
+	.highlight {
+		color: $txt-highlight-50;
+	}
+
+	&:hover {
+		.languageEN::after {
+			opacity: 1;
+			transition: opacity 0.3;
+		}
+		.languageDE::before {
+			opacity: 1;
+			transition: opacity 0.3;
+		}
+	}
+}
+
+@include breakpoint(l, min) {
 	.languageEN::after {
 		content: '<';
 		opacity: 0;
@@ -23,20 +40,5 @@
 		margin-right: 30px;
 		color: $txt-highlight-100;
 		transition: opacity 0.3s;
-	}
-
-	.highlight {
-		color: $txt-highlight-50;
-	}
-
-	&:hover {
-		.languageEN::after {
-			opacity: 1;
-			transition: opacity 0.3;
-		}
-		.languageDE::before {
-			opacity: 1;
-			transition: opacity 0.3;
-		}
 	}
 }
