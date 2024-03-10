@@ -51,7 +51,11 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 								<TechIcon key={`techIcon-${uuid()}`} technology={tech} />
 							))}
 						</div>
-						{liveLink && <a href={liveLink}>visit live product</a>}
+						{liveLink && (
+							<Link href={liveLink} className={styles.liveLink} target='_blank'>
+								visit live product
+							</Link>
+						)}
 					</div>
 					<div className={styles.cardDetails}>
 						<p className={styles.weightHighlight}>Role:</p>
@@ -95,9 +99,9 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 					))}
 				</div>
 				{liveLink && (
-					<a href={liveLink} className='liveLink'>
+					<Link href={liveLink} className={styles.liveLink} target='_blank'>
 						visit live product
-					</a>
+					</Link>
 				)}
 			</div>
 
@@ -107,7 +111,9 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 					<h4>project: {name}</h4>
 				</Link>
 				<p>{description}</p>
-				<Link href={githubLink}>[github link]</Link>
+				<Link href={githubLink} className={styles.githubLink} target='_blank'>
+					[github link]
+				</Link>
 			</div>
 		</article>
 	);
