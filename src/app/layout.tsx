@@ -3,11 +3,12 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+import { IFooterContent, INavbarContent } from '@/ts/types';
+import { getContent } from '@/utils/server';
+import { LanguageProvider } from '@/utils/client';
+
 import './fonts.css';
 import '../sass/main.scss';
-import { getContent } from '@/utils/server';
-import { IFooterContent, INavbarContent } from '@/ts/types';
-import { LanguageProvider } from '@/utils/client';
 
 export const metadata: Metadata = {
 	title: 'Patrick Pavliuchik',

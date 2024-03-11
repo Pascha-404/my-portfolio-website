@@ -1,6 +1,7 @@
 @use '$//abstracts' as *;
 
 .languageButton {
+	position: relative;
 	background: none;
 	border: none;
 	color: $txt-light-50;
@@ -8,5 +9,36 @@
 
 	.highlight {
 		color: $txt-highlight-50;
+	}
+
+	&:hover {
+		.languageEN::after {
+			opacity: 1;
+			transition: opacity 0.3;
+		}
+		.languageDE::before {
+			opacity: 1;
+			transition: opacity 0.3;
+		}
+	}
+}
+
+@include breakpoint(l, min) {
+	.languageEN::after {
+		content: '<';
+		opacity: 0;
+		position: absolute;
+		margin-left: 3px;
+		color: $txt-highlight-100;
+		transition: opacity 0.3s;
+	}
+	.languageDE::before {
+		content: '>';
+		opacity: 0;
+		position: absolute;
+		left: -15%;
+		margin-right: 30px;
+		color: $txt-highlight-100;
+		transition: opacity 0.3s;
 	}
 }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/legacy/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { v4 as uuid } from 'uuid';
 import {
 	iconReact,
 	iconAws,
@@ -44,6 +46,12 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 		setIsHovering(false);
 	}
 
+	const animationVariants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1, transition: { duration: 0.3 } },
+		exit: { opacity: 0, transition: { duration: 0.3 } },
+	};
+
 	switch (technology) {
 		case 'React':
 			return (
@@ -59,11 +67,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconReact}
 						alt='React icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'Next.js':
@@ -80,11 +97,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconNextjs}
 						alt='Nextjs icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'Express.js':
@@ -101,11 +127,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconExpress}
 						alt='Express.js icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'Node.js':
@@ -122,11 +157,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconNode}
 						alt='Node.js icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'JavaScript':
@@ -143,11 +187,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconJs}
 						alt='JavaScript icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'SASS':
@@ -164,11 +217,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconSass}
 						alt='SASS icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'HTML':
@@ -185,11 +247,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconHtml}
 						alt='HTML icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'CSS':
@@ -206,11 +277,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconCss}
 						alt='CSS icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'AWS':
@@ -227,11 +307,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconAws}
 						alt='AWS icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'MongoDB':
@@ -248,11 +337,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconMongodb}
 						alt='MongoDB icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'Cloudinary':
@@ -269,11 +367,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconCloudinary}
 						alt='Cloudinary icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'Material UI':
@@ -290,11 +397,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconMui}
 						alt='Material UI icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 		case 'Firebase':
@@ -311,11 +427,20 @@ function TechIcon({ technology }: TechIconProp): JSX.Element {
 						src={iconFirebase}
 						alt='Firebase icon'
 					/>
-					{isHovering && (
-						<div className={styles.iconTooltip} onClick={handleCloseClick}>
-							{technology}
-						</div>
-					)}
+					<AnimatePresence mode='wait'>
+						{isHovering && (
+							<motion.div
+								key={`techIcon-${uuid()}`}
+								className={styles.iconTooltip}
+								onClick={handleCloseClick}
+								variants={animationVariants}
+								initial='hidden'
+								animate='visible'
+								exit='exit'>
+								{technology}
+							</motion.div>
+						)}
+					</AnimatePresence>
 				</div>
 			);
 

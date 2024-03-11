@@ -1,10 +1,31 @@
 @use '$/abstracts/' as *;
 
 .navigationButton {
+	cursor: pointer;
+	background: none;
+	border: none;
 	&.normal,
 	&.underlined {
 		color: $txt-yellow;
 		text-transform: uppercase;
+	}
+
+	&.normal::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: $txt-yellow;
+		-webkit-transition: width 0.3s;
+		-o-transition: width 0.3s;
+		transition: width 0.3s;
+	}
+
+	&.normal:hover::after {
+		width: 100%;
+		-webkit-transition: width 0.3s;
+		-o-transition: width 0.3s;
+		transition: width 0.3s;
 	}
 
 	&.normalSmall {
@@ -16,8 +37,19 @@
 	&.underlined {
 		font-size: 20px;
 		font-weight: 700;
-		text-decoration: underline;
+		-webkit-text-decoration: 1px underline;
+		text-decoration: 1px underline;
 		text-underline-position: under;
 		line-height: 30px;
+		-webkit-transition: -webkit-text-decoration 0.3s;
+		transition: -webkit-text-decoration 0.3s;
+		-o-transition: text-decoration 0.3s;
+		transition: text-decoration 0.3s;
+		transition: text-decoration 0.3s, -webkit-text-decoration 0.3s;
+
+		&:hover {
+			-webkit-text-decoration: 3px underline;
+			text-decoration: 3px underline;
+		}
 	}
 }

@@ -17,6 +17,7 @@ import iconError from './icon-error.png';
 import iconNoData from './icon-noData.png';
 import iconFolder from './icon-folder.png';
 import iconMenu from './icon-menu.svg';
+import iconMenuX from './icon-menu-x.svg';
 
 export {
 	iconReact,
@@ -38,4 +39,5 @@ export {
 	iconFolder,
 	iconNoData,
 	iconMenu,
+	iconMenuX,
 };

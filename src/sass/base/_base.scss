@@ -1,13 +1,15 @@
 @use '../abstracts/' as *;
 
 ::-webkit-scrollbar {
-	display: none;
+	display: none; /* Safari and Chrome */
 }
 
 *,
 *:before,
 *:after {
 	box-sizing: inherit;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: -ms-autohiding-scrollbar; /* IE 10+ */
 }
 
 html body {

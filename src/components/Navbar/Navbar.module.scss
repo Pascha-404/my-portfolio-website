@@ -10,6 +10,19 @@
 	z-index: 1;
 }
 
+.progressBar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 10px;
+	background-color: $txt-highlight-100;
+	z-index: 5;
+	-webkit-transform-origin: 0%;
+	-ms-transform-origin: 0%;
+	transform-origin: 0%;
+}
+
 .navbar {
 	width: 100vw;
 	@include flexbox();
@@ -26,6 +39,7 @@
 
 	.burgerIcon {
 		display: none;
+		cursor: pointer;
 	}
 
 	.burgerContainer {
@@ -36,7 +50,7 @@
 		margin-top: 70px;
 
 		* {
-			margin-bottom: 70px;
+			margin-bottom: 45px;
 		}
 	}
 }
@@ -59,6 +73,7 @@
 			padding-left: pxToRem(50px);
 			padding-right: pxToRem(50px);
 			box-sizing: border-box;
+			z-index: 3;
 
 			@include flexbox();
 			@include align-items(center);
