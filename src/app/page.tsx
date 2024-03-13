@@ -1,13 +1,10 @@
 import HomePage from '@/components/HomePage';
 
-import {
-	IHeroSectionContent,
-	IStaticContent,
-	IAboutSectionContent,
-	IProjectData,
-} from '@/ts/types';
+import { IHeroSectionContent, IStaticContent, IAboutSectionContent } from '@/ts/types';
 
 import { getContent } from '@/utils/server';
+
+export const metadata = { robots: 'index, follow' };
 
 async function Home() {
 	const staticContent = await getContent('static_content');

@@ -2,6 +2,8 @@ import { getContent } from '@/utils/server';
 import ProjectPage from '@/components/ProjectPage';
 import { IProjectData } from '@/ts/types';
 
+export const metadata = { robots: 'index, follow' };
+
 interface ProjectParams {
 	params: { id: string };
 }
