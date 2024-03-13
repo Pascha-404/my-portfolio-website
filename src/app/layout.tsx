@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -43,9 +43,15 @@ export const metadata: Metadata = {
 		address: false,
 		telephone: false,
 	},
-	viewport: 'width=device-width, initial-scale=1',
+	category: 'Web Development',
 };
 
+export const viewport: Viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	maximumScale: 1,
+	userScalable: false,
+};
 
 async function RootLayout({ children }: { children: React.ReactNode }) {
 	const staticContent = await getContent('static_content');
