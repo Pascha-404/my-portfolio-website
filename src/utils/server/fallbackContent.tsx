@@ -33,10 +33,36 @@ const static_sections = [
 				highlight: false,
 			},
 		],
-		sub_header: {
-			en: 'Aspiring software developer with a great passion for solving problems through code.',
-			de: 'Angehender Softwareentwickler mit einer großen Leidenschaft für das Lösen von Problemen durch Code.',
-		},
+		sub_header: [
+			{
+				text: {
+					en: 'Aspiring software developer with a great',
+					de: 'Angehender Softwareentwickler mit einer großen',
+				},
+				highlight: false,
+			},
+			{
+				text: {
+					en: 'passion ',
+					de: 'Leidenschaft ',
+				},
+				highlight: true,
+			},
+			{
+				text: {
+					en: 'for solving problems through',
+					de: 'für das Lösen von Problemen durch',
+				},
+				highlight: false,
+			},
+			{
+				text: {
+					en: 'code.',
+					de: 'Code.',
+				},
+				highlight: true,
+			},
+		],
 		description: {
 			en: 'Are you looking for a motivated full-stack developer ready to grow through practical experience and create meaningful digital solutions? In my portfolio, you will find insights into my past projects and how I continuously strive to expand my skills to address real-world problems with innovative technologies.',
 			de: 'Sie sind auf der Suche nach einem motivierten Full-Stack-Entwickler, der bereit ist, durch praktische Erfahrung zu wachsen und bedeutungsvolle digitale Lösungen zu schaffen? In meinem Portfolio finden Sie einen Einblick in meine bisherigen Projekte und wie ich stetig daran arbeite, meine Fähigkeiten zu erweitern, um realen Problemen mit innovativen Technologien zu begegnen.',
