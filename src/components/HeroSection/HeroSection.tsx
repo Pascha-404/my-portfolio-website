@@ -29,9 +29,12 @@ function HeroSection({
 		stylingClass: '',
 		styles,
 	});
-	const subHeaderText =
-		staticContent.sub_header?.[currentLanguage] ||
-		fallbackContent.sub_header![currentLanguage];
+	const subHeaderText = textMapFunction({
+		objectArray: staticContent.sub_header || fallbackContent.sub_header!,
+		currentLanguage,
+		stylingClass: 'sizeHighlight',
+		styles,
+	});
 	const descriptionText =
 		staticContent.description?.[currentLanguage] ||
 		fallbackContent.description![currentLanguage];
@@ -57,10 +60,7 @@ function HeroSection({
 					{headerText} <span className={styles.colorHighlight}>Patrick</span>
 				</h1>
 
-				<h2>
-					{subHeaderText}
-					<span className={styles.sizeHighlight}>quizes.</span>
-				</h2>
+				<h2>{subHeaderText}</h2>
 
 				<p>{descriptionText}</p>
 
