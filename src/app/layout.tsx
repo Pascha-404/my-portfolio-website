@@ -12,10 +12,10 @@ import '../sass/main.scss';
 
 export const metadata: Metadata = {
 	generator: 'Next.js',
-	applicationName: 'Patrick Pavliuchik Portfolio',
-	title: 'Patrick Pavliuchik',
+	applicationName: "Patrick Pavliuchik's Portfolio",
+	title: 'Patrick Pavliuchik - Web Developer',
 	description:
-		"Welcome to the online portfolio of Patrick Pavliuchik, a passionate Full-Stack Developer specializing in React and Next.js. Explore a showcase of my web development projects, demonstrating creativity, innovation, and a commitment to crafting seamless, user-friendly experiences. Let's connect and collaborate on your next digital journey.",
+		"Patrick Pavliuchik's portfolio: Specializing in React & Next.js, focused on creating innovative, user-friendly web solutions. Open for entry-level opportunities.",
 	keywords: [
 		'Software Developer Germany',
 		'Web Developer EU',
@@ -44,6 +44,37 @@ export const metadata: Metadata = {
 		telephone: false,
 	},
 	category: 'Web Development',
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Patrick Pavliuchik - Web Developer',
+		description:
+			"Patrick Pavliuchik's portfolio: Specializing in React & Next.js, focused on creating innovative, user-friendly web solutions. Open for entry-level opportunities.",
+		images: [
+			'https://res.cloudinary.com/drpmdiapv/image/upload/v1711129072/patrick.pavliuchik.com/thumbnail-social_e8obyr.png',
+		], // Must be an absolute URL
+	},
+	openGraph: {
+		title: 'Patrick Pavliuchik - Web Developer',
+		description: "Patrick Pavliuchik's Portfolio",
+		url: 'https://patrick.pavliuchik.com/',
+		siteName: "Patrick Pavliuchik's Portfolio",
+		images: [
+			{
+				url: 'https://res.cloudinary.com/drpmdiapv/image/upload/v1711129072/patrick.pavliuchik.com/thumbnail-social_e8obyr.png', // Must be an absolute URL
+				width: 800,
+				height: 600,
+				alt: 'Website Thumbnail',
+			},
+			{
+				url: 'https://res.cloudinary.com/drpmdiapv/image/upload/v1711129072/patrick.pavliuchik.com/thumbnail-social_e8obyr.png', // Must be an absolute URL
+				width: 1800,
+				height: 1600,
+				alt: 'Website Thumbnail',
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
 };
 
 export const viewport: Viewport = {
