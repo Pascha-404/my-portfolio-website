@@ -15,7 +15,7 @@ type TechType =
 
 type TContent = 'projects' | 'static_content';
 
-type TLanguage = 'en' | 'de'
+type TLanguage = 'en' | 'de';
 
 interface ITranslations {
 	en: string;
@@ -84,9 +84,10 @@ interface INavbarContent extends IStaticContent {
 	contact: ITranslations;
 }
 
-interface IHeroSectionContent extends IStaticContent {
+interface IHeroSectionContent extends Omit<IStaticContent, 'sub_header'> {
 	fit: ITranslations;
 	image_alt: ITranslations;
+	sub_header: ITextSegment[];
 }
 
 interface IAboutSectionContent extends IStaticContent {
