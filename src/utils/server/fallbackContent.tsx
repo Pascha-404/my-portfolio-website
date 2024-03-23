@@ -77,7 +77,7 @@ const static_sections = [
 		},
 		action_btn: {
 			en: 'book a call',
-			de: 'Kennenlerngespräch',
+			de: 'Termin vereinbaren',
 		},
 		image_alt: {
 			en: 'Front photo of Patrick Pavliuchik',
