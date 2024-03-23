@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,9 +11,77 @@ import './fonts.css';
 import '../sass/main.scss';
 
 export const metadata: Metadata = {
-	title: 'Patrick Pavliuchik',
+	generator: 'Next.js',
+	applicationName: "Patrick Pavliuchik's Portfolio",
+	title: 'Patrick Pavliuchik - Web Developer',
 	description:
-		"Welcome to the online portfolio of Patrick Pavliuchik, a passionate Full-Stack Developer specializing in React and Next.js. Explore a showcase of my web development projects, demonstrating creativity, innovation, and a commitment to crafting seamless, user-friendly experiences. Let's connect and collaborate on your next digital journey.",
+		"Patrick Pavliuchik's portfolio: Specializing in React & Next.js, focused on creating innovative, user-friendly web solutions. Open for entry-level opportunities.",
+	keywords: [
+		'Software Developer Germany',
+		'Web Developer EU',
+		'Tech Industry Skills Portfolio',
+		'JavaScript Developer',
+		'React Developer',
+		'Node.js Developer',
+		'HTML5 CSS3 Expert',
+		'Agile Development Specialist',
+		'Responsive Web Design',
+		'Full-Stack Developer',
+		'Frontend Developer',
+		'Backend Developer',
+		'Creative Tech Solutions',
+		'IT Professional Europe',
+		'Hire Tech Talent Germany',
+		'Contact Software Engineer',
+		'Book Appointment Developer',
+	],
+	authors: [{ name: 'Patrick Pavliuchik' }],
+	creator: 'Patrick Pavliuchik',
+	publisher: 'Patrick Pavliuchik',
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	category: 'Web Development',
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Patrick Pavliuchik - Web Developer',
+		description:
+			"Patrick Pavliuchik's portfolio: Specializing in React & Next.js, focused on creating innovative, user-friendly web solutions. Open for entry-level opportunities.",
+		images: [
+			'https://res.cloudinary.com/drpmdiapv/image/upload/v1711129072/patrick.pavliuchik.com/thumbnail-social_e8obyr.png',
+		], // Must be an absolute URL
+	},
+	openGraph: {
+		title: 'Patrick Pavliuchik - Web Developer',
+		description: "Patrick Pavliuchik's Portfolio",
+		url: 'https://patrick.pavliuchik.com/',
+		siteName: "Patrick Pavliuchik's Portfolio",
+		images: [
+			{
+				url: 'https://res.cloudinary.com/drpmdiapv/image/upload/v1711129072/patrick.pavliuchik.com/thumbnail-social_e8obyr.png', // Must be an absolute URL
+				width: 800,
+				height: 600,
+				alt: 'Website Thumbnail',
+			},
+			{
+				url: 'https://res.cloudinary.com/drpmdiapv/image/upload/v1711129072/patrick.pavliuchik.com/thumbnail-social_e8obyr.png', // Must be an absolute URL
+				width: 1800,
+				height: 1600,
+				alt: 'Website Thumbnail',
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
+};
+
+export const viewport: Viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	maximumScale: 1,
+	userScalable: false,
 };
 
 async function RootLayout({ children }: { children: React.ReactNode }) {

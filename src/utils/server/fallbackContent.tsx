@@ -33,21 +33,47 @@ const static_sections = [
 				highlight: false,
 			},
 		],
-		sub_header: {
-			en: 'software engineer, who loves CHALLENGES and QUIZES.',
-			de: 'Softwareentwickler, welcher Herausforderungen und Rätsel liebt.',
-		},
+		sub_header: [
+			{
+				text: {
+					en: 'Aspiring software developer with a great',
+					de: 'Angehender Softwareentwickler mit einer großen',
+				},
+				highlight: false,
+			},
+			{
+				text: {
+					en: 'passion ',
+					de: 'Leidenschaft ',
+				},
+				highlight: true,
+			},
+			{
+				text: {
+					en: 'for solving problems through',
+					de: 'für das Lösen von Problemen durch',
+				},
+				highlight: false,
+			},
+			{
+				text: {
+					en: 'code.',
+					de: 'Code.',
+				},
+				highlight: true,
+			},
+		],
 		description: {
-			en: 'Are you looking for a passionate full stack developer with a love for creating meaningful digital experiences? Explore my portfolio to discover my journey through various projects and technologies.',
-			de: 'Suchen Sie einen leidenschaftlichen Full-Stack-Entwickler mit einer Liebe für das Schaffen bedeutungsvoller digitaler Erlebnisse? Entdecken Sie mein Portfolio, um meine Reise durch verschiedene Projekte und Technologien zu entdecken.',
+			en: 'Are you looking for a motivated full-stack developer ready to grow through practical experience and create meaningful digital solutions? In my portfolio, you will find insights into my past projects and how I continuously strive to expand my skills to address real-world problems with innovative technologies.',
+			de: 'Sie sind auf der Suche nach einem motivierten Full-Stack-Entwickler, der bereit ist, durch praktische Erfahrung zu wachsen und bedeutungsvolle digitale Lösungen zu schaffen? In meinem Portfolio finden Sie einen Einblick in meine bisherigen Projekte und wie ich stetig daran arbeite, meine Fähigkeiten zu erweitern, um realen Problemen mit innovativen Technologien zu begegnen.',
 		},
 		fit: {
 			en: 'Maybe we could make a good fit?',
-			de: 'Vielleicht passen wir ja zusammen?',
+			de: 'Lassen Sie uns herausfinden, ob wir zusammen passen?',
 		},
 		navigation_btn: {
-			en: 'more about me, my experience and portfolio',
-			de: 'mehr über mich, meine Erfahrungen und mein Portfolio',
+			en: 'more about my portfolio',
+			de: 'mehr über mein Portfolio',
 		},
 		action_btn: {
 			en: 'book a call',
@@ -108,8 +134,8 @@ const static_sections = [
 			},
 		],
 		description: {
-			en: "Hi there! I'm a passionate Fullstack Engineer with a knack for turning ideas into functional, user-friendly web applications. My journey in the tech world began with a strong curiosity for problem-solving and a love for crafting digital experiences. Now, I'm on the lookout for exciting junior positions in Berlin where I can contribute my skills and grow as a developer.",
-			de: 'Hallo! Ich bin ein leidenschaftlicher Fullstack-Entwickler mit einem Talent dafür, Ideen in funktionale, benutzerfreundliche Webanwendungen umzusetzen. Meine Reise in der Technikwelt begann mit einer starken Neugier für das Lösen von Problemen und einer Liebe für das Gestalten digitaler Erlebnisse. Jetzt bin ich auf der Suche nach spannenden Einstiegspositionen in Berlin, wo ich meine Fähigkeiten einbringen und als Entwickler wachsen kann.',
+			en: "Hello! I'm a passionate full-stack developer specialized in turning ideas into functional and user-friendly web applications. My enthusiasm for the tech world has been sparked by my strong curiosity and love for problem-solving as well as designing digital experiences. While I'm particularly interested in entry-level positions in Berlin to demonstrate my skills on-site, I'm also open to remote opportunities that allow me to contribute my dedication and skills from anywhere and continue to grow.",
+			de: 'Hallo! Ich bin ein leidenschaftlicher Fullstack-Entwickler, der sich darauf spezialisiert hat, Ideen in funktionale und benutzerfreundliche Webanwendungen zu verwandeln. Meine Begeisterung für die Technikwelt wurde durch meine starke Neugier und Liebe zum Problemlösen sowie zum Gestalten digitaler Erlebnisse geweckt. Während ich besonders an Einstiegspositionen in Berlin interessiert bin, um dort vor Ort mein Können unter Beweis zu stellen, bin ich auch offen für Remote-Möglichkeiten, die es mir erlauben, mein Engagement und meine Fähigkeiten von überall aus einzubringen und weiter zu wachsen.',
 		},
 		skills: {
 			header: [
@@ -123,26 +149,80 @@ const static_sections = [
 			],
 			frontend: {
 				en: [
-					{ data: 'Proficient in HTML, CSS, and JavaScript.' },
-					{ data: 'Experience with modern frontend frameworks like React and Vue.js.' },
-					{ data: 'Responsive design and mobile-first development.' },
+					{
+						data: 'Experienced in developing with React, including the use of modern features like Hooks and the Context API for efficient state management.',
+					},
+					{
+						data: 'Professional application of SASS for stylish and maintainable CSS structures.',
+					},
+					{
+						data: 'Effective use of Git and GitHub for version control and collaborative projects.',
+					},
+					{
+						data: 'Implementation of accessible websites by using alt attributes for images and keyboard navigation.',
+					},
+					{
+						data: 'Utilizing Google Lighthouse for performance optimization, prioritizing image loading, and fundamental knowledge in performance improvement strategies.',
+					},
 				],
 				de: [
-					{ data: 'Beherrscht HTML, CSS und JavaScript.' },
-					{ data: 'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.' },
-					{ data: 'Responsives Design und Mobile-First-Entwicklung.' },
+					{
+						data: 'Erfahrung in der Entwicklung mit React, einschließlich der Nutzung moderner Features wie Hooks und Context API für effizientes State-Management.',
+					},
+					{
+						data: 'Professionelle Anwendung von SASS für stilvolle und wartbare CSS-Strukturen.',
+					},
+					{
+						data: 'Effektive Nutzung von Git und GitHub zur Versionskontrolle und Zusammenarbeit in Projekten.',
+					},
+					{
+						data: 'Umsetzung von barrierefreien Webseiten durch die Verwendung von alt-Attributen für Bilder und Tastaturnavigation.',
+					},
+					{
+						data: 'Einsatz von Google Lighthouse für Performance-Optimierung, Priorisierung des Ladens von Bildern und grundlegende Kenntnisse in Performance-Verbesserungsstrategien.',
+					},
 				],
 			},
 			backend: {
 				en: [
-					{ data: 'Proficient in HTML, CSS, and JavaScript.' },
-					{ data: 'Experience with modern frontend frameworks like React and Vue.js.' },
-					{ data: 'Responsive design and mobile-first development.' },
+					{
+						data: 'Specialized in Node.js for server-side development, with experience in Express and Next.js for robust backend solutions.',
+					},
+					{
+						data: 'Extensive knowledge in working with NoSQL databases, including MongoDB, MongoDB Atlas, Firebase Firestore, and Firebase Realtime Database.',
+					},
+					{
+						data: 'Experienced in developing RESTful APIs, including implementing a CMS with CRUD operations to manage records in local databases.',
+					},
+					{
+						data: 'Proficient in authentication techniques and security practices, including the use of OAuth, Firebase Authentication, and the security middleware Helmet.',
+					},
+					{
+						data: 'Skilled in using Firebase for a variety of backend services such as databases, authentication, and Cloud Functions.',
+					},
+					{
+						data: 'Hands-on experience with the command-line, Linux systems, as well as deploying and configuring web servers like Nginx and Apache on Ubuntu and using virtual machines.',
+					},
 				],
 				de: [
-					{ data: 'Beherrscht HTML, CSS und JavaScript.' },
-					{ data: 'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.' },
-					{ data: 'Responsives Design und Mobile-First-Entwicklung.' },
+					{
+						data: 'Spezialisiert auf Node.js für serverseitige Entwicklung, mit Erfahrungen in Express und Next.js für robuste Backend-Lösungen.',
+					},
+					{
+						data: 'Umfassende Kenntnisse in der Arbeit mit NoSQL-Datenbanken, einschließlich MongoDB, MongoDB Atlas, Firebase Firestore und Firebase Realtime Database.',
+					},
+					{
+						data: 'Erfahrung in der Entwicklung von RESTful APIs, einschließlich der Implementierung eines CMS mit CRUD-Operationen zur Verwaltung von Datensätzen in lokalen Datenbanken.',
+					},
+					{
+						data: 'Kenntnisse in Authentifizierungstechniken und Sicherheitspraktiken, einschließlich der Verwendung von OAuth, Firebase Authentifizierung und der Sicherheitsmiddleware Helmet.',
+					},
+					{
+						data: 'Erfahrener Einsatz von Firebase für eine Vielzahl von Backend-Services wie Datenbanken, Authentifizierung und Cloud Functions.',
+					},
+					{
+						data: 'Praktische Erfahrung mit der Command-Line, Linux-Systemen, sowie dem Einsatz und der Konfiguration von Webservern wie Nginx und Apache auf Ubuntu und der Verwendung virtueller Maschinen.',
+					},
 				],
 			},
 		},
@@ -170,29 +250,49 @@ const static_sections = [
 			companys: {
 				en: [
 					{
-						company_name: 'BVG',
-						company_role: 'Mechanic',
-						time: '2020-2023',
+						company_name: 'Berliner Verkehrsbetriebe',
+						company_role: 'Automotive Mechatronics Technician',
+						time: '2020-Today',
 						skills: [
-							{ data: 'Proficient in HTML, CSS, and JavaScript.' },
 							{
-								data: 'Experience with modern frontend frameworks like React and Vue.js.',
+								data: 'Specialized in vehicle electrical systems with an emphasis on identifying, troubleshooting, and executing complex repairs. Proficient in generating and refining repair documentation tailored to specific vehicle models by leveraging a diverse array of diagnostic tools and software.',
 							},
-							{ data: 'Responsive design and mobile-first development.' },
+							{
+								data: 'Demonstrated expertise in fault diagnosis employing a methodical approach, including the interpretation of measurement data, consulting repair manuals and circuit diagrams, and devising various solution strategies for intricate systems and components.',
+							},
+							{
+								data: 'Independently managed a majority of tasks with the ability to collaborate effectively with team members and superiors on multifaceted challenges, shared knowledge with apprentices and interns, and actively participated in diagnostic and repair activities to enhance personal skill set.',
+							},
+							{
+								data: 'Adapted swiftly to emerging vehicle technologies and diagnostic instruments through practical experience and continuous professional development, including self-directed study of technical manuals to augment comprehension of diverse vehicle systems.',
+							},
+							{
+								data: 'Committed to maintaining high standards of precision and quality across all assignments, conducted thorough final inspections, and meticulously documented diagnostic findings to support transparency and uphold quality assurance standards.',
+							},
 						],
 					},
 				],
 				de: [
 					{
-						company_name: 'BVG',
+						company_name: 'Berliner Verkehrsbetriebe',
 						company_role: 'KFZ-Mechatroniker',
-						time: '2020-2023',
+						time: '2020-Heute',
 						skills: [
-							{ data: 'Beherrscht HTML, CSS und JavaScript.' },
 							{
-								data: 'Erfahrung mit modernen Frontend-Frameworks wie React und Vue.js.',
+								data: 'Spezialisiert auf Fahrzeugelektriksysteme mit Schwerpunkt auf Identifizierung, Fehlersuche und Durchführung komplexer Reparaturen. Kompetent in der Erstellung und Verfeinerung von Reparaturdokumentationen, angepasst an spezifische Fahrzeugmodelle, unter Verwendung einer vielfältigen Auswahl an Diagnosetools und Software.',
 							},
-							{ data: 'Responsives Design und Mobile-First-Entwicklung.' },
+							{
+								data: 'Nachgewiesene Expertise in der Fehlerdiagnose mit einem methodischen Ansatz, einschließlich der Interpretation von Messdaten, Konsultation von Reparaturhandbüchern und Schaltplänen sowie der Entwicklung verschiedener Lösungsstrategien für komplexe Systeme und Komponenten.',
+							},
+							{
+								data: 'Selbstständige Bewältigung der meisten Aufgaben mit der Fähigkeit, effektiv mit Teammitgliedern und Vorgesetzten bei komplexen Herausforderungen zusammenzuarbeiten, Wissen mit Auszubildenden und Praktikanten geteilt und aktiv an Diagnose- und Reparaturaktivitäten teilgenommen, um das persönliche Können zu erweitern.',
+							},
+							{
+								data: 'Schnelle Anpassung an neue Fahrzeugtechnologien und Diagnoseinstrumente durch praktische Erfahrungen und kontinuierliche berufliche Weiterbildung, einschließlich eigenständigem Studium von technischen Handbüchern, um das Verständnis verschiedener Fahrzeugsysteme zu vertiefen.',
+							},
+							{
+								data: 'Engagement für die Aufrechterhaltung hoher Präzisions- und Qualitätsstandards bei allen Aufgaben, Durchführung gründlicher Abschlussinspektionen und akribische Dokumentation von Diagnoseergebnissen zur Förderung der Transparenz und Einhaltung von Qualitätsstandards.',
+							},
 						],
 					},
 				],
@@ -218,8 +318,8 @@ const static_sections = [
 			},
 		],
 		description: {
-			en: "Whether you have a project in mind, want to discuss potential collaborations, or simply want to chat about design and technology, I'm here for it. Feel free to reach out by filling out the form below to book a call with me.",
-			de: 'Ob Sie ein Projekt im Sinn haben, über mögliche Zusammenarbeiten diskutieren möchten oder einfach nur über Design und Technologie plaudern wollen, ich bin dafür da. Zögern Sie nicht, mich zu kontaktieren, indem Sie das untenstehende Formular ausfüllen, um einen Anruf mit mir zu vereinbaren.',
+			en: 'Looking to bolster your development team? I bring a passion for technology and a commitment to continuous improvement. For an initial introduction or to discuss potential employment opportunities, you can contact me via email, phone, or Calendly. Let’s explore how we can work together.',
+			de: 'Suchen Sie Verstärkung für Ihr Entwicklungsteam? Ich bringe Leidenschaft für Technologie und die Bereitschaft, mich ständig weiterzuentwickeln, mit. Für ein erstes Kennenlernen oder um über potenzielle Anstellungen zu sprechen, erreichen Sie mich via E-Mail, Telefon oder Calendly. Lassen Sie uns gemeinsam herausfinden, wie wir zusammenarbeiten können.',
 		},
 		action_btn: {
 			en: 'book a call',

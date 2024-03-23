@@ -33,7 +33,7 @@
 		}
 
 		.links {
-			width: 100%;
+			width: 95%;
 			margin-bottom: pxToRem(69px);
 			@include flexbox();
 			@include align-items(center);
