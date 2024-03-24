@@ -30,12 +30,12 @@
 			.contactWrapper,
 			.sitemap {
 				@include flexbox(column);
-				@include justify-content(space-around);
 				margin-right: pxToRem(94px);
 
 				h6 {
 					font-size: 20px;
 					font-weight: 700;
+					margin-bottom: 20px;
 				}
 				div {
 					@include flexbox(column);
