@@ -8,7 +8,13 @@ import Link from 'next/link';
 import styles from './NavigationButton.module.scss';
 
 interface NavigationButtonProps {
-	style: 'button' | 'underlined' | 'normal' | 'normalSmall';
+	style:
+		| 'button'
+		| 'underlined'
+		| 'normal'
+		| 'normalSmall'
+		| 'uppercaseBlue'
+		| 'uppercaseFatBlue';
 	text: string;
 	targetId?: string; // section where view should go to
 	onClick?: () => void;
@@ -62,10 +68,26 @@ function NavigationButton({
 				</Link>
 			);
 
-		case 'underlined': // will be upercased AND underlined with yellow text
+		case 'underlined': // will be uppercased AND underlined with yellow text
 			return (
 				<Link href={href} onClick={handleClick} target={'_blank'}>
 					<button className={`${styles.navigationButton} ${styles.underlined}`}>
+						{text}
+					</button>
+				</Link>
+			);
+		case 'uppercaseBlue': // will be uppercased AND underlined with yellow text
+			return (
+				<Link href={href} onClick={handleClick} target={'_blank'}>
+					<button className={`${styles.navigationButton} ${styles.uppercaseBlue}`}>
+						{text}
+					</button>
+				</Link>
+			);
+		case 'uppercaseFatBlue': // will be uppercased AND bold with blue text
+			return (
+				<Link href={href} onClick={handleClick} target={'_blank'}>
+					<button className={`${styles.navigationButton} ${styles.uppercaseFatBlue}`}>
 						{text}
 					</button>
 				</Link>
