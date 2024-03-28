@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
 import { TechType } from '@/ts/types';
 
+import NavigationButton from '../NavigationButton';
 import Image from 'next/legacy/image';
 import TechIcon from '../TechIcon';
 
@@ -52,9 +53,11 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 							))}
 						</div>
 						{liveLink && (
-							<Link href={liveLink} className={styles.liveLink} target='_blank'>
-								visit live product
-							</Link>
+							<NavigationButton
+								href={liveLink}
+								style='uppercaseFatBlue'
+								text='visit live product'
+							/>
 						)}
 					</div>
 					<div className={styles.cardDetails}>
@@ -99,9 +102,11 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 					))}
 				</div>
 				{liveLink && (
-					<Link href={liveLink} className={styles.liveLink} target='_blank'>
-						visit live product
-					</Link>
+					<NavigationButton
+						href={liveLink}
+						style='uppercaseFatBlue'
+						text='visit live product'
+					/>
 				)}
 			</div>
 
@@ -111,9 +116,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 					<h4>project: {name}</h4>
 				</Link>
 				<p>{description}</p>
-				<Link href={githubLink} className={styles.githubLink} target='_blank'>
-					[github link]
-				</Link>
+				<NavigationButton href={githubLink} style='uppercaseBlue' text='[github link]' />
 			</div>
 		</article>
 	);
