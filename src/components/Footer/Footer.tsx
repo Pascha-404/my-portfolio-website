@@ -64,6 +64,16 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 								style='normalSmall'
 							/>
 							<NavigationButton text={resumeText} targetId='resume' style='normalSmall' />
+							<NavigationButton
+								text='LinkedIn'
+								style='normalSmall'
+								href='https://www.linkedin.com/in/patrick-pavliuchik-b481b9200/'
+							/>
+							<NavigationButton
+								text='GitHub'
+								style='normalSmall'
+								href='https://github.com/Pascha-404'
+							/>
 						</div>
 					</div>
 				</div>

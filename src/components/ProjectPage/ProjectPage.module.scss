@@ -7,7 +7,7 @@
 	margin-top: pxToRem(120px);
 	margin-bottom: pxToRem(300px);
 
-	.projectImage,
+	.linksWrapper,
 	.overviewWrapper,
 	.challengesWrapper,
 	.approachWrapper,
@@ -31,9 +31,14 @@
 		}
 	}
 
+	.linksWrapper {
+		@include flexbox();
+		@include justify-content(space-between);
+		margin-top: 15px;
+	}
+
 	.projectImageWrapper {
 		width: 100%;
-		margin-bottom: pxToRem(62px);
 	}
 
 	.overviewWrapper,
@@ -58,8 +63,8 @@
 
 	@include breakpoint(m) {
 		padding-left: pxToRem(105px);
-		
-		.projectImageWrapper,
+
+		.linksWrapper,
 		.overviewWrapper,
 		.challengesWrapper,
 		.approachWrapper,
@@ -81,7 +86,7 @@
 		}
 	}
 	@include breakpoint(xs) {
-		.projectImageWrapper,
+		.linksWrapper,
 		.overviewWrapper,
 		.challengesWrapper,
 		.approachWrapper,
