@@ -9,6 +9,7 @@ import { IProjectData } from '@/ts/types';
 import { useLanguage } from '@/utils/client';
 
 import styles from './ProjectPage.module.scss';
+import NavigationButton from '../NavigationButton';
 
 interface ProjectPageProps {
 	projectData: IProjectData;
@@ -50,6 +51,17 @@ function ProjectPage({ projectData }: ProjectPageProps): JSX.Element {
 							priority
 							objectFit='cover'
 						/>
+					)}
+				</div>
+
+				<div className={styles.linksWrapper}>
+					<NavigationButton
+						href={githubLink}
+						style='uppercaseFatBlue'
+						text='[github link]'
+					/>
+					{liveLink && (
+						<NavigationButton href={liveLink} style='uppercaseFatBlue' text='Live link' />
 					)}
 				</div>
 
