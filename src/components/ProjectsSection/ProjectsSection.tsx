@@ -38,7 +38,7 @@ function ProjectsSection({
 		<SectionTransition>
 			<section id='projectsSection' className={styles.projectsSection}>
 				<h3>{headerText}</h3>
-				{projects.map(project => {
+				{projects.map((project, idx) => {
 					return (
 						<ProjectCard
 							key={project._id}
@@ -51,6 +51,7 @@ function ProjectsSection({
 							liveLink={project.liveLink ? project.liveLink : undefined}
 							description={project[currentLanguage].description}
 							githubLink={project.githubLink}
+							imgLoadPriority={idx <= 0 ? true : false}
 						/>
 					);
 				})}
