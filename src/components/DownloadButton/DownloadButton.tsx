@@ -1,3 +1,6 @@
+// Component is currently not implemented
+// Leaving the component for demonstration purpose
+
 'use client';
 
 import React, { useRef } from 'react';
