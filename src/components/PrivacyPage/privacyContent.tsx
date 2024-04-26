@@ -596,7 +596,7 @@ const content = {
 					professional provider (Art. 6 Para. 1 lit. f GDPR). If a corresponding consent
 					has been requested, processing is carried out exclusively on the basis of Art. 6
 					Para. 1 lit. a GDPR and § 25 Para. 1 TTDSG, insofar as the consent includes the
-					storage of cookies or access to information in the user's end device (e.g.,
+					storage of cookies or access to information in the user&apos;s end device (e.g.,
 					device fingerprinting) within the meaning of the TTDSG. The consent can be
 					revoked at any time.
 				</p>{' '}
@@ -803,8 +803,8 @@ const content = {
 					For security reasons and to protect the transmission of confidential content,
 					such as orders or inquiries that you send to us as the site operator, this site
 					uses an SSL or TLS encryption. You can recognize an encrypted connection by the
-					fact that the address line of the browser changes from "http://" to "https://"
-					and by the lock symbol in your browser line.
+					fact that the address line of the browser changes from &quot;http://&quot; to
+					&quot;https://&quot; and by the lock symbol in your browser line.
 				</p>{' '}
 				<p>
 					If SSL or TLS encryption is activated, the data you transmit to us cannot be
@@ -815,12 +815,12 @@ const content = {
 			<div className={styles.dataSection}>
 				<h3>Cookies</h3>{' '}
 				<p>
-					Our websites use so-called "cookies". Cookies are small data packets and do not
-					cause any damage to your device. They are stored either temporarily for the
-					duration of a session (session cookies) or permanently (permanent cookies) on
-					your device. Session cookies are automatically deleted after your visit.
-					Permanent cookies remain stored on your device until you delete them yourself or
-					an automatic deletion is carried out by your web browser.
+					Our websites use so-called &quot;cookies&quot;. Cookies are small data packets
+					and do not cause any damage to your device. They are stored either temporarily
+					for the duration of a session (session cookies) or permanently (permanent
+					cookies) on your device. Session cookies are automatically deleted after your
+					visit. Permanent cookies remain stored on your device until you delete them
+					yourself or an automatic deletion is carried out by your web browser.
 				</p>{' '}
 				<p>
 					Cookies can be from us (first-party cookies) or from third-party companies
@@ -889,15 +889,16 @@ const content = {
 					cache to display texts and fonts correctly.
 				</p>{' '}
 				<p>
-					For this purpose, the browser you are using must connect to Google's servers.
-					This gives Google knowledge that our website has been accessed via your IP
-					address. The use of Google Fonts is based on Art. 6 Para. 1 lit. f GDPR. The
+					For this purpose, the browser you are using must connect to Google&apos;s
+					servers. This gives Google knowledge that our website has been accessed via your
+					IP address. The use of Google Fonts is based on Art. 6 Para. 1 lit. f GDPR. The
 					website operator has a legitimate interest in the uniform representation of the
 					typeface on its website. If a corresponding consent has been requested,
 					processing is carried out exclusively on the basis of Art. 6 Para. 1 lit. a GDPR
 					and § 25 Para. 1 TTDSG, insofar as the consent includes the storage of cookies
-					or access to information in the user's end device (e.g., device fingerprinting)
-					within the meaning of the TTDSG. Consent can be revoked at any time.
+					or access to information in the user&apos;s end device (e.g., device
+					fingerprinting) within the meaning of the TTDSG. Consent can be revoked at any
+					time.
 				</p>{' '}
 				<p>
 					If your browser does not support Google Fonts, a default font will be used by
@@ -911,7 +912,7 @@ const content = {
 						rel='noopener noreferrer'>
 						https://developers.google.com/fonts/faq
 					</a>{' '}
-					and in Google's privacy policy:{' '}
+					and in Google&apos;s privacy policy:{' '}
 					<a
 						href='https://policies.google.com/privacy?hl=en'
 						target='_blank'
@@ -952,8 +953,8 @@ const content = {
 				</p>
 				<br />
 				<p>
-					For more information on the handling of user data, please refer to Calendly's
-					privacy policy at{' '}
+					For more information on the handling of user data, please refer to
+					Calendly&apos;s privacy policy at{' '}
 					<a href='https://calendly.com/pages/privacy'>
 						https://calendly.com/pages/privacy.
 					</a>
