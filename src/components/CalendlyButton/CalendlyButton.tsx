@@ -16,7 +16,7 @@ function CalendlyButton({ text }: CalendlyButtonProps): JSX.Element {
 		if (typeof window !== undefined) {
 			setRootElement(document.getElementById('root'));
 		}
-	});
+	}, []);
 
 	return rootElement ? (
 		<PopupButton
