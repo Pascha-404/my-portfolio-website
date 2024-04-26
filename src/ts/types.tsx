@@ -92,7 +92,6 @@ interface IHeroSectionContent extends Omit<IStaticContent, 'sub_header'> {
 
 interface IAboutSectionContent extends IStaticContent {
 	skills: {
-		header: ITextSegment[];
 		frontend: { en: IDataListData[]; de: IDataListData[] };
 		backend: { en: IDataListData[]; de: IDataListData[] };
 	};

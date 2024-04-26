@@ -138,15 +138,6 @@ const static_sections = [
 			de: 'Hallo! Ich bin ein leidenschaftlicher Fullstack-Entwickler, der sich darauf spezialisiert hat, Ideen in funktionale und benutzerfreundliche Webanwendungen zu verwandeln. Meine Begeisterung für die Technikwelt wurde durch meine starke Neugier und Liebe zum Problemlösen sowie zum Gestalten digitaler Erlebnisse geweckt. Während ich besonders an Einstiegspositionen in Berlin interessiert bin, um dort vor Ort mein Können unter Beweis zu stellen, bin ich auch offen für Remote-Möglichkeiten, die es mir erlauben, mein Engagement und meine Fähigkeiten von überall aus einzubringen und weiter zu wachsen.',
 		},
 		skills: {
-			header: [
-				{
-					text: {
-						en: 'My skills',
-						de: 'Meine Fähigkeiten',
-					},
-					highlight: false,
-				},
-			],
 			frontend: {
 				en: [
 					{
@@ -494,7 +485,7 @@ const projects = [
 			'Cloudinary',
 		],
 		githubLink: 'https://github.com/Pascha-404/goksenia-portfolio-homepage',
-		liveLink: 'https://patrick.pavliuchik.com/goksenia',
+		liveLink: '',
 		yearCreated: 2021,
 		en: {
 			role: 'Full-Stack Developer',
@@ -622,7 +613,7 @@ const projects = [
 		imgSrc: null,
 		stack: ['React', 'CSS', 'Material UI', 'Firebase'],
 		githubLink: 'https://github.com/Pascha-404/webChatApp',
-		liveLink: 'https://patrick.pavliuchik.com/webchatapp',
+		liveLink: '',
 		yearCreated: 2021,
 		en: {
 			role: 'Full-Stack Developer',
