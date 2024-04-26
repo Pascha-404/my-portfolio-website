@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 
 import SectionTransition from '../SectionTransition';
 import DataListCard from '../DataListCard';
-import DownloadButton from '../DownloadButton';
+// import DownloadButton from '../DownloadButton';
 
 import { IAboutSectionContent } from '@/ts/types';
 import { useLanguage } from '@/utils/client';
@@ -25,19 +25,13 @@ function AboutSection({
 		styles,
 	});
 	const descriptionText = staticContent.description?.[currentLanguage];
-	const skillsHeaderText = textMapFunction({
-		objectArray: staticContent.skills.header!,
-		currentLanguage,
-		stylingClass: '',
-		styles,
-	});
 	const experienceHeaderText = textMapFunction({
 		objectArray: staticContent.experience.header!,
 		currentLanguage,
 		stylingClass: 'colorHighlight',
 		styles,
 	});
-	const downloadButtonText = staticContent.experience.pdfLink[currentLanguage];
+	// const downloadButtonText = staticContent.experience.pdfLink[currentLanguage];
 
 	return (
 		<SectionTransition>
@@ -46,7 +40,6 @@ function AboutSection({
 					<h5>{headerText}</h5>
 					<p>{descriptionText}</p>
 					<div className={styles.dataWrapper}>
-						<p>{skillsHeaderText}:</p>
 						<div className={styles.dataCardWrapper}>
 							<DataListCard
 								type='home_skill'
@@ -64,7 +57,7 @@ function AboutSection({
 				<div className={styles.myExperience}>
 					<h5>{experienceHeaderText}</h5>
 					<div className={styles.dataWrapper}>
-						<DownloadButton text={`[${downloadButtonText}]`} id='resume' />
+						{/* <DownloadButton text={`[${downloadButtonText}]`} id='resume' /> */}
 						<div className={styles.dataCardWrapper}>
 							{staticContent.experience.companys[currentLanguage].map(company => {
 								return (
