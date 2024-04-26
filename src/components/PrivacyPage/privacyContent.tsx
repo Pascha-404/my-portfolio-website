@@ -104,11 +104,9 @@ const content = {
 				</p>{' '}
 				<p>Wir setzen folgende(n) Hoster ein:</p>
 				<p>
-					///////////////
+					Digital Ocean, LLC.
 					<br />
-					Anschrift Webhoster
-					<br />
-					////////////////
+					101 Avenue of the Americas, 10th Floor, New York, NY 10013, USA.
 				</p>
 			</div>
 			<h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
@@ -608,11 +606,9 @@ const content = {
 				</p>{' '}
 				<p>We use the following host(s):</p>
 				<p>
-					///////////////
+					Digital Ocean, LLC.
 					<br />
-					Address Webhoster
-					<br />
-					/////////////////
+					101 Avenue of the Americas, 10th Floor, New York, NY 10013, USA.
 				</p>
 			</div>
 			<h2>3. General Notes and Mandatory Information</h2>
