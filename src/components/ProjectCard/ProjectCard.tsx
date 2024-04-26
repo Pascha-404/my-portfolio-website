@@ -21,11 +21,22 @@ interface ProjectCardProps {
 	description: string;
 	githubLink: string;
 	liveLink?: string;
+	imgLoadPriority?: boolean;
 }
 
 function ProjectCard(props: ProjectCardProps): JSX.Element {
 	const img = props.imgSrc || defaultImg;
-	const { id, role, task, stack, name, description, liveLink, githubLink } = props;
+	const {
+		id,
+		role,
+		task,
+		stack,
+		name,
+		description,
+		liveLink,
+		githubLink,
+		imgLoadPriority = false,
+	} = props;
 
 	return (
 		<article className={styles.projectCard}>
@@ -40,6 +51,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 								height='400'
 								objectFit='cover'
 								alt='Project Preview'
+								priority={imgLoadPriority}
 							/>
 						</Link>
 					</div>
@@ -80,6 +92,7 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 								height='172'
 								objectFit='cover'
 								alt='Project Preview'
+								priority={imgLoadPriority}
 							/>
 						</Link>
 					</div>
