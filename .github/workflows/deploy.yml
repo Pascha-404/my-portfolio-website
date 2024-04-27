@@ -13,13 +13,15 @@ jobs:
       uses: appleboy/ssh-action@v1.0.3
       env: 
         WORK_DIR: ${{ secrets.WORK_DIR }}
-        SERVICE: ${{ secrets.SSH_SERVICE }}
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_UBUNTU_KEY }}
         port: ${{ secrets.SSH_PORT }}
-        envs: WORK_DIR,SERVICE
+        envs: WORK_DIR
         script: |
           cd $WORK_DIR
           git pull
+          pm2 stop all
+          npm run build
+          pm2 start all
