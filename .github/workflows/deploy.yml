@@ -22,6 +22,7 @@ jobs:
         script: |
           cd $WORK_DIR
           git pull
+          npm ci
           pm2 stop all
           npm run build
           pm2 start all
