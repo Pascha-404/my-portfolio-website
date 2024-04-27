@@ -11,6 +11,7 @@ import './fonts.css';
 import '../sass/main.scss';
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://patrick.pavliuchik.com'),
 	generator: 'Next.js',
 	applicationName: "Patrick Pavliuchik's Portfolio",
 	title: 'Patrick Pavliuchik - Web Developer',
