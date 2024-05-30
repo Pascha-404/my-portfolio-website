@@ -63,7 +63,6 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 								targetId='aboutSection'
 								style='normalSmall'
 							/>
-							<NavigationButton text={resumeText} targetId='resume' style='normalSmall' />
 							<NavigationButton
 								text='LinkedIn'
 								style='normalSmall'
