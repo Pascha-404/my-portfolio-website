@@ -29,3 +29,4 @@ For any inquiries or discussions regarding this project, feel free to reach out 
 
 - LinkedIn: [Click!](https://www.linkedin.com/in/patrick-pavliuchik-b481b9200/)
 - Email: [Click!](mailto:patrick@pavliuchik.com)
+- LiveLink: [Click!](https://patrick.pavliuchik.com)
