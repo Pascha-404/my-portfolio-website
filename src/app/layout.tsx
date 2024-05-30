@@ -76,6 +76,9 @@ export const metadata: Metadata = {
 		locale: 'en_US',
 		type: 'website',
 	},
+	verification: {
+		google: 'x9si6f7IBEIYCKhwTUNqZBm4M6OtO82G9a1Wh1K2U7Y',
+	},
 };
 
 export const viewport: Viewport = {
