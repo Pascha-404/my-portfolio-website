@@ -46,7 +46,7 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 						<h6>{contactsText}</h6>
 						<div>
 							<p>Patrick Pavliuchik,</p>
-							<a href='tel:04917782934'>+49 17782934</a>
+							<a href='tel:+4915679396206'>+49 (0) 15679 396206</a>
 							<a href='mailto:patrick@pavliuchik.com'>patrick@pavliuchik.com</a>
 						</div>
 					</div>
@@ -63,7 +63,6 @@ function Footer({ staticContent }: { staticContent: IFooterContent }): JSX.Eleme
 								targetId='aboutSection'
 								style='normalSmall'
 							/>
-							<NavigationButton text={resumeText} targetId='resume' style='normalSmall' />
 							<NavigationButton
 								text='LinkedIn'
 								style='normalSmall'
