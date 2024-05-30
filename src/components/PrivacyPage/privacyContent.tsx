@@ -138,14 +138,14 @@ const content = {
 				<p>
 					Patrick Pavliuchik
 					<br />
-					ADRESSE
+					K&ouml;rtingstr. 61c
 					<br />
-					PLZ
+					12107 Berlin
 				</p>
 				<p>
-					Telefon: 04923854
+					Telefon: +49 (0) 15679 396206
 					<br />
-					E-Mail: fkodfok@jdsjf.com
+					E-Mail: patrick@pavliuchik.com
 				</p>
 				<p>
 					Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die
@@ -635,14 +635,14 @@ const content = {
 				<p>
 					Patrick Pavliuchik
 					<br />
-					ADDRESS
+					K&ouml;rtingstr. 61c
 					<br />
-					ZIP CODE
+					12107 Berlin
 				</p>
 				<p>
-					Phone: 04923854
+					Phone: +49 (0) 15679 396206
 					<br />
-					Email: fkodfok@jdsjf.com
+					Email: patrick@pavliuchik.com
 				</p>
 				<p>
 					The responsible entity is the natural or legal person who alone or jointly with
