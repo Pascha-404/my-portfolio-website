@@ -1,30 +1,27 @@
-name: Remote SSH repo update and restart service
+name: Build and Push Docker Image
+
 on:
   push:
-      branches:
-        - main
-jobs:
+    branches:
+      - main
 
-  deploy:
-    name: deploy
+jobs:
+  build-and-push:
     runs-on: ubuntu-latest
+
     steps:
-    - name: executing remote ssh commands using key
-      uses: appleboy/ssh-action@v1.0.3
-      env: 
-        WORK_DIR: ${{ secrets.WORK_DIR }}
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v3
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_UBUNTU_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        envs: WORK_DIR
-        script: |
-          cd $WORK_DIR
-          git fetch --all
-          git reset --hard origin/main
-          git clean -fd
-          npm ci
-          pm2 stop all
-          npm run build
-          pm2 start all
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:latest
