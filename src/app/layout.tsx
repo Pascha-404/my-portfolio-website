@@ -12,6 +12,7 @@ import '../sass/main.scss';
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://patrick.pavliuchik.com'),
+	alternates: { canonical: '/' },
 	generator: 'Next.js',
 	applicationName: "Patrick Pavliuchik's Portfolio",
 	title: 'Patrick Pavliuchik - Web Developer',
@@ -78,6 +79,12 @@ export const metadata: Metadata = {
 	},
 	verification: {
 		google: 'x9si6f7IBEIYCKhwTUNqZBm4M6OtO82G9a1Wh1K2U7Y',
+	},
+	other: {
+		'geo.region': 'DE-BE',
+		'geo.placename': 'Berlin',
+		'geo.position': '52.517037;13.38886',
+		ICBM: '52.517037, 13.38886',
 	},
 };
 
