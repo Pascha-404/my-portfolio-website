@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://patrick.pavliuchik.com/</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+<!-- Baufachbetrieb Mueller Project -->
+  <url>
+    <loc>https://patrick.pavliuchik.com/project/658ef4b9f0e9b6a1ddc52e1d</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- Goksenia Portfolio Project -->
+  <url>
+    <loc>https://patrick.pavliuchik.com/project/658ef4bbf0e9b6a1ddc52e1e</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- WebChatApp Project -->
+  <url>
+    <loc>https://patrick.pavliuchik.com/project/658ef4bbf0e9b6a1ddc52e1f</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- Mood Booster Project -->
+  <url>
+    <loc>https://patrick.pavliuchik.com/project/658ef4bbf0e9b6a1ddc52e20</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
