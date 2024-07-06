@@ -56,8 +56,8 @@ function HeroSection({
 		<CldImage
 			src={staticContent.heroImage_src}
 			alt={imageAltText}
-			width={446}
-			height={446}
+			width={691}
+			height={691}
 			priority
 		/>
 	) : (
