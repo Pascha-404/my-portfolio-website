@@ -7,6 +7,7 @@ import { textMapFunction } from '@/utils/client';
 import { static_sections } from '@/utils/server/fallbackContent';
 import { IHeroSectionContent } from '@/ts/types';
 
+import { CldImage } from 'next-cloudinary';
 import Image from 'next/legacy/image';
 import NavigationButton from '../NavigationButton';
 import CalendlyButton from '../CalendlyButton';
@@ -49,6 +50,19 @@ function HeroSection({
 	const imageAltText =
 		staticContent.image_alt[currentLanguage] ||
 		fallbackContent.image_alt![currentLanguage];
+
+	// renders local stored image as fallback content
+	const heroImage = staticContent.heroImage_src ? (
+		<CldImage
+			src={staticContent.heroImage_src}
+			alt={imageAltText}
+			width={446}
+			height={446}
+			priority
+		/>
+	) : (
+		<Image src={HeroImg} alt={imageAltText} priority />
+	);
 	const arrowAltText =
 		staticContent.arrow_alt?.[currentLanguage] ||
 		fallbackContent.arrow_alt![currentLanguage];
@@ -77,9 +91,7 @@ function HeroSection({
 
 				<Image src={iconArrow} alt={arrowAltText} />
 			</div>
-			<div className={styles.heroSecondHalf}>
-				<Image src={HeroImg} alt={imageAltText} priority />
-			</div>
+			<div className={styles.heroSecondHalf}>{heroImage}</div>
 		</section>
 	);
 }
