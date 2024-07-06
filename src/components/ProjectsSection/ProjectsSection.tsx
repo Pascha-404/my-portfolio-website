@@ -39,11 +39,12 @@ function ProjectsSection({
 			<section id='projectsSection' className={styles.projectsSection}>
 				<h3>{headerText}</h3>
 				{projects.map((project, idx) => {
+					const imgProps = project.imgSrc != null ? { imgSrc: project.imgSrc } : {};
+
 					return (
 						<ProjectCard
 							key={project._id}
 							id={project._id}
-							imgSrc={project.imgSrc}
 							name={project.name}
 							role={project[currentLanguage].role}
 							stack={project.stack}
@@ -52,6 +53,7 @@ function ProjectsSection({
 							description={project[currentLanguage].description}
 							githubLink={project.githubLink}
 							imgLoadPriority={idx <= 0 ? true : false}
+							{...imgProps}
 						/>
 					);
 				})}
