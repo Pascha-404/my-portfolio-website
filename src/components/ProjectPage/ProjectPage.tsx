@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/legacy/image';
+import { CldImage } from 'next-cloudinary';
 import PageTransition from '../PageTransition';
 import DataListCard from '@/components/DataListCard';
 
@@ -35,14 +36,12 @@ function ProjectPage({ projectData }: ProjectPageProps): JSX.Element {
 
 				<div className={styles.projectImageWrapper}>
 					{imgSrc ? (
-						<Image
+						<CldImage
 							src={imgSrc}
-							width='1161'
+							width='1250'
 							height='600'
-							layout='responsive'
 							alt='Project Screenshot'
 							priority
-							objectFit='cover'
 						/>
 					) : (
 						<Image
