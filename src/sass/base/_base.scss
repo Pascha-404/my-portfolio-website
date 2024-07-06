@@ -13,6 +13,9 @@
 }
 
 html body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 	color: $txt-light-50;
 	background: $bg-color-dark;
