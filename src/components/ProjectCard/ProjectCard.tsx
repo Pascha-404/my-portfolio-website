@@ -5,15 +5,16 @@ import { v4 as uuid } from 'uuid';
 import defaultImg from '../../../public/projectCard-default-img.jpeg';
 import { TechType } from '@/ts/types';
 
-import NavigationButton from '../NavigationButton';
+import { CldImage } from 'next-cloudinary';
 import Image from 'next/legacy/image';
+import NavigationButton from '../NavigationButton';
 import TechIcon from '../TechIcon';
 
 import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
 	readonly id: string;
-	imgSrc?: string | null;
+	imgSrc?: string; // defaults to defaultImg if not provided
 	name: string;
 	role: string;
 	stack: TechType[];
@@ -25,9 +26,9 @@ interface ProjectCardProps {
 }
 
 function ProjectCard(props: ProjectCardProps): JSX.Element {
-	const img = props.imgSrc || defaultImg;
 	const {
 		id,
+		imgSrc,
 		role,
 		task,
 		stack,
@@ -45,14 +46,25 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 				<div className={styles.displaySmallScreen}>
 					<div className={styles.imgWrapper}>
 						<Link href={`/project/${id}`}>
-							<Image
-								src={img}
-								width='800'
-								height='400'
-								objectFit='cover'
-								alt='Project Preview'
-								priority={imgLoadPriority}
-							/>
+							{imgSrc ? (
+								<CldImage
+									src={imgSrc}
+									width='800'
+									height='400'
+									alt='Project Preview'
+									priority={imgLoadPriority}
+									style={{ objectFit: 'cover' }}
+								/>
+							) : (
+								<Image
+									src={defaultImg}
+									width='800'
+									height='400'
+									objectFit='cover'
+									alt='Project Preview'
+									priority={imgLoadPriority}
+								/>
+							)}
 						</Link>
 					</div>
 					<Link href={`/project/${id}`} className={styles.showPhone}>
@@ -86,14 +98,25 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
 				<div className={styles.displayBigScreen}>
 					<div className={styles.imgWrapper}>
 						<Link href={`/project/${id}`}>
-							<Image
-								src={img}
-								width='455'
-								height='172'
-								objectFit='cover'
-								alt='Project Preview'
-								priority={imgLoadPriority}
-							/>
+							{imgSrc ? (
+								<CldImage
+									src={imgSrc}
+									width='455'
+									height='172'
+									alt='Project Preview'
+									priority={imgLoadPriority}
+									style={{ objectFit: 'cover' }}
+								/>
+							) : (
+								<Image
+									src={defaultImg}
+									width='455'
+									height='172'
+									objectFit='cover'
+									alt='Project Preview'
+									priority={imgLoadPriority}
+								/>
+							)}
 						</Link>
 					</div>
 					<div className={styles.cardDetails}>

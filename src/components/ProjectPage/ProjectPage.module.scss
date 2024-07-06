@@ -6,6 +6,7 @@
 	padding-left: pxToRem(144px);
 	margin-top: pxToRem(120px);
 	margin-bottom: pxToRem(300px);
+	max-width: 1500px;
 
 	.linksWrapper,
 	.overviewWrapper,
@@ -39,6 +40,10 @@
 
 	.projectImageWrapper {
 		width: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	.overviewWrapper,

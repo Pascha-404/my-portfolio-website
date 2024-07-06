@@ -2,7 +2,7 @@
 
 .main {
 	width: 90%;
-	max-width: 1920px;
+	max-width: 1500px;
 	padding-left: pxToRem(144px);
 
 	@include breakpoint(m) {
