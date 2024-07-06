@@ -86,6 +86,7 @@ interface INavbarContent extends IStaticContent {
 
 interface IHeroSectionContent extends Omit<IStaticContent, 'sub_header'> {
 	fit: ITranslations;
+	heroImage_src: string;
 	image_alt: ITranslations;
 	sub_header: ITextSegment[];
 }
